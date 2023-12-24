@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background .control {
+  padding-top: 50px;
+}
+.background .control .headertexts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.background .control .headertexts .div1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.background .control .headertexts .div1 .texts {
+  display: flex;
+  gap: 5px;
+}
+.background .control .headertexts .div1 .texts p {
+  color: var(--primary, #c778dd);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .headertexts .div1 .texts h2 {
+  color: var(--white, #fff);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .headertexts .div1 .line hr {
+  width: 50px;
+}
+.background .control .headertexts .div2 {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.background .control .headertexts .div2 h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  color: var(--white, #fff);
+  font-size: 14px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .headertexts .div2 h2 svg {
+  width: 15px;
+}
+.background .control .maps {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+  gap: 40px;
+  padding-top: 30px;
+}
+.background .control .maps .border {
+  border: 2px solid rgb(255, 255, 255);
+}
+.background .control .maps .border .images .img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+}
+.background .control .maps .border .images hr {
+  border-top: 1px solid var(--gray, #abb2bf);
+}
+.background .control .maps .border .skills {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.background .control .maps .border .skills h2 {
+  color: var(--gray, #abb2bf);
+  font-size: 14px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.background .control .maps .border .hr hr {
+  border-top: 1px solid var(--gray, #abb2bf);
+}
+.background .control .maps .border .projectname h2 {
+  color: var(--white, #fff);
+  font-family: "Fira Code", monospace;
+  padding: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .maps .border .projectoverview p {
+  padding: 10px;
+  color: var(--gray, #abb2bf);
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.background .control .maps .border .live {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+.background .control .maps .border .live a {
+  width: 40%;
+  border: 1px solid var(--primary, #C778DD);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--white, #fff);
+  font-family: "Fira Code", monospace;
+  padding: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (min-width: 992px) {
+  .background .control .headertexts .div1 .texts p {
+    font-size: 32px;
+  }
+  .background .control .headertexts .div1 .texts h2 {
+    font-size: 32px;
+  }
+  .background .control .headertexts .div1 .line hr {
+    width: 300px;
+  }
+  .background .control .headertexts .div2 h2 {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+  }
+  .background .control .headertexts .div2 h2 svg {
+    width: 22px;
+    height: 22px;
+  }
+  .background .control .maps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .background .control .maps .border {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .background .control .maps .border .images img {
+    height: 35vh;
+  }
+  .background .control .maps .border .projectname {
+    padding-top: 20px;
+  }
+  .background .control .maps .border .live {
+    display: flex;
+  }
+}/*# sourceMappingURL=index.module.css.map */

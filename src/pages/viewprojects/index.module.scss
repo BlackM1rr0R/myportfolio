@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .control{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .texts{
+            display: flex;
+            p {
+                color: var(--primary, #c778dd);
+                font-family: "Fira Code", monospace;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+              }
+              h2 {
+                color: var(--white, #fff);
+                font-size: 16px;
+                font-family: "Fira Code", monospace;
+        
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+              }
+        }
+        .allmyprojects{
+            
+                p {
+                    color: var(--primary, #ffffff);
+                    font-family: "Fira Code", monospace;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                  }
+            
+        }
+            .maps {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 30px;
+      gap: 40px;
+        padding-top: 30px;
+      .border {
+        border: 2px solid rgb(255, 255, 255);
+        .images {
+          .img {
+            width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+          }
+          hr {
+            border-top: 1px solid var(--gray, #abb2bf);
+          }
+        }
+        .skills {
+          display: flex;
+          justify-content: center;
+          padding: 5px;
+          h2 {
+            color: var(--gray, #abb2bf);
+            font-size: 14px;
+            font-family: "Fira Code", monospace;
+
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .hr {
+          hr {
+            border-top: 1px solid var(--gray, #abb2bf);
+          }
+        }
+        .projectname {
+          h2 {
+            color: var(--white, #fff);
+            font-family: "Fira Code", monospace;
+            padding: 10px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+        .projectoverview {
+          p {
+            padding: 10px;
+            color: var(--gray, #abb2bf);
+            font-family: "Fira Code", monospace;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .live{
+            display: flex;
+          padding-top: 10px;
+          padding-bottom: 30px;
+            justify-content: center;
+            a{
+                
+                width: 40%;
+                border: 1px solid var(--primary, #C778DD);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+                color: var(--white, #fff);
+                font-family: "Fira Code", monospace;
+                padding: 10px;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+      }
+    }
+    }
+}
+
+
+@media(min-width:992px){
+    .background{
+        .control{
+            .texts{
+                p{
+                    font-size: 24px;
+                }
+                h2{
+                    font-size: 24px;
+                }
+            }
+            .allmyprojects{
+                p{
+                    font-size: 24px;
+                }
+            }
+            .maps{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                .border{
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                    .images{
+                        img{
+                            height: 35vh;
+                        }
+                    }
+                 
+                    .projectoverview{
+                        p{
+                           
+                        }
+                    }
+                    .projectname{
+                        padding-top: 20px;
+                    }
+                    .live{
+                        display: flex;
+                        
+                    }
+                }
+              }
+        }
+    }
+}

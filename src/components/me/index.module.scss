@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.background {
+  .control {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        h2 {
+          color: var(--white, #fff);
+          font-family: "Fira Code", monospace;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        h3 {
+          display: flex;
+          justify-content: center;
+          font-family: "Fira Code", monospace;
+          color: var(--primary, #c778dd);
+
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+      p {
+        color: var(--gray, #abb2bf);
+        font-family: "Fira Code", monospace;
+
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px; /* 156.25% */
+      }
+      .div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 200px;
+          background-color: transparent;
+          border: none;
+          border: 1px solid var(--primary, #c778dd);
+          display: inline-flex;
+          padding: 8px 16px;
+          align-items: flex-start;
+          gap: 10px;
+          color: var(--white, #fff);
+          font-size: 16px;
+          font-family: "Fira Code", monospace;
+
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .background {
+    .control {
+        padding-top: 130px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      .texts {
+        div {
+            h2{
+                font-size: 45px;
+            }
+            h3{
+                padding-left: 50px;
+                font-size: 55px;
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+        p{
+            width: 550px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        .div{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            a{
+                width: 400px;
+                padding: 16px 24px;
+            }
+        }
+      }
+      .images{
+        img{
+            width: 500px;
+            object-fit: cover;
+        }
+      }
+    }
+  }
+}

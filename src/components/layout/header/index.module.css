@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--primary, rgba(199, 120, 221, 0.9450980392));
+}
+.background .control {
+  display: flex;
+  justify-content: space-between;
+}
+.background .control .texts {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.background .control .texts svg {
+  background-color: black;
+}
+.background .control .texts h2 {
+  color: var(--white, #000000);
+  font-family: "Fira Code", monospace;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.background .control .contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.background .control .contacts svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+.background .control .about {
+  display: none;
+}
+.background .control .about p {
+  color: var(--primary, #000000);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .about a {
+  text-decoration: none;
+  color: var(--gray, #ffffff);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (min-width: 992px) {
+  .background .control {
+    display: flex;
+    align-items: center;
+  }
+  .background .control .about {
+    display: flex;
+    gap: 20px;
+  }
+  .background .control .about div {
+    display: flex;
+    gap: 8px;
+  }
+}/*# sourceMappingURL=index.module.css.map */

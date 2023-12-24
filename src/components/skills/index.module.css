@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  padding-bottom: 30px;
+}
+.background .control .headertexts {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.background .control .headertexts p {
+  color: var(--primary, #c778dd);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .headertexts h2 {
+  color: var(--white, #fff);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+.background .control .skills .border {
+  border: 2px solid rgb(255, 255, 255);
+}
+.background .control .skills .border .front {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.background .control .skills .border .front h2 {
+  color: var(--white, #fff);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .skills .border ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+.background .control .skills .border ul li:nth-child(odd) {
+  color: white;
+  font-size: 16px;
+  font-size: 12px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .skills .border ul li:nth-child(even) {
+  color: var(--primary, #c778dd);
+  font-size: 15px;
+  font-size: 12px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (min-width: 992px) {
+  .background .control .headertexts p {
+    font-size: 32px;
+  }
+  .background .control .headertexts h2 {
+    font-size: 32px;
+  }
+  .background .control .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .background .control .skills .border {
+    padding-bottom: 10px;
+  }
+  .background .control .skills .border .front h2 {
+    font-size: 20px;
+  }
+  .background .control .skills .border ul li:nth-child(odd) {
+    color: white;
+    font-size: 16px;
+  }
+  .background .control .skills .border ul li:nth-child(even) {
+    color: var(--primary, #c778dd);
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=index.module.css.map */
