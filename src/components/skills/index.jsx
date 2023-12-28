@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
+import { HTMLIcon } from "../../icons";
 const Skills = () => {
   const [data, setData] = useState([
     {
@@ -71,6 +72,7 @@ const Skills = () => {
                   <li>{item.li11}</li>
                   <li>{item.li12}</li>
                 </ul>
+              
               </div>
             ))}
           </div>

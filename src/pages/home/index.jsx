@@ -7,6 +7,7 @@ import Contacts from '../../components/contacts';
 import Movies from "../../assets/images/movies.png"
 import Khuran from "../../assets/images/khuran.png"
 import TicTac from "../../assets/images/tictac.png"
+import Language from '../../components/language';
 const Home = () => {
   const [data, setData] = useState([
     {
@@ -40,6 +41,7 @@ const Home = () => {
       <Me/>
       <Projects data={data}/>
       <Skills/>
+      <Language/>
       <About/>
       <Contacts/>
     </div>

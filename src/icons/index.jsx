@@ -157,6 +157,7 @@ const LiveIcon = () => {
     </svg>
   );
 };
+
 export {
   LogoIcon,
   GitHubIcon,
@@ -166,5 +167,6 @@ export {
   LiveIcon,
   GitHubWhiteIcon,
   FigmaWhiteIcon,
-  LinkedinWhiteIcon
+  LinkedinWhiteIcon,
+
 };
