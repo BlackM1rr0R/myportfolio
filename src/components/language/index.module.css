@@ -56,6 +56,53 @@
   gap: 10px;
   padding: 10px;
 }
+.background .control .skills .border ul .div1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.background .control .skills .border ul .div1 img {
+  width: 20px;
+  border-radius: 5px;
+}
+.background .control .skills .border ul .div3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.background .control .skills .border ul .div3 img {
+  width: 20px;
+  border-radius: 5px;
+}
+.background .control .skills .border ul .div5 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.background .control .skills .border ul .div5 img {
+  width: 20px;
+  border-radius: 5px;
+}
+.background .control .skills .border ul .div2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.background .control .skills .border ul .div2 img {
+  width: 20px;
+  border-radius: 5px;
+}
+.background .control .skills .border ul .div4 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.background .control .skills .border ul .div4 img {
+  width: 20px;
+  border-radius: 5px;
+}
 .background .control .skills .border ul li:nth-child(odd) {
   color: white;
   font-size: 16px;

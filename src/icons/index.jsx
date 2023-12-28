@@ -157,7 +157,13 @@ const LiveIcon = () => {
     </svg>
   );
 };
-
+const AzerIcon=()=>{
+  return(
+    <svg xmlns="http://www.w3.org/2000/svg" width="513" height="114" viewBox="0 0 513 114" fill="none">
+  <path d="M0 -0.00585938H513V113.994H0V-0.00585938Z" fill="#00B5E2"/>
+</svg>
+  )
+}
 export {
   LogoIcon,
   GitHubIcon,
@@ -168,5 +174,5 @@ export {
   GitHubWhiteIcon,
   FigmaWhiteIcon,
   LinkedinWhiteIcon,
-
+AzerIcon
 };
