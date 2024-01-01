@@ -10,6 +10,7 @@ import CarsBaku from "../../assets/images/carsbaku.png";
 import ChinaGames from "../../assets/images/chinagames.png";
 import NewsTR from "../../assets/images/newstr.png";
 import Maglos from "../../assets/images/maglos.png";
+import Payments from '../../assets/images/payment.png'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
 const ViewProjects = () => {
@@ -37,6 +38,14 @@ const ViewProjects = () => {
       link: "https://tictakgame.vercel.app",
       overview:
         "Tic-tac-toe is a classic game played on a 3x3 grid. Two players take turns marking an empty cell with their..",
+    },
+    {
+      photo: `${Payments}`,
+      skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
+      name: "Payment Method",
+      link: "https://paymentmethod.vercel.app/",
+      overview:
+        "A payment method is a way or mechanism used to transfer money or value from one party to another in exchange..",
     },
     {
       photo: `${RSP}`,
