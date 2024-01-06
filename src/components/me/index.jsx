@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
-import Images from '../../assets/images/Image.png'
+import Images from "../../assets/images/elchin.png";
+import { ArrayIcon } from "../../icons";
 import { Link } from "react-router-dom";
 const Me = () => {
   return (
@@ -17,12 +18,18 @@ const Me = () => {
               He crafts responsive websites where technologies meet creativity
             </p>
             <div className={styles.div}>
-
-            <Link to={"https://wa.me/057487048"}>Contact me!!</Link>
+              <Link to={"https://wa.me/057487048"}>Contact me!!</Link>
             </div>
           </div>
-          <div className={styles.images}>
+          <div className={styles.arrayicon}>
+            <ArrayIcon />
+          </div>
+          <div className={styles.controlimages}>
+            <div className={styles.fleximages}>
+              
                 <img src={Images} alt="" />
+              
+            </div>
           </div>
         </div>
       </Wrapper>

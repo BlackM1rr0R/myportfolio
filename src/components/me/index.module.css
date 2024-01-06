@@ -71,6 +71,28 @@
   font-weight: 500;
   line-height: normal;
 }
+.background .control .arrayicon {
+  display: flex;
+  justify-content: center;
+}
+.background .control .arrayicon svg {
+  rotate: 55deg;
+  height: 150px;
+}
+.background .control .controlimages {
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(199, 120, 221, 0.6705882353) 50%, rgba(50, 15, 133, 0) 100%);
+}
+.background .control .controlimages .fleximages {
+  border-radius: 20%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3764705882) 0.4%, rgba(67, 67, 67, 0) 100%);
+  display: flex;
+  justify-content: center;
+}
+.background .control .controlimages .fleximages img {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
 
 @media (min-width: 992px) {
   .background .control {
@@ -103,9 +125,24 @@
     width: 400px;
     padding: 16px 24px;
   }
-  .background .control .images img {
-    width: 500px;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .background .control .arrayicon {
+    display: flex;
+    justify-content: center;
+  }
+  .background .control .arrayicon svg {
+    rotate: -10deg;
+    height: 50%;
+  }
+  .background .control .controlimages {
+    width: 20%;
+    border-radius: 10%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(199, 120, 221, 0.4862745098) 80%, rgba(50, 15, 133, 0) 100%);
+  }
+  .background .control .controlimages .fleximages {
+    border-radius: 20%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3764705882) 0.4%, rgba(67, 67, 67, 0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }/*# sourceMappingURL=index.module.css.map */
