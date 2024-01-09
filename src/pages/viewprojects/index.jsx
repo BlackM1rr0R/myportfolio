@@ -10,7 +10,7 @@ import CarsBaku from "../../assets/images/carsbaku.png";
 import ChinaGames from "../../assets/images/chinagames.png";
 import NewsTR from "../../assets/images/newstr.png";
 import Maglos from "../../assets/images/maglos.png";
-import Payments from '../../assets/images/payment.png'
+import Payments from '../../assets/images/payment2.png'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
 const ViewProjects = () => {
@@ -42,8 +42,8 @@ const ViewProjects = () => {
     {
       photo: `${Payments}`,
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
-      name: "Payment Method",
-      link: "https://paymentmethod.vercel.app/",
+      name: "Payment Method Mobile App",
+      link: "https://mypaymentmethod.vercel.app/",
       overview:
         "A payment method is a way or mechanism used to transfer money or value from one party to another in exchange..",
     },
@@ -63,14 +63,7 @@ const ViewProjects = () => {
       overview:
         "When people get sick in the city of Sakarya, they receive all kinds of treatment and care at home.",
     },
-    {
-      photo: `${CarsBaku}`,
-      skills: "HTML SCSS JavaScript REACTJS Responsive",
-      name: "Mashina.kg",
-      link: "https://carsbaku.vercel.app/",
-      overview:
-        "An auto selling website is a digital platform that facilitates the buying and selling of vehicles.",
-    },
+
     {
       photo: `${ChinaGames}`,
       skills: "HTML SCSS JavaScript Responsive",
