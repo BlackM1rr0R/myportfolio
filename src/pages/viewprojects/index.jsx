@@ -12,6 +12,7 @@ import NewsTR from "../../assets/images/newstr.png";
 import Maglos from "../../assets/images/maglos.png";
 import Payments from '../../assets/images/payment2.png'
 import FootBall from '../../assets/images/football.png'
+import JS1 from '../../assets/images/js2.jpeg'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
 const ViewProjects = () => {
@@ -25,12 +26,20 @@ const ViewProjects = () => {
       link: "https://movies-baku.vercel.app/",
     },
     {
-      photo: `${Khuran}`,
-      skills: "HTML SCSS REACTJS REST API`s Router`s",
-      name: "Khuran App",
+      photo: `${Payments}`,
+      skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
+      name: "Payment Method Mobile App",
+      link: "https://mypaymentmethod.vercel.app/",
       overview:
-        "Provides information about the Quranic text, translations, interpretations (Tafsirs), and audio recitation.",
-      link: "https://khuran.vercel.app/",
+      "A payment method is a way or mechanism used to transfer money or value from one party to another in exchange..",
+    },
+    {
+      photo: `${JS1}`,
+      skills: "HTML JavaScript",
+      name: "JavaScript-Lektionen",
+      link: "https://github.com/7u4bgr/jsagain",
+      overview:
+      "JavaScript is a high-level, versatile programming language primarily known for its use in web development..",
     },
     {
       photo: `${TicTac}`,
@@ -38,15 +47,15 @@ const ViewProjects = () => {
       name: "TicTacToe",
       link: "https://tictakgame.vercel.app",
       overview:
-        "Tic-tac-toe is a classic game played on a 3x3 grid. Two players take turns marking an empty cell with their..",
+      "Tic-tac-toe is a classic game played on a 3x3 grid. Two players take turns marking an empty cell with their..",
     },
     {
-      photo: `${Payments}`,
-      skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
-      name: "Payment Method Mobile App",
-      link: "https://mypaymentmethod.vercel.app/",
+      photo: `${Khuran}`,
+      skills: "HTML SCSS REACTJS REST API`s Router`s",
+      name: "Khuran App",
       overview:
-        "A payment method is a way or mechanism used to transfer money or value from one party to another in exchange..",
+        "Provides information about the Quranic text, translations, interpretations (Tafsirs), and audio recitation.",
+      link: "https://khuran.vercel.app/",
     },
     {
       photo: `${FootBall}`,

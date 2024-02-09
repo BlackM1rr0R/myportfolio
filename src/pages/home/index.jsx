@@ -5,7 +5,7 @@ import Skills from '../../components/skills';
 import About from '../../components/about';
 import Contacts from '../../components/contacts';
 import Movies from "../../assets/images/movies.png"
-import Khuran from "../../assets/images/khuran.png"
+import Payments from "../../assets/images/payment2.png"
 import TicTac from "../../assets/images/tictac.png"
 import Language from '../../components/language';
 const Home = () => {
@@ -19,12 +19,12 @@ const Home = () => {
       link: "https://movies-baku.vercel.app/",
     },
     {
-      photo:`${Khuran}`,
-      skills: "HTML SCSS REACTJS REST API`s Router`s",
-      name: "Khuran App",
+      photo: `${Payments}`,
+      skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
+      name: "Payment Method Mobile App",
+      link: "https://mypaymentmethod.vercel.app/",
       overview:
-        "Provides information about the Quranic text, translations, interpretations (Tafsirs), and audio recitation.",
-      link: "https://khuran.vercel.app/",
+      "A payment method is a way or mechanism used to transfer money or value from one party to another in exchange..",
     },
     {
       photo:`${TicTac}`,
