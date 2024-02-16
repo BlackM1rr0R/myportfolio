@@ -141,7 +141,7 @@ const ViewProjects = () => {
                 </div>
                 <div className={styles.live}>
                   <Link target="_blank" to={item.link}>
-                    Live <LiveIcon />
+                    Live1 <LiveIcon />
                   </Link>
                 </div>
               </div>
