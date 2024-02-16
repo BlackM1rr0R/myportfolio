@@ -13,6 +13,7 @@ import Maglos from "../../assets/images/maglos.png";
 import Payments from '../../assets/images/payment2.png'
 import FootBall from '../../assets/images/football.png'
 import JS1 from '../../assets/images/js2.jpeg'
+import Bitcoin from '../../assets/images/bitcoin5.png'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
 const ViewProjects = () => {
@@ -32,6 +33,14 @@ const ViewProjects = () => {
       link: "https://mypaymentmethod.vercel.app/",
       overview:
       "A payment method is a way or mechanism used to transfer money or value from one party to another in exchange..",
+    },
+    {
+      photo: `${Bitcoin}`,
+      skills: "HTML SCSS REACTJS REST API`s Router`s",
+      name: "Crypto-Exchange Website",
+      link: "https://crypto-api.vercel.app/",
+      overview:
+      " These platforms play a crucial role in the cryptocurrency ecosystem, providing users with a marketplace where.. ",
     },
     {
       photo: `${JS1}`,
