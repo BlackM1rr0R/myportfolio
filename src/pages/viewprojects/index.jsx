@@ -6,7 +6,6 @@ import Khuran from "../../assets/images/khuran.png";
 import TicTac from "../../assets/images/tictac.png";
 import RSP from "../../assets/images/rsp.png";
 import Sakarya from "../../assets/images/sakarya.png";
-import CarsBaku from "../../assets/images/carsbaku.png";
 import ChinaGames from "../../assets/images/chinagames.png";
 import NewsTR from "../../assets/images/newstr.png";
 import Maglos from "../../assets/images/maglos.png";
@@ -14,6 +13,7 @@ import Payments from '../../assets/images/payment2.png'
 import FootBall from '../../assets/images/football.png'
 import JS1 from '../../assets/images/js2.jpeg'
 import Bitcoin from '../../assets/images/bitcoin5.png'
+import Booking from '../../assets/images/booking3.png'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
 const ViewProjects = () => {
@@ -41,6 +41,14 @@ const ViewProjects = () => {
       link: "https://crypto-api.vercel.app/",
       overview:
       " These platforms play a crucial role in the cryptocurrency ecosystem, providing users with a marketplace where.. ",
+    },
+    {
+      photo: `${Booking}`,
+      skills: "HTML SCSS REACTJS Router`s",
+      name: "Booking-Reservation",
+      link: "https://doctor-baku.vercel.app/",
+      overview:
+      "  Booking and reservation refer to the process of securing a spot or arrangement for a service, accommodation.. ",
     },
     {
       photo: `${JS1}`,
