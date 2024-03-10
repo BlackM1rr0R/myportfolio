@@ -16,6 +16,8 @@ import Bitcoin from '../../assets/images/bitcoin5.png'
 import Booking from '../../assets/images/booking3.png'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
+
 const ViewProjects = () => {
   const [data, setData] = useState([
     {
@@ -124,6 +126,11 @@ const ViewProjects = () => {
         "Finance is a broad term encompassing the management of money and assets. It involves activities related to investing..",
     },
   ]);
+  const [backgroundSpring] = useSpring(() => ({
+    from: { transform: 'opacity:0' },
+    to: { transform: 'opacity:1' },
+    config: { duration: 2200 },
+  }));
   return (
     <div className={styles.background}>
       <Wrapper>
@@ -135,7 +142,7 @@ const ViewProjects = () => {
           <div className={styles.allmyprojects}>
             <p>List of my projects:</p>
           </div>
-          <div className={styles.maps}>
+          <animated.div style={backgroundSpring} className={styles.maps}>
             {data?.map((item) => (
               <div className={styles.border}>
                 <div className={styles.images}>
@@ -163,7 +170,7 @@ const ViewProjects = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </animated.div>
         </div>
       </Wrapper>
     </div>

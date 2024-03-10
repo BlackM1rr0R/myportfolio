@@ -1,3 +1,4 @@
+/* index.module.scss */
 * {
   margin: 0;
   padding: 0;
@@ -122,7 +123,7 @@
 }
 .background .control .maps .border .live a {
   width: 40%;
-  border: 1px solid var(--primary, #C778DD);
+  border: 1px solid var(--primary, #c778dd);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +137,10 @@
   font-weight: 500;
   line-height: normal;
 }
-
+.background .control .maps .border .live a:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s ease-in-out;
+}
 @media (min-width: 992px) {
   .background .control .headertexts .div1 .texts p {
     font-size: 32px;
