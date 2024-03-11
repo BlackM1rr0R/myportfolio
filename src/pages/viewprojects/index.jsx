@@ -1,27 +1,48 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import Wrapper from "../../components/UI/wrapper";
-import Movies from "../../assets/images/movies.png";
-import Khuran from "../../assets/images/khuran.png";
-import TicTac from "../../assets/images/tictac.png";
-import RSP from "../../assets/images/rsp.png";
-import Sakarya from "../../assets/images/sakarya.png";
+import Movies from "../../assets/images/moviebackground.jpg";
+import Khuran from "../../assets/images/khuranbackground.jpg";
+import TicTac from "../../assets/images/tictactoebackground.jpg";
+import RSP from "../../assets/images/rockbackground1.jpg";
+import Sakarya from "../../assets/images/emergency.jpg";
 import ChinaGames from "../../assets/images/chinagames.png";
-import NewsTR from "../../assets/images/newstr.png";
-import Maglos from "../../assets/images/maglos.png";
-import Payments from '../../assets/images/payment2.png'
-import FootBall from '../../assets/images/football.png'
+import NewsTR from "../../assets/images/newstrbackground.jpg";
+import Maglos from "../../assets/images/financebackground.jpg";
+import Payments from '../../assets/images/paymentbackground.jpg'
+import FootBall from '../../assets/images/footballbackground.jpg'
 import JS1 from '../../assets/images/js2.jpeg'
-import Bitcoin from '../../assets/images/bitcoin5.png'
+import Bitcoin from '../../assets/images/bitcoinbackground.jpg'
 import Booking from '../../assets/images/booking3.png'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
-
+import MovieVideo from '../../assets/images/movienew.mp4'
+import PaymentVideo from '../../assets/images/paymentnew.mp4'
+import CryptoVideo from '../../assets/images/cryptovideo.mp4'
+import DoctorVideo from '../../assets/images/doctorvideo.mp4'
+import JsVideo from '../../assets/images/jsvideo.mp4'
+import TikTakVideo from '../../assets/images/tiktak.mp4'
+import KhuranVideo from '../../assets/images/khuranvideo.mp4'
+import FootballVideo from '../../assets/images/footballvideo.mp4'
+import RockVideo from '../../assets/images/rockvideo.mp4'
+import SakaryaVideo from '../../assets/images/sakaryavideo.mp4'
+import ChinaGamesVideo from '../../assets/images/chinagames.mp4'
+import NewsTrVideo from '../../assets/images/newstrvideo.mp4'
+import MaglosFinance from '../../assets/images/maglosfinance.mp4'
 const ViewProjects = () => {
+  const [hover,setHover]=useState(false)
+  const handleHover=()=>{
+    setHover(true)
+  }
+  const handleHoverExit=()=>{
+    setHover(false)
+  }
+
   const [data, setData] = useState([
     {
       photo: `${Movies}`,
+      video:`${MovieVideo}`,
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Movies-baku",
       overview:
@@ -30,6 +51,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Payments}`,
+      video:`${PaymentVideo}`,
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
       name: "Payment Method Mobile App",
       link: "https://mypaymentmethod.vercel.app/",
@@ -38,6 +60,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Bitcoin}`,
+      video:`${CryptoVideo}`,
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Crypto-Exchange Website",
       link: "https://crypto-api.vercel.app/",
@@ -46,6 +69,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Booking}`,
+      video:`${DoctorVideo}`,
       skills: "HTML SCSS REACTJS Router`s",
       name: "Booking-Reservation",
       link: "https://doctor-baku.vercel.app/",
@@ -54,6 +78,8 @@ const ViewProjects = () => {
     },
     {
       photo: `${JS1}`,
+      video:`${JsVideo}`,
+
       skills: "HTML JavaScript",
       name: "JavaScript-Lektionen",
       link: "https://github.com/7u4bgr/jsagain",
@@ -62,6 +88,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${TicTac}`,
+      video:`${TikTakVideo}`,
       skills: "HTML SCSS JavaScript REACTJS",
       name: "TicTacToe",
       link: "https://tictakgame.vercel.app",
@@ -70,14 +97,18 @@ const ViewProjects = () => {
     },
     {
       photo: `${Khuran}`,
+      video:`${KhuranVideo}`,
+
       skills: "HTML SCSS REACTJS REST API`s Router`s",
-      name: "Khuran App",
+      name: "Khuran Website",
       overview:
         "Provides information about the Quranic text, translations, interpretations (Tafsirs), and audio recitation.",
       link: "https://khuran.vercel.app/",
     },
     {
       photo: `${FootBall}`,
+      video:`${FootballVideo}`,
+
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
       name: "Football Mobile App",
       link: "https://football-baku.vercel.app/",
@@ -86,6 +117,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${RSP}`,
+      video:`${RockVideo}`,
       skills: "HTML SCSS JavaScript REACTJS",
       name: "Rock Scissors Paper",
       link: "https://rockpaperscissorsgames.vercel.app/",
@@ -94,6 +126,8 @@ const ViewProjects = () => {
     },
     {
       photo: `${Sakarya}`,
+      video:`${SakaryaVideo}`,
+
       skills: "HTML SCSS JavaScript REACTJS Responsive",
       name: "Sakarya Evde Sağlık Hizmeti",
       link: "https://sakaryaevdesaglik.vercel.app/",
@@ -103,6 +137,8 @@ const ViewProjects = () => {
 
     {
       photo: `${ChinaGames}`,
+      video:`${ChinaGamesVideo}`,
+
       skills: "HTML SCSS JavaScript Responsive",
       name: "China Games",
       link: "https://chinagames.vercel.app/",
@@ -111,6 +147,8 @@ const ViewProjects = () => {
     },
     {
       photo: `${NewsTR}`,
+      video:`${NewsTrVideo}`,
+
       skills: "HTML SCSS JavaScript ReactJS API`s",
       name: "NewsTR",
       link: "https://news-tr.vercel.app/",
@@ -119,6 +157,8 @@ const ViewProjects = () => {
     },
     {
       photo: `${Maglos}`,
+      video:`${MaglosFinance}`,
+
       skills: "HTML SCSS JavaScript ReactJS API`s",
       name: "Maglos Finance",
       link: "https://maglos.vercel.app/",
@@ -145,8 +185,14 @@ const ViewProjects = () => {
           <animated.div style={backgroundSpring} className={styles.maps}>
             {data?.map((item) => (
               <div className={styles.border}>
-                <div className={styles.images}>
-                  <img className={styles.img} src={item.photo} alt="" />
+                <div onMouseEnter={handleHover}  onMouseLeave={handleHoverExit} className={styles.images}>
+                {hover ? (
+                    <video autoPlay={true} muted>
+                      <source src={item.video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img className={styles.img} src={item.photo} alt="" />
+                  )}
                   <hr />
                 </div>
                 <div className={styles.skills}>

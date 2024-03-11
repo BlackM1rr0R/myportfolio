@@ -72,7 +72,14 @@ line-height: 26px; /* 162.5% */
             padding: 15px;
             line-height: normal;
         }
+      
     }
+    .readmore:hover{
+        background-color: #c778dd;
+        color: black;
+        border: 1px solid white;
+        transition: 600ms;
+      }
 }
 @media(min-width:992px){
     .background{

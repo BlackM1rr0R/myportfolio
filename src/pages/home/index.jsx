@@ -4,10 +4,12 @@ import Projects from "../../components/projects";
 import Skills from "../../components/skills";
 import About from "../../components/about";
 import Contacts from "../../components/contacts";
-import Movies from "../../assets/images/movies.png";
-import MoviesVideo from "../../assets/images/movie.mp4";
-import Payments from "../../assets/images/payment2.png";
-import TicTac from "../../assets/images/tictac.png";
+import Movies from "../../assets/images/moviebackground.jpg";
+import MoviesVideo from "../../assets/images/movienew.mp4";
+import PaymentVideo from "../../assets/images/paymentnew.mp4";
+import TiktakVideo from "../../assets/images/tiktak.mp4";
+import Payments from "../../assets/images/paymentbackground.jpg";
+import TicTac from "../../assets/images/tictactoebackground.jpg";
 import Language from "../../components/language";
 import { useSpring, animated } from "react-spring";
 const Home = () => {
@@ -23,7 +25,7 @@ const Home = () => {
     },
     {
       photo: `${Payments}`,
-      video:`${MoviesVideo}`,
+      video:`${PaymentVideo}`,
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
       name: "Payment Method Mobile App",
       link: "https://mypaymentmethod.vercel.app/",
@@ -32,7 +34,7 @@ const Home = () => {
     },
     {
       photo: `${TicTac}`,
-      video:`${MoviesVideo}`,
+      video:`${TiktakVideo}`,
       skills: "HTML SCSS JavaScript REACTJS",
       name: "TicTacToe",
       link: "https://tictakgame.vercel.app",

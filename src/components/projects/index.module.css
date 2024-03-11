@@ -78,6 +78,9 @@
      object-fit: cover;
   vertical-align: bottom;
 }
+.background .control .maps .border .images video {
+  width: 100%;
+}
 .background .control .maps .border .images hr {
   border-top: 1px solid var(--gray, #abb2bf);
 }
@@ -138,8 +141,11 @@
   line-height: normal;
 }
 .background .control .maps .border .live a:hover {
-  opacity: 0.7;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  background-color: #c778dd;
+  color: black;
+  border: 1px solid white;
+  transition: 600ms;
 }
 @media (min-width: 992px) {
   .background .control .headertexts .div1 .texts p {
@@ -170,6 +176,12 @@
     justify-content: space-between;
   }
   .background .control .maps .border .images img {
+    height: 35vh;
+  }
+  .background .control .maps .border video {
+    height: 35vh;
+  }
+  .background .control .maps .border video source {
     height: 35vh;
   }
   .background .control .maps .border .projectname {

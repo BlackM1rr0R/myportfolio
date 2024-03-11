@@ -71,6 +71,12 @@
   padding: 15px;
   line-height: normal;
 }
+.background .readmore:hover {
+  background-color: #c778dd;
+  color: black;
+  border: 1px solid white;
+  transition: 600ms;
+}
 
 @media (min-width: 992px) {
   .background .headertexts p {

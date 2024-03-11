@@ -71,6 +71,12 @@
   font-weight: 500;
   line-height: normal;
 }
+.background .control .texts .div a:hover {
+  background-color: #c778dd;
+  color: black;
+  border: 1px solid white;
+  transition: 600ms;
+}
 .background .control .arrayicon {
   display: flex;
   justify-content: center;
