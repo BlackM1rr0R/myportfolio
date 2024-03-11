@@ -46,7 +46,7 @@ const Home = () => {
     opacity: 1,
     from: { transform: 'translateX(-100%)' },
     to: { transform: 'translateX(0)' },
-    config: { duration: 2200 },
+    config: { duration: 400 },
   }));
 
   const [skillsSpring] = useSpring(() => ({
