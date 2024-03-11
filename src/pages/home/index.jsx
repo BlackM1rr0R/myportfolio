@@ -52,31 +52,31 @@ const Home = () => {
   const [skillsSpring] = useSpring(() => ({
     opacity: 1,
     from: { opacity: 0 },
-    config: { duration: 2200 },
+    config: { duration: 400 },
   }));
 
   const [projectsSpring] = useSpring(() => ({
     opacity: 1,
     from: { opacity: 0 },
-    config: { duration: 2200 },
+    config: { duration: 400 },
   }));
 
   const [languageSpring] = useSpring(() => ({
     opacity: 1,
     from: { opacity: 0 },
-    config: { duration: 2200 },
+    config: { duration: 400 },
   }));
 
   const [aboutSpring] = useSpring(() => ({
     opacity: 1,
     from: { opacity: 0 },
-    config: { duration: 2200 },
+    config: { duration: 400 },
   }));
 
   const [contactSpring] = useSpring(() => ({
     opacity: 1,
     from: { opacity: 0 },
-    config: { duration: 2200 },
+    config: { duration: 400 },
   }));
 
   return (
