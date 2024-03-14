@@ -18,6 +18,9 @@ const Skills = () => {
       li10: "•React",
       li11: "•React UI",
       li12: "•REST API`s",
+      li13:"•NextJS",
+      li14:"•Redux",
+     
     },
     {
         name:"CyberSecurity",
@@ -71,6 +74,9 @@ const Skills = () => {
                   <li>{item.li10}</li>
                   <li>{item.li11}</li>
                   <li>{item.li12}</li>
+                  <li>{item.li13}</li>
+                  <li>{item.li14}</li>
+                
                 </ul>
               
               </div>
