@@ -4,7 +4,7 @@ import Wrapper from "../../components/UI/wrapper";
 import Movies from "../../assets/images/moviebackground.jpg";
 import Khuran from "../../assets/images/khuranbackground.jpg";
 import TicTac from "../../assets/images/tictactoebackground.jpg";
-import RSP from "../../assets/images/rockbackground1.jpg";
+import RSP from "../../assets/images/rockbackground.jpg";
 import Sakarya from "../../assets/images/emergency.jpg";
 import ChinaGames from "../../assets/images/chinagames.png";
 import NewsTR from "../../assets/images/newstrbackground.jpg";
