@@ -16,7 +16,6 @@ import Bitcoin from '../../assets/images/bitcoinbackground.jpg'
 import Booking from '../../assets/images/booking3.png'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
-import { useSpring, animated } from "react-spring";
 import MovieVideo from '../../assets/images/movienew.mp4'
 import PaymentVideo from '../../assets/images/paymentnew.mp4'
 import CryptoVideo from '../../assets/images/cryptovideo.mp4'
@@ -166,11 +165,7 @@ const ViewProjects = () => {
         "Finance is a broad term encompassing the management of money and assets. It involves activities related to investing..",
     },
   ]);
-  const [backgroundSpring] = useSpring(() => ({
-    from: { transform: 'opacity:0' },
-    to: { transform: 'opacity:1' },
-    config: { duration: 2200 },
-  }));
+
   return (
     <div className={styles.background}>
       <Wrapper>
@@ -182,7 +177,7 @@ const ViewProjects = () => {
           <div className={styles.allmyprojects}>
             <p>List of my projects:</p>
           </div>
-          <animated.div style={backgroundSpring} className={styles.maps}>
+          <div className={styles.maps}>
             {data?.map((item) => (
               <div className={styles.border}>
                 <div onMouseEnter={handleHover}  onMouseLeave={handleHoverExit} className={styles.images}>
@@ -216,7 +211,7 @@ const ViewProjects = () => {
                 </div>
               </div>
             ))}
-          </animated.div>
+          </div>
         </div>
       </Wrapper>
     </div>

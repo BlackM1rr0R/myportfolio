@@ -11,12 +11,12 @@ import TiktakVideo from "../../assets/images/tiktak.mp4";
 import Payments from "../../assets/images/paymentbackground.jpg";
 import TicTac from "../../assets/images/tictactoebackground.jpg";
 import Language from "../../components/language";
-import { useSpring, animated } from "react-spring";
+import styles from "./index.module.css"
 const Home = () => {
   const [data, setData] = useState([
     {
       photo: `${Movies}`,
-      video:`${MoviesVideo}`,
+      video: `${MoviesVideo}`,
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Movies-baku",
       overview:
@@ -25,7 +25,7 @@ const Home = () => {
     },
     {
       photo: `${Payments}`,
-      video:`${PaymentVideo}`,
+      video: `${PaymentVideo}`,
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
       name: "Payment Method Mobile App",
       link: "https://mypaymentmethod.vercel.app/",
@@ -34,7 +34,7 @@ const Home = () => {
     },
     {
       photo: `${TicTac}`,
-      video:`${TiktakVideo}`,
+      video: `${TiktakVideo}`,
       skills: "HTML SCSS JavaScript REACTJS",
       name: "TicTacToe",
       link: "https://tictakgame.vercel.app",
@@ -42,63 +42,15 @@ const Home = () => {
         "Tic-tac-toe is a classic game played on a 3x3 grid. Two players take turns marking an empty cell with their..",
     },
   ]);
-  const [backgroundSpring] = useSpring(() => ({
-    opacity: 1,
-    from: { opacity: 0 },
-
-    config: { duration: 400 },
-  }));
-
-  const [skillsSpring] = useSpring(() => ({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 400 },
-  }));
-
-  const [projectsSpring] = useSpring(() => ({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 400 },
-  }));
-
-  const [languageSpring] = useSpring(() => ({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 400 },
-  }));
-
-  const [aboutSpring] = useSpring(() => ({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 400 },
-  }));
-
-  const [contactSpring] = useSpring(() => ({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 400 },
-  }));
 
   return (
-    <div>
-      <animated.div style={backgroundSpring}>
-        <Me />
-      </animated.div>
-      <animated.div style={projectsSpring}>
-        <Projects data={data} />
-      </animated.div>
-      <animated.div style={skillsSpring}>
-        <Skills />
-      </animated.div>
-      <animated.div style={languageSpring}>
-        <Language />
-      </animated.div>
-      <animated.div style={aboutSpring}>
-        <About />
-      </animated.div>
-      <animated.div style={contactSpring}>
-        <Contacts />
-      </animated.div>
+    <div className={styles.homes}>
+      <Me />
+      <Projects data={data} />
+      <Skills />
+      <Language />
+      <About />
+      <Contacts />
     </div>
   );
 };
