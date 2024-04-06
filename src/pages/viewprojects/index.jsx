@@ -14,6 +14,7 @@ import FootBall from '../../assets/images/footballbackground.jpg'
 import JS1 from '../../assets/images/js2.jpeg'
 import Bitcoin from '../../assets/images/bitcoinbackground.jpg'
 import Booking from '../../assets/images/booking3.png'
+import NextCalcPP from '../../assets/images/calcphoto.jpg'
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
 import MovieVideo from '../../assets/images/movienew.mp4'
@@ -29,6 +30,7 @@ import SakaryaVideo from '../../assets/images/sakaryavideo.mp4'
 import ChinaGamesVideo from '../../assets/images/chinagames.mp4'
 import NewsTrVideo from '../../assets/images/newstrvideo.mp4'
 import MaglosFinance from '../../assets/images/maglosfinance.mp4'
+import CalcNextJS from '../../assets/images/calc-next-js.mp4'
 const ViewProjects = () => {
   const [hover,setHover]=useState(false)
   const handleHover=()=>{
@@ -56,6 +58,15 @@ const ViewProjects = () => {
       link: "https://mypaymentmethod.vercel.app/",
       overview:
       "A payment method is a way or mechanism used to transfer money or value from one party to another in exchange..",
+    },
+    {
+      photo: `${NextCalcPP}`,
+      video:`${CalcNextJS}`,
+      skills: "HTML SCSS NextJS Responsive",
+      name: "Calculator with NextJS",
+      link: "https://calcwithnext.vercel.app/",
+      overview:
+      " These are simple calculators used for arithmetic operations like addition, subtraction, multiplication, and division.. ",
     },
     {
       photo: `${Bitcoin}`,
