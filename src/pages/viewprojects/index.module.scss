@@ -3,34 +3,246 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .background {
-  animation: animation 2s ease-in-out forwards;
-
-
+  animation: 2s ease-in-out forwards;
+  background-color: rgb(255, 255, 255);
   padding-top: 40px;
   padding-bottom: 40px;
   .control {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    .texts {
+    .controlDarkMode {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .texts {
+        display: flex;
+        p {
+          color: var(--primary, #c778dd);
+          font-family: "Fira Code", monospace;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        h2 {
+          color: var(--white, #000000);
+          font-size: 16px;
+          font-family: "Fira Code", monospace;
+
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+      .darkButton,
+      .lightButton {
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+          font-family: "Fira Code", monospace;
+
+      }
+
+      .darkButton {
+        background-color: black;
+        color: white;
+        border: none;
+      }
+
+      .lightButton {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+          font-family: "Fira Code", monospace;
+        
+      }
+
+      .lightButton:hover {
+        transform: translateX(5px);
+       
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+      
+      }
+    }
+    .allmyprojects {
       p {
-        color: var(--primary, #c778dd);
+        color: var(--primary, #000000);
         font-family: "Fira Code", monospace;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
       }
-      h2 {
-        color: var(--white, #fff);
-        font-size: 16px;
+    }
+    .maps {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 30px;
+      gap: 40px;
+      padding-top: 30px;
+      .border {
+        border: 2px solid rgb(0, 0, 0);
+        .images {
+          .img {
+            width: 100%;
+
+            vertical-align: bottom;
+          }
+          video {
+            width: 100%;
+            height: 35vh;
+            source {
+              height: 35vh;
+            }
+          }
+          hr {
+            border-top: 1px solid var(--gray, #646464);
+          }
+        }
+        .skills {
+          display: flex;
+          justify-content: center;
+          padding: 5px;
+          h2 {
+            color: var(--gray, #000000);
+            font-size: 14px;
+            font-family: "Fira Code", monospace;
+
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .hr {
+          hr {
+            border-top: 1px solid var(--gray, #646464);
+          }
+        }
+        .projectname {
+          h2 {
+            color: var(--white, #000000);
+            font-family: "Fira Code", monospace;
+            padding: 10px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+        .projectoverview {
+          p {
+            padding: 10px;
+            color: var(--gray, #000000);
+            font-family: "Fira Code", monospace;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .live {
+          display: flex;
+          padding-top: 10px;
+          padding-bottom: 30px;
+          justify-content: center;
+          a {
+            width: 40%;
+            border: 1px solid var(--primary, #c541e9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--white, #000000);
+            font-family: "Fira Code", monospace;
+            padding: 10px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            svg {
+              fill: black;
+            }
+          }
+          a:hover {
+            background-color: #c778dd;
+            color: black;
+            border: 1px solid white;
+            transition: 600ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+.backgroundblack {
+  background-color: black;
+  animation: 2s ease-in-out forwards;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .control {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .controlDarkMode {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .darkButton,
+      .lightButton {
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        font-family: "Fira Code", monospace;
+      }
+
+      .darkButton {
+        background-color: black;
+        font-family: "Fira Code", monospace;
+        border: 1px solid white;
+        color: white;
+      }
+
+      .lightButton {
+        background-color: white;
         font-family: "Fira Code", monospace;
 
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
+        color: black;
+        border: 1px solid black;
+      }
+
+      .darkButton:hover {
+        transform: translateX(5px);
+        background-color: white;
+        color: black;
+      }
+      .texts {
+        display: flex;
+        p {
+          color: var(--primary, #c778dd);
+          font-family: "Fira Code", monospace;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        h2 {
+          color: var(--white, #fff);
+          font-size: 16px;
+          font-family: "Fira Code", monospace;
+
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
       }
     }
     .allmyprojects {
@@ -130,6 +342,9 @@
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+            svg {
+              fill: white;
+            }
           }
           a:hover {
             background-color: #c778dd;
@@ -142,6 +357,7 @@
     }
   }
 }
+
 @keyframes animation {
   from {
     opacity: 0;
@@ -152,6 +368,49 @@
 }
 @media (min-width: 992px) {
   .background {
+    .control {
+      .texts {
+        p {
+          font-size: 24px;
+        }
+        h2 {
+          font-size: 24px;
+        }
+      }
+      .allmyprojects {
+        p {
+          font-size: 24px;
+        }
+      }
+      .maps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .border {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .images {
+            img {
+              height: 35vh;
+            }
+          }
+
+          .projectoverview {
+            p {
+            }
+          }
+          .projectname {
+            padding-top: 20px;
+          }
+          .live {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .backgroundblack {
+    background-color: black;
     .control {
       .texts {
         p {

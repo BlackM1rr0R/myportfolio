@@ -5,7 +5,8 @@
 }
 
 .background {
-  animation: animation 2s ease-in-out forwards;
+  animation: 2s ease-in-out forwards;
+  background-color: rgb(255, 255, 255);
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -14,10 +15,15 @@
   flex-direction: column;
   gap: 30px;
 }
-.background .control .texts {
+.background .control .controlDarkMode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.background .control .controlDarkMode .texts {
   display: flex;
 }
-.background .control .texts p {
+.background .control .controlDarkMode .texts p {
   color: var(--primary, #c778dd);
   font-family: "Fira Code", monospace;
   font-size: 16px;
@@ -25,16 +31,40 @@
   font-weight: 500;
   line-height: normal;
 }
-.background .control .texts h2 {
-  color: var(--white, #fff);
+.background .control .controlDarkMode .texts h2 {
+  color: var(--white, #000000);
   font-size: 16px;
   font-family: "Fira Code", monospace;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
+.background .control .controlDarkMode .darkButton,
+.background .control .controlDarkMode .lightButton {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: "Fira Code", monospace;
+}
+.background .control .controlDarkMode .darkButton {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.background .control .controlDarkMode .lightButton {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  font-family: "Fira Code", monospace;
+}
+.background .control .controlDarkMode .lightButton:hover {
+  transform: translateX(5px);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
 .background .control .allmyprojects p {
-  color: var(--primary, #ffffff);
+  color: var(--primary, #000000);
   font-family: "Fira Code", monospace;
   font-size: 16px;
   font-style: normal;
@@ -50,7 +80,7 @@
   padding-top: 30px;
 }
 .background .control .maps .border {
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
 }
 .background .control .maps .border .images .img {
   width: 100%;
@@ -64,7 +94,7 @@
   height: 35vh;
 }
 .background .control .maps .border .images hr {
-  border-top: 1px solid var(--gray, #abb2bf);
+  border-top: 1px solid var(--gray, #646464);
 }
 .background .control .maps .border .skills {
   display: flex;
@@ -72,7 +102,7 @@
   padding: 5px;
 }
 .background .control .maps .border .skills h2 {
-  color: var(--gray, #abb2bf);
+  color: var(--gray, #000000);
   font-size: 14px;
   font-family: "Fira Code", monospace;
   font-style: normal;
@@ -80,10 +110,10 @@
   line-height: normal;
 }
 .background .control .maps .border .hr hr {
-  border-top: 1px solid var(--gray, #abb2bf);
+  border-top: 1px solid var(--gray, #646464);
 }
 .background .control .maps .border .projectname h2 {
-  color: var(--white, #fff);
+  color: var(--white, #000000);
   font-family: "Fira Code", monospace;
   padding: 10px;
   font-size: 18px;
@@ -93,7 +123,7 @@
 }
 .background .control .maps .border .projectoverview p {
   padding: 10px;
-  color: var(--gray, #abb2bf);
+  color: var(--gray, #000000);
   font-family: "Fira Code", monospace;
   font-size: 14px;
   font-style: normal;
@@ -107,6 +137,165 @@
   justify-content: center;
 }
 .background .control .maps .border .live a {
+  width: 40%;
+  border: 1px solid var(--primary, #c541e9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--white, #000000);
+  font-family: "Fira Code", monospace;
+  padding: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.background .control .maps .border .live a svg {
+  fill: black;
+}
+.background .control .maps .border .live a:hover {
+  background-color: #c778dd;
+  color: black;
+  border: 1px solid white;
+  transition: 600ms;
+}
+
+.backgroundblack {
+  background-color: black;
+  animation: 2s ease-in-out forwards;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.backgroundblack .control {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.backgroundblack .control .controlDarkMode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.backgroundblack .control .controlDarkMode .darkButton,
+.backgroundblack .control .controlDarkMode .lightButton {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: "Fira Code", monospace;
+}
+.backgroundblack .control .controlDarkMode .darkButton {
+  background-color: black;
+  font-family: "Fira Code", monospace;
+  border: 1px solid white;
+  color: white;
+}
+.backgroundblack .control .controlDarkMode .lightButton {
+  background-color: white;
+  font-family: "Fira Code", monospace;
+  color: black;
+  border: 1px solid black;
+}
+.backgroundblack .control .controlDarkMode .darkButton:hover {
+  transform: translateX(5px);
+  background-color: white;
+  color: black;
+}
+.backgroundblack .control .controlDarkMode .texts {
+  display: flex;
+}
+.backgroundblack .control .controlDarkMode .texts p {
+  color: var(--primary, #c778dd);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.backgroundblack .control .controlDarkMode .texts h2 {
+  color: var(--white, #fff);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.backgroundblack .control .allmyprojects p {
+  color: var(--primary, #ffffff);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.backgroundblack .control .maps {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+  gap: 40px;
+  padding-top: 30px;
+}
+.backgroundblack .control .maps .border {
+  border: 2px solid rgb(255, 255, 255);
+}
+.backgroundblack .control .maps .border .images .img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.backgroundblack .control .maps .border .images video {
+  width: 100%;
+  height: 35vh;
+}
+.backgroundblack .control .maps .border .images video source {
+  height: 35vh;
+}
+.backgroundblack .control .maps .border .images hr {
+  border-top: 1px solid var(--gray, #abb2bf);
+}
+.backgroundblack .control .maps .border .skills {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.backgroundblack .control .maps .border .skills h2 {
+  color: var(--gray, #abb2bf);
+  font-size: 14px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.backgroundblack .control .maps .border .hr hr {
+  border-top: 1px solid var(--gray, #abb2bf);
+}
+.backgroundblack .control .maps .border .projectname h2 {
+  color: var(--white, #fff);
+  font-family: "Fira Code", monospace;
+  padding: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.backgroundblack .control .maps .border .projectoverview p {
+  padding: 10px;
+  color: var(--gray, #abb2bf);
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.backgroundblack .control .maps .border .live {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+.backgroundblack .control .maps .border .live a {
   width: 40%;
   border: 1px solid var(--primary, #c778dd);
   display: flex;
@@ -122,7 +311,10 @@
   font-weight: 500;
   line-height: normal;
 }
-.background .control .maps .border .live a:hover {
+.backgroundblack .control .maps .border .live a svg {
+  fill: white;
+}
+.backgroundblack .control .maps .border .live a:hover {
   background-color: #c778dd;
   color: black;
   border: 1px solid white;
@@ -163,6 +355,36 @@
     padding-top: 20px;
   }
   .background .control .maps .border .live {
+    display: flex;
+  }
+  .backgroundblack {
+    background-color: black;
+  }
+  .backgroundblack .control .texts p {
+    font-size: 24px;
+  }
+  .backgroundblack .control .texts h2 {
+    font-size: 24px;
+  }
+  .backgroundblack .control .allmyprojects p {
+    font-size: 24px;
+  }
+  .backgroundblack .control .maps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .backgroundblack .control .maps .border {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .backgroundblack .control .maps .border .images img {
+    height: 35vh;
+  }
+  .backgroundblack .control .maps .border .projectname {
+    padding-top: 20px;
+  }
+  .backgroundblack .control .maps .border .live {
     display: flex;
   }
 }/*# sourceMappingURL=index.module.css.map */
