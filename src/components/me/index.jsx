@@ -4,9 +4,9 @@ import Wrapper from "../UI/wrapper";
 import Images from "../../assets/images/elchin.png";
 import { ArrayIcon } from "../../icons";
 import { Link } from "react-router-dom";
-const Me = () => {
+const Me = ({ darkMode }) => {
   return (
-    <div className={styles.background}>
+    <div className={darkMode ? styles.background : styles.whitebackground}>
       <Wrapper>
         <div className={styles.control}>
           <div className={styles.texts}>
@@ -26,9 +26,7 @@ const Me = () => {
           </div>
           <div className={styles.controlimages}>
             <div className={styles.fleximages}>
-              
-                <img src={Images} alt="" />
-              
+              <img src={Images} alt="" />
             </div>
           </div>
         </div>

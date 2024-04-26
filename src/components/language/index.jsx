@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
-import { AzerIcon } from "../../icons";
 import Azer from "../../assets/images/azer.svg";
 import Turk from "../../assets/images/turk.svg";
 import English from "../../assets/images/uk.svg";
-import Rus from '../../assets/images/rus.svg'
-import German from '../../assets/images/german.svg'
-const Language = () => {
+import Rus from "../../assets/images/rus.svg";
+import German from "../../assets/images/german.svg";
+const Language = ({ darkMode }) => {
   const [data, setData] = useState([
     {
       name: "Language",
@@ -18,13 +17,16 @@ const Language = () => {
       li3: "•English B1",
       flag3: `${English}`,
       li4: "•Russian B1",
-      flag4:`${Rus}`,
+      flag4: `${Rus}`,
       li5: "•German B2",
-      flag5:`${German}`
+      flag5: `${German}`,
     },
   ]);
   return (
-    <div id="skills" className={styles.background}>
+    <div
+      id="skills"
+      className={darkMode ? styles.background : styles.whitebackground}
+    >
       <Wrapper>
         <div className={styles.control}>
           <div className={styles.headertexts}>
@@ -51,12 +53,12 @@ const Language = () => {
                     <li>{item.li3}</li>
                   </div>
                   <div className={styles.div4}>
-                  <li>{item.li4}</li>
-                <img src={item.flag4} alt="" />
+                    <li>{item.li4}</li>
+                    <img src={item.flag4} alt="" />
                   </div>
                   <div className={styles.div5}>
-                <img src={item.flag5} alt="" />
-                  <li>{item.li5}</li>
+                    <img src={item.flag5} alt="" />
+                    <li>{item.li5}</li>
                   </div>
                 </ul>
               </div>

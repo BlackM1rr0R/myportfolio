@@ -131,6 +131,134 @@
       }
     }
   }
+  .whitebackground {
+    padding-bottom: 30px;
+    .control {
+      .headertexts {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        p {
+          color: var(--primary, #c778dd);
+          font-family: "Fira Code", monospace;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        h2 {
+          color: var(--white, #000000);
+          font-size: 16px;
+          font-family: "Fira Code", monospace;
+  
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+      .skills {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding-top: 20px;
+        .border {
+   
+          border: 2px solid rgb(0, 0, 0);
+          .front {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            h2 {
+              color: var(--white, #000000);
+              font-size: 16px;
+              font-family: "Fira Code", monospace;
+  
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+          }
+          ul {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+            padding: 10px;
+            .div1{
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              img{
+                width: 20px;
+                border-radius: 5px;
+              }
+            }
+            .div3{
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              img{
+                width: 20px;
+                border-radius: 5px;
+              }
+            }
+            .div5{
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              img{
+                width: 20px;
+                border-radius: 5px;
+              }
+            }
+            .div2{
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              gap: 10px;
+              img{
+                width: 20px;
+                border-radius: 5px;
+              }
+            }
+            .div4{
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              gap: 10px;
+              img{
+                width: 20px;
+                border-radius: 5px;
+              }
+            }
+            li:nth-child(odd) {
+                
+              color: rgb(0, 0, 0);
+              font-size: 16px;
+              font-size: 12px;
+              font-family: "Fira Code", monospace;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+            
+            li:nth-child(even) {
+                display: flex;
+                justify-content: flex-end;
+              color: var(--primary, #c800ff);
+              font-size: 15px;
+              font-size: 12px;
+              font-family: "Fira Code", monospace;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+  
+            }
+        
+          }
+        }
+      }
+    }
+  }
   @media(min-width:992px){
       .background{
           .control{
@@ -165,6 +293,48 @@
                             
                             li:nth-child(even) {
                               color: var(--primary, #c778dd);
+                              font-size: 15px;
+  
+                            }
+                          
+                      }
+                  }
+              }
+          }
+      }    
+      .whitebackground{
+          .control{
+            .headertexts{
+              p{
+                  font-size: 32px;
+              }
+              h2{
+                  font-size: 32px;
+              }
+          }
+              .skills{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+         
+       
+                  .border{
+                    padding-bottom: 10px;
+                    width: 31.7%;
+                      .front{
+                          h2{
+                              font-size: 20px;
+                          }
+                      }
+                      ul{
+                          li:nth-child(odd) {
+                              color: rgb(0, 0, 0);
+                              font-size: 16px;
+                            }
+                            
+                            li:nth-child(even) {
+                              color: var(--primary, #c800ff);
                               font-size: 15px;
   
                             }

@@ -100,9 +100,108 @@
   padding-bottom: 60px;
 }
 
+.whitebackground .control {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.whitebackground .control .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.whitebackground .control .texts div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.whitebackground .control .texts div h2 {
+  color: var(--white, #000000);
+  font-family: "Fira Code", monospace;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.whitebackground .control .texts div h3 {
+  display: flex;
+  justify-content: center;
+  font-family: "Fira Code", monospace;
+  color: var(--primary, #b400e6);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.whitebackground .control .texts p {
+  color: var(--gray, #636363);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 156.25% */
+}
+.whitebackground .control .texts .div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whitebackground .control .texts .div a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--primary, #b400e6);
+  display: inline-flex;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--white, #000000);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .texts .div a:hover {
+  background-color: #c778dd;
+  color: black;
+  border: 1px solid white;
+  transition: 600ms;
+}
+.whitebackground .control .arrayicon {
+  display: flex;
+  justify-content: center;
+}
+.whitebackground .control .arrayicon svg {
+  rotate: 55deg;
+  height: 150px;
+}
+.whitebackground .control .arrayicon svg path {
+  fill: black;
+}
+.whitebackground .control .controlimages {
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(199, 120, 221, 0.6705882353) 50%, rgba(50, 15, 133, 0) 100%);
+}
+.whitebackground .control .controlimages .fleximages {
+  border-radius: 20%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3764705882) 0.4%, rgba(67, 67, 67, 0) 100%);
+  display: flex;
+  justify-content: center;
+}
+.whitebackground .control .controlimages .fleximages img {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
 @media (min-width: 992px) {
   .background .control {
-    padding-top: 130px;
+    padding-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -145,6 +244,56 @@
     background: radial-gradient(50% 50% at 50% 50%, rgba(199, 120, 221, 0.4862745098) 80%, rgba(50, 15, 133, 0) 100%);
   }
   .background .control .controlimages .fleximages {
+    border-radius: 20%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3764705882) 0.4%, rgba(67, 67, 67, 0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .whitebackground .control {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .whitebackground .control .texts div h2 {
+    font-size: 45px;
+  }
+  .whitebackground .control .texts div h3 {
+    padding-left: 50px;
+    font-size: 55px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .whitebackground .control .texts p {
+    width: 550px;
+    line-height: 30px;
+    font-size: 20px;
+  }
+  .whitebackground .control .texts .div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .whitebackground .control .texts .div a {
+    width: 400px;
+    padding: 16px 24px;
+  }
+  .whitebackground .control .arrayicon {
+    display: flex;
+    justify-content: center;
+  }
+  .whitebackground .control .arrayicon svg {
+    rotate: -10deg;
+    height: 50%;
+  }
+  .whitebackground .control .controlimages {
+    width: 20%;
+    border-radius: 10%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(199, 120, 221, 0.4862745098) 80%, rgba(50, 15, 133, 0) 100%);
+  }
+  .whitebackground .control .controlimages .fleximages {
     border-radius: 20%;
     background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3764705882) 0.4%, rgba(67, 67, 67, 0) 100%);
     display: flex;

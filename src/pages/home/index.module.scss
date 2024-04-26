@@ -1,7 +1,85 @@
-
-.homes {
-    animation: animation 2s ease-in-out forwards;
+.background {
+    animation: 2s ease-in-out forwards;
+    background-color: rgb(255, 255, 255);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .homes {
+        animation: animation 2s ease-in-out forwards;
+        .darkMode{
+            .darkButton,
+            .lightButton {
+              padding: 10px 20px;
+              cursor: pointer;
+              border-radius: 5px;
+              transition: all 0.3s ease;
+                font-family: "Fira Code", monospace;
+      
+            }
+      
+            .darkButton {
+             background: var(--background, #282c33);
+              color: white;
+              border: none;
+            }
+      
+            .lightButton {
+              background-color: white;
+              color: black;
+              border: 1px solid black;
+                font-family: "Fira Code", monospace;
+              
+            }
+      
+            .lightButton:hover {
+              transform: translateX(5px);
+             
+           background: var(--background, #282c33);
+              color: rgb(255, 255, 255);
+            
+            }
+        }
+    }
 }
+.backgroundblack {
+    background: var(--background, #282c33);
+    animation: 2s ease-in-out forwards;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .homes {
+        animation: animation 2s ease-in-out forwards;
+        .darkButton,
+        .lightButton {
+          padding: 10px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+          font-family: "Fira Code", monospace;
+        }
+  
+        .darkButton {
+            background: var(--background, #282c33);
+          font-family: "Fira Code", monospace;
+          border: 1px solid white;
+          color: white;
+        }
+  
+        .lightButton {
+          background-color: white;
+          font-family: "Fira Code", monospace;
+  
+          color: black;
+          border: 1px solid black;
+        }
+  
+        .darkButton:hover {
+          transform: translateX(5px);
+          
+          background-color: white;
+          color: black;
+        }
+    }
+}
+
 @keyframes animation {
     from {
         opacity: 0;

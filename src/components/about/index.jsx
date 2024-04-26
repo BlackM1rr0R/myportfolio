@@ -3,9 +3,12 @@ import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
 import { RightArrowIcon } from "../../icons/";
 import { Link } from "react-router-dom";
-const About = () => {
+const About = ({ darkMode }) => {
   return (
-    <div id="about" className={styles.background}>
+    <div
+      id="about"
+      className={darkMode ? styles.background : styles.whitebackground}
+    >
       <Wrapper>
         <div className={styles.headertexts}>
           <p>#</p>
@@ -23,12 +26,14 @@ const About = () => {
           </p>
         </div>
         <div className={styles.salam}>
-
-        <div className={styles.readmore}>
-          <Link target="_blank" to={"https://www.linkedin.com/in/elcin-abdullayev-583861229/"}>
-            Read more <RightArrowIcon />
-          </Link>
-        </div>
+          <div className={styles.readmore}>
+            <Link
+              target="_blank"
+              to={"https://www.linkedin.com/in/elcin-abdullayev-583861229/"}
+            >
+              Read more <RightArrowIcon />
+            </Link>
+          </div>
         </div>
       </Wrapper>
     </div>

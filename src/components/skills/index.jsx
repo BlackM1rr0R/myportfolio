@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
-import { HTMLIcon } from "../../icons";
-const Skills = () => {
+
+const Skills = ({ darkMode }) => {
   const [data, setData] = useState([
     {
       name: "Front-End Developer",
@@ -18,37 +18,39 @@ const Skills = () => {
       li10: "•React",
       li11: "•React UI",
       li12: "•REST API`s",
-      li13:"•NextJS",
-      li14:"•Redux",
-     
+      li13: "•NextJS",
+      li14: "•Redux",
     },
     {
-        name:"CyberSecurity",
-        li1: "•PAM360",
-        li2: "•KempLB",
-        li3: "•Symantec",
-        li4: "•EDR",
-        li5: "•XDR",
-        li6: "•Bitrix24",
-        li7: "•Nessus Scan",
+      name: "CyberSecurity",
+      li1: "•PAM360",
+      li2: "•KempLB",
+      li3: "•Symantec",
+      li4: "•EDR",
+      li5: "•XDR",
+      li6: "•Bitrix24",
+      li7: "•Nessus Scan",
     },
     {
-        name:"Other",
-        li1: "•Figma",
-        li2: "•IT Essential",
-        li3: "•Linux OS",
-        li4: "•Windows 2007",
-        li5: "•Parrot OS",
-        li6: "•Tails OS",
-        li7: "•Basic Network",
-        li8:"•Cyber Tool",
-        li9:"•Jira",
-        li10:"•Zendesk",
-        li11:"•AnyDesk"
+      name: "Other",
+      li1: "•Figma",
+      li2: "•IT Ess",
+      li3: "•Linux OS",
+      li4: "•Windows OS",
+      li5: "•Parrot OS",
+      li6: "•Tails OS",
+      li7: "•Network",
+      li8: "•Cyber Tool",
+      li9: "•Jira",
+      li10: "•Zendesk",
+      li11: "•AnyDesk",
     },
   ]);
   return (
-    <div id="skills" className={styles.background}>
+    <div
+      id="skills"
+      className={darkMode ? styles.background : styles.whitebackground}
+    >
       <Wrapper>
         <div className={styles.control}>
           <div className={styles.headertexts}>
@@ -76,9 +78,7 @@ const Skills = () => {
                   <li>{item.li12}</li>
                   <li>{item.li13}</li>
                   <li>{item.li14}</li>
-                
                 </ul>
-              
               </div>
             ))}
           </div>

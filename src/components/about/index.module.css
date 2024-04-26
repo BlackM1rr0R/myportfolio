@@ -35,7 +35,7 @@
   padding-top: 20px;
 }
 .background .about h2 {
-  color: var(--gray, #ABB2BF);
+  color: var(--gray, #abb2bf);
   font-size: 16px;
   font-family: "Fira Code", monospace;
   font-style: normal;
@@ -43,7 +43,7 @@
   line-height: normal;
 }
 .background .about p {
-  color: var(--gray, #ABB2BF);
+  color: var(--gray, #abb2bf);
   font-family: "Fira Code", monospace;
   font-size: 15px;
   font-style: normal;
@@ -51,10 +51,13 @@
   line-height: 26px; /* 162.5% */
 }
 .background .readmore {
-  border: 1px solid var(--primary, #C778DD);
+  border: 1px solid var(--primary, #c778dd);
   margin-top: 20px;
   display: flex;
   justify-content: center;
+}
+.background .readmore svg path {
+  fill: white;
 }
 .background .readmore a {
   text-decoration: none;
@@ -64,7 +67,7 @@
   background-color: transparent;
   border: none;
   font-family: "Fira Code", monospace;
-  color: var(--white, #FFF);
+  color: var(--white, #fff);
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -76,6 +79,90 @@
   color: black;
   border: 1px solid white;
   transition: 600ms;
+}
+
+.whitebackground {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.whitebackground .headertexts {
+  display: flex;
+  gap: 5px;
+}
+.whitebackground .headertexts p {
+  color: var(--primary, #c778dd);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .headertexts h2 {
+  color: var(--white, #000000);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+.whitebackground .about h2 {
+  color: var(--gray, #383838);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .about p {
+  color: var(--gray, #383838);
+  font-family: "Fira Code", monospace;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.whitebackground .readmore {
+  border: 1px solid var(--primary, #000000);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.whitebackground .readmore svg path {
+  fill: black;
+}
+.whitebackground .readmore a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: transparent;
+  border: none;
+  font-family: "Fira Code", monospace;
+  color: var(--white, #000000);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 15px;
+  line-height: normal;
+}
+.whitebackground .readmore:hover {
+  cursor: pointer;
+  background-color: #c778dd;
+  color: black;
+  border: 1px solid white;
+  transition: 600ms;
+}
+.whitebackground .readmore:hover a {
+  color: white;
+}
+.whitebackground .readmore:hover svg path {
+  fill: white;
 }
 
 @media (min-width: 992px) {
@@ -96,6 +183,26 @@
     justify-content: flex-end;
   }
   .background .salam .readmore {
+    width: 30%;
+    display: flex;
+  }
+  .whitebackground .headertexts p {
+    font-size: 32px;
+  }
+  .whitebackground .headertexts h2 {
+    font-size: 32px;
+  }
+  .whitebackground .about {
+    width: 50%;
+  }
+  .whitebackground .about p {
+    line-height: 32px;
+  }
+  .whitebackground .salam {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .whitebackground .salam .readmore {
     width: 30%;
     display: flex;
   }

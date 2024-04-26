@@ -43,8 +43,7 @@
         cursor: pointer;
         border-radius: 5px;
         transition: all 0.3s ease;
-          font-family: "Fira Code", monospace;
-
+        font-family: "Fira Code", monospace;
       }
 
       .darkButton {
@@ -57,16 +56,14 @@
         background-color: white;
         color: black;
         border: 1px solid black;
-          font-family: "Fira Code", monospace;
-        
+        font-family: "Fira Code", monospace;
       }
 
       .lightButton:hover {
         transform: translateX(5px);
-       
-        background-color: rgb(0, 0, 0);
+
+        background: var(--background, #282c33);
         color: rgb(255, 255, 255);
-      
       }
     }
     .allmyprojects {
@@ -183,7 +180,7 @@
 }
 
 .backgroundblack {
-  background-color: black;
+  background: var(--background, #282c33);
   animation: 2s ease-in-out forwards;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -205,7 +202,7 @@
       }
 
       .darkButton {
-        background-color: black;
+        background: var(--background, #282c33);
         font-family: "Fira Code", monospace;
         border: 1px solid white;
         color: white;
@@ -410,7 +407,7 @@
     }
   }
   .backgroundblack {
-    background-color: black;
+    background: var(--background, #282c33);
     .control {
       .texts {
         p {

@@ -75,6 +75,77 @@
   line-height: normal;
 }
 
+.whitebackground {
+  padding-bottom: 30px;
+}
+.whitebackground .control .headertexts {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.whitebackground .control .headertexts p {
+  color: var(--primary, #c778dd);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .headertexts h2 {
+  color: var(--white, #000000);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+.whitebackground .control .skills .border {
+  border: 2px solid rgb(0, 0, 0);
+}
+.whitebackground .control .skills .border .front {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.whitebackground .control .skills .border .front h2 {
+  color: var(--white, #000000);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .skills .border ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+.whitebackground .control .skills .border ul li:nth-child(odd) {
+  color: black;
+  font-size: 16px;
+  font-size: 12px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .skills .border ul li:nth-child(even) {
+  color: var(--primary, #c800ff);
+  font-size: 15px;
+  font-size: 12px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 @media (min-width: 992px) {
   .background .control .headertexts p {
     font-size: 32px;
@@ -98,6 +169,31 @@
     font-size: 16px;
   }
   .background .control .skills .border ul li:nth-child(even) {
+    color: var(--primary, #c778dd);
+    font-size: 15px;
+  }
+  .whitebackground .control .headertexts p {
+    font-size: 32px;
+  }
+  .whitebackground .control .headertexts h2 {
+    font-size: 32px;
+  }
+  .whitebackground .control .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .whitebackground .control .skills .border {
+    padding-bottom: 10px;
+  }
+  .whitebackground .control .skills .border .front h2 {
+    font-size: 20px;
+  }
+  .whitebackground .control .skills .border ul li:nth-child(odd) {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+  }
+  .whitebackground .control .skills .border ul li:nth-child(even) {
     color: var(--primary, #c778dd);
     font-size: 15px;
   }

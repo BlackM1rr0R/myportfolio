@@ -72,6 +72,74 @@
   line-height: normal;
 }
 
+.whitebackground {
+  padding-bottom: 30px;
+}
+.whitebackground .control {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.whitebackground .control .headertexts {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.whitebackground .control .headertexts p {
+  color: var(--primary, #c778dd);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .headertexts h2 {
+  color: var(--white, #000000);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .overview p {
+  color: var(--gray, #393939);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .mail {
+  border: 1px solid var(--gray, #000000);
+}
+.whitebackground .control .mail .texts {
+  padding: 20px;
+}
+.whitebackground .control .mail .texts h2 {
+  color: var(--white, #000000);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .mail .icontexts {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.whitebackground .control .mail .icontexts a {
+  text-decoration: none;
+  color: var(--white, #000000);
+  font-size: 13px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 @media (min-width: 992px) {
   .background .control .headertexts p {
     font-size: 32px;
@@ -95,6 +163,30 @@
     width: 20%;
   }
   .background .control .flexs .mail .icontexts {
+    padding-left: 0px;
+  }
+  .whitebackground .control .headertexts p {
+    font-size: 32px;
+  }
+  .whitebackground .control .headertexts h2 {
+    font-size: 32px;
+  }
+  .whitebackground .control .overview {
+    width: 50%;
+  }
+  .whitebackground .control .flexs {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .whitebackground .control .flexs .mail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+  }
+  .whitebackground .control .flexs .mail .icontexts {
     padding-left: 0px;
   }
 }/*# sourceMappingURL=index.module.css.map */

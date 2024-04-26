@@ -61,6 +61,9 @@
 .background .control .headertexts .div2 h2 svg {
   width: 15px;
 }
+.background .control .headertexts .div2 h2 svg path {
+  fill: white;
+}
 .background .control .maps {
   display: flex;
   justify-content: center;
@@ -124,6 +127,9 @@
   padding-bottom: 30px;
   justify-content: center;
 }
+.background .control .maps .border .live svg path {
+  fill: white;
+}
 .background .control .maps .border .live a {
   width: 40%;
   border: 1px solid var(--primary, #c778dd);
@@ -147,6 +153,159 @@
   border: 1px solid white;
   transition: 600ms;
 }
+.background .control .maps .border .live a:hover svg path {
+  fill: black;
+}
+
+.whitebackground .control {
+  padding-top: 50px;
+}
+.whitebackground .control .headertexts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.whitebackground .control .headertexts .div1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.whitebackground .control .headertexts .div1 .texts {
+  display: flex;
+  gap: 5px;
+}
+.whitebackground .control .headertexts .div1 .texts p {
+  color: var(--primary, #c778dd);
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .headertexts .div1 .texts h2 {
+  color: var(--white, #000000);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .headertexts .div1 .line hr {
+  width: 50px;
+}
+.whitebackground .control .headertexts .div2 {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.whitebackground .control .headertexts .div2 h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  color: var(--white, #000000);
+  font-size: 14px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .headertexts .div2 h2 svg {
+  width: 15px;
+}
+.whitebackground .control .headertexts .div2 h2 svg path {
+  fill: black;
+}
+.whitebackground .control .maps {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+  gap: 40px;
+  padding-top: 30px;
+}
+.whitebackground .control .maps .border {
+  border: 2px solid rgb(0, 0, 0);
+}
+.whitebackground .control .maps .border .images .img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+}
+.whitebackground .control .maps .border .images video {
+  width: 100%;
+}
+.whitebackground .control .maps .border .images hr {
+  border-top: 1px solid var(--gray, #abb2bf);
+}
+.whitebackground .control .maps .border .skills {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.whitebackground .control .maps .border .skills h2 {
+  color: var(--gray, #000000);
+  font-size: 14px;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.whitebackground .control .maps .border .hr hr {
+  border-top: 1px solid var(--gray, #6e6e6e);
+}
+.whitebackground .control .maps .border .projectname h2 {
+  color: var(--white, #000000);
+  font-family: "Fira Code", monospace;
+  padding: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .maps .border .projectoverview p {
+  padding: 10px;
+  color: var(--gray, #000000);
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.whitebackground .control .maps .border .live {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+.whitebackground .control .maps .border .live a {
+  width: 40%;
+  border: 1px solid var(--primary, #b959d3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--white, #000000);
+  font-family: "Fira Code", monospace;
+  padding: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.whitebackground .control .maps .border .live a:hover {
+  opacity: 1;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  transition: 600ms;
+}
+.whitebackground .control .maps .border .live a:hover svg path {
+  fill: white;
+}
+
 @media (min-width: 992px) {
   .background .control .headertexts .div1 .texts p {
     font-size: 32px;
@@ -188,6 +347,48 @@
     padding-top: 20px;
   }
   .background .control .maps .border .live {
+    display: flex;
+  }
+  .whitebackground .control .headertexts .div1 .texts p {
+    font-size: 32px;
+  }
+  .whitebackground .control .headertexts .div1 .texts h2 {
+    font-size: 32px;
+  }
+  .whitebackground .control .headertexts .div1 .line hr {
+    width: 300px;
+  }
+  .whitebackground .control .headertexts .div2 h2 {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+  }
+  .whitebackground .control .headertexts .div2 h2 svg {
+    width: 22px;
+    height: 22px;
+  }
+  .whitebackground .control .maps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .whitebackground .control .maps .border {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .whitebackground .control .maps .border .images img {
+    height: 35vh;
+  }
+  .whitebackground .control .maps .border video {
+    height: 35vh;
+  }
+  .whitebackground .control .maps .border video source {
+    height: 35vh;
+  }
+  .whitebackground .control .maps .border .projectname {
+    padding-top: 20px;
+  }
+  .whitebackground .control .maps .border .live {
     display: flex;
   }
 }/*# sourceMappingURL=index.module.css.map */

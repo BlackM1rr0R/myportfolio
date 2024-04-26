@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Me from "../../components/me";
 import Projects from "../../components/projects";
 import Skills from "../../components/skills";
@@ -11,7 +11,8 @@ import TiktakVideo from "../../assets/images/tiktak.mp4";
 import Payments from "../../assets/images/paymentbackground.jpg";
 import TicTac from "../../assets/images/tictactoebackground.jpg";
 import Language from "../../components/language";
-import styles from "./index.module.css"
+import styles from "./index.module.css";
+import Wrapper from "../../components/UI/wrapper";
 const Home = () => {
   const [data, setData] = useState([
     {
@@ -42,15 +43,43 @@ const Home = () => {
         "Tic-tac-toe is a classic game played on a 3x3 grid. Two players take turns marking an empty cell with their..",
     },
   ]);
-
+  const [dark, setDark] = useState(true);
+  const handleClicker = () => {
+    setDark((prevDark) => !prevDark);
+  };
+  useEffect(() => {
+    const container = document.getElementById("container");
+    if (container) {
+      container.style.transition = "opacity 0.5s ease-in-out";
+      container.style.opacity = dark ? "0.8" : "1";
+    }
+  }, [dark]);
   return (
-    <div className={styles.homes}>
-      <Me />
-      <Projects data={data} />
-      <Skills />
-      <Language />
-      <About />
-      <Contacts />
+    
+    <div
+    id="container"
+    className={dark ? styles.backgroundblack : styles.background}
+    >
+      <div className={styles.homes}>
+        <Wrapper>
+        <div className={styles.darkMode}>
+          <button
+            onClick={handleClicker}
+            className={`${styles.darkButton} ${
+              dark ? styles.darkButton : styles.lightButton
+            }`}
+            >
+            {dark ? "Dark Mode" : "Light Mode"}
+          </button>
+        </div>
+            </Wrapper>
+        <Me darkMode={dark}/>
+        <Projects darkMode={dark} data={data} />
+        <Skills darkMode={dark}/>
+        <Language darkMode={dark}/>
+        <About darkMode={dark}/>
+        <Contacts darkMode={dark}/>
+      </div>
     </div>
   );
 };

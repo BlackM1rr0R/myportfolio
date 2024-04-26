@@ -4,7 +4,7 @@ import Wrapper from "../UI/wrapper";
 import { LiveIcon, RightArrowIcon } from "../../icons/";
 
 import { Link, useNavigate } from "react-router-dom";
-const Projects = ({ data }) => {
+const Projects = ({ data, darkMode }) => {
   const [hover, setHover] = useState(false);
   const handleHover = () => {
     setHover(true);
@@ -14,7 +14,10 @@ const Projects = ({ data }) => {
   };
 
   return (
-    <div id="projects" className={styles.background}>
+    <div
+      id="projects"
+      className={darkMode ? styles.background : styles.whitebackground}
+    >
       <Wrapper>
         <div className={styles.control}>
           <div className={styles.headertexts}>
@@ -39,7 +42,11 @@ const Projects = ({ data }) => {
           <div className={styles.maps}>
             {data?.map((item) => (
               <div className={styles.border}>
-                <div onMouseEnter={handleHover}  onMouseLeave={handleHoverExit} className={styles.images}>
+                <div
+                  onMouseEnter={handleHover}
+                  onMouseLeave={handleHoverExit}
+                  className={styles.images}
+                >
                   {hover ? (
                     <video autoPlay={true} muted>
                       <source src={item.video} type="video/mp4" />
