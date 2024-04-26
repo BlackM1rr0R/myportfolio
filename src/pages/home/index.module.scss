@@ -6,6 +6,8 @@
     .homes {
         animation: animation 2s ease-in-out forwards;
         .darkMode{
+          display: flex;
+          justify-content: flex-end;
             .darkButton,
             .lightButton {
               padding: 10px 20px;
@@ -46,7 +48,9 @@
     padding-top: 40px;
     padding-bottom: 40px;
     .homes {
-        animation: animation 2s ease-in-out forwards;
+      animation: animation 2s ease-in-out forwards;
+      .darkMode{
+    
         .darkButton,
         .lightButton {
           padding: 10px 20px;
@@ -70,6 +74,7 @@
           color: black;
           border: 1px solid black;
         }
+      }
   
         .darkButton:hover {
           transform: translateX(5px);

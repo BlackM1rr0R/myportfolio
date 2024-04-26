@@ -7,6 +7,10 @@
 .background .homes {
   animation: animation 2s ease-in-out forwards;
 }
+.background .homes .darkMode {
+  display: flex;
+  justify-content: flex-end;
+}
 .background .homes .darkMode .darkButton,
 .background .homes .darkMode .lightButton {
   padding: 10px 20px;
@@ -41,21 +45,21 @@
 .backgroundblack .homes {
   animation: animation 2s ease-in-out forwards;
 }
-.backgroundblack .homes .darkButton,
-.backgroundblack .homes .lightButton {
+.backgroundblack .homes .darkMode .darkButton,
+.backgroundblack .homes .darkMode .lightButton {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
   font-family: "Fira Code", monospace;
 }
-.backgroundblack .homes .darkButton {
+.backgroundblack .homes .darkMode .darkButton {
   background: var(--background, #282c33);
   font-family: "Fira Code", monospace;
   border: 1px solid white;
   color: white;
 }
-.backgroundblack .homes .lightButton {
+.backgroundblack .homes .darkMode .lightButton {
   background-color: white;
   font-family: "Fira Code", monospace;
   color: black;
