@@ -17,20 +17,6 @@ import Booking from "../../assets/images/booking3.png";
 import NextCalcPP from "../../assets/images/calcphoto.jpg";
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
-import MovieVideo from "../../assets/images/movienew.mp4";
-import PaymentVideo from "../../assets/images/paymentnew.mp4";
-import CryptoVideo from "../../assets/images/cryptovideo.mp4";
-import DoctorVideo from "../../assets/images/doctorvideo.mp4";
-import JsVideo from "../../assets/images/jsvideo.mp4";
-import TikTakVideo from "../../assets/images/tiktak.mp4";
-import KhuranVideo from "../../assets/images/khuranvideo.mp4";
-import FootballVideo from "../../assets/images/footballvideo.mp4";
-import RockVideo from "../../assets/images/rockvideo.mp4";
-import SakaryaVideo from "../../assets/images/sakaryavideo.mp4";
-import ChinaGamesVideo from "../../assets/images/chinagames.mp4";
-import NewsTrVideo from "../../assets/images/newstrvideo.mp4";
-import MaglosFinance from "../../assets/images/maglosfinance.mp4";
-import CalcNextJS from "../../assets/images/calc-next-js.mp4";
 const ViewProjects = () => {
   const [hover, setHover] = useState(true);
   const handleHover = () => {
@@ -43,7 +29,7 @@ const ViewProjects = () => {
   const [data, setData] = useState([
     {
       photo: `${Movies}`,
-      video: `${MovieVideo}`,
+   
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Movies-baku",
       overview:
@@ -52,7 +38,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Payments}`,
-      video: `${PaymentVideo}`,
+      
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
       name: "Payment Method Mobile App",
       link: "https://mypaymentmethod.vercel.app/",
@@ -61,7 +47,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${NextCalcPP}`,
-      video: `${CalcNextJS}`,
+ 
       skills: "HTML SCSS NextJS Responsive",
       name: "Calculator with NextJS",
       link: "https://calcwithnext.vercel.app/",
@@ -70,7 +56,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Bitcoin}`,
-      video: `${CryptoVideo}`,
+    
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Crypto-Exchange Website",
       link: "https://crypto-api.vercel.app/",
@@ -79,7 +65,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Booking}`,
-      video: `${DoctorVideo}`,
+      
       skills: "HTML SCSS REACTJS Router`s",
       name: "Booking-Reservation",
       link: "https://doctor-baku.vercel.app/",
@@ -88,7 +74,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${JS1}`,
-      video: `${JsVideo}`,
+     
 
       skills: "HTML JavaScript",
       name: "JavaScript-Lektionen",
@@ -98,7 +84,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${TicTac}`,
-      video: `${TikTakVideo}`,
+     
       skills: "HTML SCSS JavaScript REACTJS",
       name: "TicTacToe",
       link: "https://tictakgame.vercel.app",
@@ -107,7 +93,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Khuran}`,
-      video: `${KhuranVideo}`,
+     
 
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Khuran Website",
@@ -117,7 +103,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${FootBall}`,
-      video: `${FootballVideo}`,
+ 
 
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
       name: "Football Mobile App",
@@ -127,7 +113,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${RSP}`,
-      video: `${RockVideo}`,
+      
       skills: "HTML SCSS JavaScript REACTJS",
       name: "Rock Scissors Paper",
       link: "https://rockpaperscissorsgames.vercel.app/",
@@ -136,7 +122,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Sakarya}`,
-      video: `${SakaryaVideo}`,
+ 
 
       skills: "HTML SCSS JavaScript REACTJS Responsive",
       name: "Sakarya Evde Sağlık Hizmeti",
@@ -147,7 +133,7 @@ const ViewProjects = () => {
 
     {
       photo: `${ChinaGames}`,
-      video: `${ChinaGamesVideo}`,
+    
 
       skills: "HTML SCSS JavaScript Responsive",
       name: "China Games",
@@ -157,7 +143,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${NewsTR}`,
-      video: `${NewsTrVideo}`,
+     
 
       skills: "HTML SCSS JavaScript ReactJS API`s",
       name: "NewsTR",
@@ -167,7 +153,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Maglos}`,
-      video: `${MaglosFinance}`,
+     
 
       skills: "HTML SCSS JavaScript ReactJS API`s",
       name: "Maglos Finance",
@@ -222,13 +208,9 @@ const ViewProjects = () => {
                   onMouseLeave={handleHoverExit}
                   className={styles.images}
                 >
-                  {hover ? (
-                    <video autoPlay={true} muted>
-                      <source src={item.video} type="video/mp4" />
-                    </video>
-                  ) : (
+                 
                     <img className={styles.img} src={item.photo} alt="" />
-                  )}
+                  
                   <hr />
                 </div>
                 <div className={styles.skills}>
