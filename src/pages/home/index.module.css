@@ -7,29 +7,44 @@
 .background .homes {
   animation: animation 2s ease-in-out forwards;
 }
-.background .homes .darkMode .darkButton,
-.background .homes .darkMode .lightButton {
+.background .homes .modeandlang {
+  display: flex;
+  gap: 10px;
+}
+.background .homes .modeandlang .darkMode .darkButton,
+.background .homes .modeandlang .darkMode .lightButton {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
   font-family: "Fira Code", monospace;
 }
-.background .homes .darkMode .darkButton {
+.background .homes .modeandlang .darkMode .darkButton {
   background: var(--background, #282c33);
   color: white;
   border: none;
 }
-.background .homes .darkMode .lightButton {
+.background .homes .modeandlang .darkMode .lightButton {
   background-color: white;
   color: black;
   border: 1px solid black;
   font-family: "Fira Code", monospace;
 }
-.background .homes .darkMode .lightButton:hover {
+.background .homes .modeandlang .darkMode .lightButton:hover {
   transform: translateX(5px);
   background: var(--background, #282c33);
   color: rgb(255, 255, 255);
+}
+.background .homes .modeandlang .lang select {
+  padding: 9px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: "Fira Code", monospace;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  font-family: "Fira Code", monospace;
 }
 
 .backgroundblack {
@@ -41,27 +56,42 @@
 .backgroundblack .homes {
   animation: animation 2s ease-in-out forwards;
 }
-.backgroundblack .homes .darkButton,
-.backgroundblack .homes .lightButton {
+.backgroundblack .homes .modeandlang {
+  display: flex;
+  gap: 10px;
+}
+.backgroundblack .homes .modeandlang .lang select {
+  padding: 9px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: "Fira Code", monospace;
+  background: var(--background, #282c33);
+  font-family: "Fira Code", monospace;
+  border: 1px solid white;
+  color: white;
+}
+.backgroundblack .homes .modeandlang .darkButton,
+.backgroundblack .homes .modeandlang .lightButton {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
   font-family: "Fira Code", monospace;
 }
-.backgroundblack .homes .darkButton {
+.backgroundblack .homes .modeandlang .darkButton {
   background: var(--background, #282c33);
   font-family: "Fira Code", monospace;
   border: 1px solid white;
   color: white;
 }
-.backgroundblack .homes .lightButton {
+.backgroundblack .homes .modeandlang .lightButton {
   background-color: white;
   font-family: "Fira Code", monospace;
   color: black;
   border: 1px solid black;
 }
-.backgroundblack .homes .darkButton:hover {
+.backgroundblack .homes .modeandlang .darkButton:hover {
   transform: translateX(5px);
   background-color: white;
   color: black;

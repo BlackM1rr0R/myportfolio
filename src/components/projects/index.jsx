@@ -4,7 +4,7 @@ import Wrapper from "../UI/wrapper";
 import { LiveIcon, RightArrowIcon } from "../../icons/";
 
 import { Link, useNavigate } from "react-router-dom";
-const Projects = ({ data,darkMode }) => {
+const Projects = ({ data,darkMode,translations }) => {
 
 
   return (
@@ -18,7 +18,7 @@ const Projects = ({ data,darkMode }) => {
             <div className={styles.div1}>
               <div className={styles.texts}>
                 <p>#</p>
-                <h2>projects</h2>
+                <h2>{translations.projects}</h2>
               </div>
               <div className={styles.line}>
                 <hr />
@@ -29,7 +29,7 @@ const Projects = ({ data,darkMode }) => {
               className={`${styles.div2} ${styles.linkHovered}`}
             >
               <h2>
-                View all <RightArrowIcon />
+                {translations.viewall} <RightArrowIcon />
               </h2>
             </Link>
           </div>
@@ -57,7 +57,7 @@ const Projects = ({ data,darkMode }) => {
                 </div>
                 <div className={styles.live}>
                   <Link target="_blank" to={item.link}>
-                    Live <LiveIcon />
+                    {translations.map} <LiveIcon />
                   </Link>
                 </div>
               </div>

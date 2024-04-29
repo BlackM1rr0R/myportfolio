@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
 
-const Skills = ({ darkMode }) => {
+const Skills = ({ darkMode,translations }) => {
   const [data, setData] = useState([
     {
       name: "Front-End Developer",
@@ -55,7 +55,7 @@ const Skills = ({ darkMode }) => {
         <div className={styles.control}>
           <div className={styles.headertexts}>
             <p>#</p>
-            <h2>skills</h2>
+            <h2>{translations.skills}</h2>
           </div>
           <div className={styles.skills}>
             {data?.map((item) => (
