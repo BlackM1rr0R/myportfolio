@@ -69,7 +69,7 @@
   background: var(--background, #282c33);
   color: rgb(255, 255, 255);
 }
-.background .control .controlDarkMode .modeandlang select {
+.background .control .controlDarkMode .modeandlang .select {
   padding: 9px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -226,7 +226,7 @@
   background-color: white;
   color: black;
 }
-.backgroundblack .control .controlDarkMode .modeandlang select {
+.backgroundblack .control .controlDarkMode .modeandlang .select {
   padding: 9px 20px;
   cursor: pointer;
   border-radius: 5px;

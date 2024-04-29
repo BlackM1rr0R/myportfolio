@@ -21,12 +21,12 @@ import { useDispatch } from "react-redux";
 import { changeLanguage } from "../../redux/actions.js";
 import translations from "../home/text.json";
 const ViewProjects = () => {
-  const savedLanguage = sessionStorage.getItem("language");
+  const savedLanguage = localStorage.getItem("language");
   const [language, setLanguage] = useState(savedLanguage || "en");
   const dispatch = useDispatch();
   const handleChangeLanguage = (lng) => {
     setLanguage(lng);
-    sessionStorage.setItem("language", lng);
+    localStorage.setItem("language", lng);
     dispatch(changeLanguage(lng));
   };
   const [hover, setHover] = useState(true);
@@ -206,6 +206,7 @@ const ViewProjects = () => {
                 </button>
               </div>
               <select
+              className={styles.select}
                 onChange={(e) => handleChangeLanguage(e.target.value)}
                 value={language}
                 name=""

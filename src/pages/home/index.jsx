@@ -14,13 +14,13 @@ import { useSelector, useDispatch } from "react-redux";
 import translations from "./text.json";
 import { changeLanguage } from "../../redux/actions.js";
 const Home = () => {
-  const savedLanguage = sessionStorage.getItem("language");
+  const savedLanguage = localStorage.getItem("language");
   const [language, setLanguage] = useState(savedLanguage || "en");
   const dispatch = useDispatch();
 
   const handleChangeLanguage = (lng) => {
     setLanguage(lng);
-    sessionStorage.setItem("language", lng);
+    localStorage.setItem("language", lng);
     dispatch(changeLanguage(lng));
   };
   const [data, setData] = useState([
@@ -52,10 +52,10 @@ const Home = () => {
     setDark((prevDark) => !prevDark);
     const newDarkMode = !dark;
     setDark(newDarkMode);
-    sessionStorage.setItem("darkMode", newDarkMode);
+    localStorage.setItem("darkMode", newDarkMode);
   };
   const [dark, setDark] = useState(
-    sessionStorage.getItem("darkMode") === "true"
+    localStorage.getItem("darkMode") === "true"
   );
 
   useEffect(() => {
