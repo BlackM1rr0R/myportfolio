@@ -17,7 +17,18 @@ import Booking from "../../assets/images/booking3.png";
 import NextCalcPP from "../../assets/images/calcphoto.jpg";
 import { LiveIcon } from "../../icons";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { changeLanguage } from "../../redux/actions.js";
+import translations from "../home/text.json";
 const ViewProjects = () => {
+  const savedLanguage = sessionStorage.getItem("language");
+  const [language, setLanguage] = useState(savedLanguage || "en");
+  const dispatch = useDispatch();
+  const handleChangeLanguage = (lng) => {
+    setLanguage(lng);
+    sessionStorage.setItem("language", lng);
+    dispatch(changeLanguage(lng));
+  };
   const [hover, setHover] = useState(true);
   const handleHover = () => {
     setHover(true);
@@ -29,7 +40,7 @@ const ViewProjects = () => {
   const [data, setData] = useState([
     {
       photo: `${Movies}`,
-   
+
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Movies-baku",
       overview:
@@ -38,7 +49,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Payments}`,
-      
+
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
       name: "Payment Method Mobile App",
       link: "https://mypaymentmethod.vercel.app/",
@@ -47,7 +58,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${NextCalcPP}`,
- 
+
       skills: "HTML SCSS NextJS Responsive",
       name: "Calculator with NextJS",
       link: "https://calcwithnext.vercel.app/",
@@ -56,7 +67,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Bitcoin}`,
-    
+
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Crypto-Exchange Website",
       link: "https://crypto-api.vercel.app/",
@@ -65,7 +76,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${Booking}`,
-      
+
       skills: "HTML SCSS REACTJS Router`s",
       name: "Booking-Reservation",
       link: "https://doctor-baku.vercel.app/",
@@ -74,7 +85,6 @@ const ViewProjects = () => {
     },
     {
       photo: `${JS1}`,
-     
 
       skills: "HTML JavaScript",
       name: "JavaScript-Lektionen",
@@ -84,7 +94,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${TicTac}`,
-     
+
       skills: "HTML SCSS JavaScript REACTJS",
       name: "TicTacToe",
       link: "https://tictakgame.vercel.app",
@@ -93,7 +103,6 @@ const ViewProjects = () => {
     },
     {
       photo: `${Khuran}`,
-     
 
       skills: "HTML SCSS REACTJS REST API`s Router`s",
       name: "Khuran Website",
@@ -103,7 +112,6 @@ const ViewProjects = () => {
     },
     {
       photo: `${FootBall}`,
- 
 
       skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
       name: "Football Mobile App",
@@ -113,7 +121,7 @@ const ViewProjects = () => {
     },
     {
       photo: `${RSP}`,
-      
+
       skills: "HTML SCSS JavaScript REACTJS",
       name: "Rock Scissors Paper",
       link: "https://rockpaperscissorsgames.vercel.app/",
@@ -122,7 +130,6 @@ const ViewProjects = () => {
     },
     {
       photo: `${Sakarya}`,
- 
 
       skills: "HTML SCSS JavaScript REACTJS Responsive",
       name: "Sakarya Evde Sağlık Hizmeti",
@@ -133,7 +140,6 @@ const ViewProjects = () => {
 
     {
       photo: `${ChinaGames}`,
-    
 
       skills: "HTML SCSS JavaScript Responsive",
       name: "China Games",
@@ -143,7 +149,6 @@ const ViewProjects = () => {
     },
     {
       photo: `${NewsTR}`,
-     
 
       skills: "HTML SCSS JavaScript ReactJS API`s",
       name: "NewsTR",
@@ -153,7 +158,6 @@ const ViewProjects = () => {
     },
     {
       photo: `${Maglos}`,
-     
 
       skills: "HTML SCSS JavaScript ReactJS API`s",
       name: "Maglos Finance",
@@ -186,22 +190,37 @@ const ViewProjects = () => {
           <div className={styles.controlDarkMode}>
             <div className={styles.texts}>
               <p>/</p>
-              <h2>projects</h2>
+              <h2>{translations[language].projects}</h2>
             </div>
-            <div className={styles.darkMode}>
-              <button
-                onClick={handleClicker}
-                className={`${styles.darkButton} ${
-                  dark ? styles.darkButton : styles.lightButton
-                }`}
+            <div className={styles.modeandlang}>
+              <div className={styles.darkMode}>
+                <button
+                  onClick={handleClicker}
+                  className={`${styles.darkButton} ${
+                    dark ? styles.darkButton : styles.lightButton
+                  }`}
+                >
+                  {dark
+                    ? `${translations[language].darkmode}`
+                    : `${translations[language].lightmode}`}
+                </button>
+              </div>
+              <select
+                onChange={(e) => handleChangeLanguage(e.target.value)}
+                value={language}
+                name=""
+                id=""
               >
-                {dark ? "Dark Mode" : "Light Mode"}
-              </button>
+                <option value="en">English</option>
+                <option value="aze">Azərbaycanca</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+              </select>
             </div>
           </div>
 
           <div className={styles.allmyprojects}>
-            <p>List of my projects:</p>
+            <p>{translations[language].listmyprojects}</p>
           </div>
           <div className={styles.maps}>
             {data?.map((item) => (
@@ -211,9 +230,8 @@ const ViewProjects = () => {
                   onMouseLeave={handleHoverExit}
                   className={styles.images}
                 >
-                 
-                    <img className={styles.img} src={item.photo} alt="" />
-                  
+                  <img className={styles.img} src={item.photo} alt="" />
+
                   <hr />
                 </div>
                 <div className={styles.skills}>
@@ -232,7 +250,7 @@ const ViewProjects = () => {
                 </div>
                 <div className={styles.live}>
                   <Link target="_blank" to={item.link}>
-                    Live <LiveIcon />
+                    {translations[language].map} <LiveIcon />
                   </Link>
                 </div>
               </div>

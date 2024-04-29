@@ -39,29 +39,46 @@
   font-weight: 500;
   line-height: normal;
 }
-.background .control .controlDarkMode .darkButton,
-.background .control .controlDarkMode .lightButton {
+.background .control .controlDarkMode .modeandlang {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.background .control .controlDarkMode .modeandlang .darkMode .darkButton,
+.background .control .controlDarkMode .modeandlang .darkMode .lightButton {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
   font-family: "Fira Code", monospace;
 }
-.background .control .controlDarkMode .darkButton {
+.background .control .controlDarkMode .modeandlang .darkMode .darkButton {
   background-color: black;
   color: white;
   border: none;
 }
-.background .control .controlDarkMode .lightButton {
+.background .control .controlDarkMode .modeandlang .darkMode .lightButton {
   background-color: white;
   color: black;
   border: 1px solid black;
   font-family: "Fira Code", monospace;
 }
-.background .control .controlDarkMode .lightButton:hover {
+.background .control .controlDarkMode .modeandlang .darkMode .lightButton:hover {
   transform: translateX(5px);
   background: var(--background, #282c33);
   color: rgb(255, 255, 255);
+}
+.background .control .controlDarkMode .modeandlang select {
+  padding: 9px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: "Fira Code", monospace;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  font-family: "Fira Code", monospace;
 }
 .background .control .allmyprojects p {
   color: var(--primary, #000000);
@@ -178,30 +195,47 @@
   align-items: center;
   justify-content: space-between;
 }
-.backgroundblack .control .controlDarkMode .darkButton,
-.backgroundblack .control .controlDarkMode .lightButton {
+.backgroundblack .control .controlDarkMode .modeandlang {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.backgroundblack .control .controlDarkMode .modeandlang .darkMode .darkButton,
+.backgroundblack .control .controlDarkMode .modeandlang .darkMode .lightButton {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
   font-family: "Fira Code", monospace;
 }
-.backgroundblack .control .controlDarkMode .darkButton {
+.backgroundblack .control .controlDarkMode .modeandlang .darkMode .darkButton {
   background: var(--background, #282c33);
   font-family: "Fira Code", monospace;
   border: 1px solid white;
   color: white;
 }
-.backgroundblack .control .controlDarkMode .lightButton {
+.backgroundblack .control .controlDarkMode .modeandlang .darkMode .lightButton {
   background-color: white;
   font-family: "Fira Code", monospace;
   color: black;
   border: 1px solid black;
 }
-.backgroundblack .control .controlDarkMode .darkButton:hover {
+.backgroundblack .control .controlDarkMode .modeandlang .darkMode .darkButton:hover {
   transform: translateX(5px);
   background-color: white;
   color: black;
+}
+.backgroundblack .control .controlDarkMode .modeandlang select {
+  padding: 9px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: "Fira Code", monospace;
+  background: var(--background, #282c33);
+  font-family: "Fira Code", monospace;
+  border: 1px solid white;
+  color: white;
 }
 .backgroundblack .control .controlDarkMode .texts {
   display: flex;
@@ -330,6 +364,10 @@
   }
 }
 @media (min-width: 992px) {
+  .background .control .controlDarkMode .modeandlang {
+    display: flex;
+    flex-direction: row;
+  }
   .background .control .texts p {
     font-size: 24px;
   }
@@ -359,6 +397,10 @@
   }
   .backgroundblack {
     background: var(--background, #282c33);
+  }
+  .backgroundblack .control .controlDarkMode .modeandlang {
+    display: flex;
+    flex-direction: row;
   }
   .backgroundblack .control .texts p {
     font-size: 24px;

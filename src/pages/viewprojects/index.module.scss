@@ -37,33 +37,50 @@
           line-height: normal;
         }
       }
-      .darkButton,
-      .lightButton {
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        font-family: "Fira Code", monospace;
-      }
+      .modeandlang {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        .darkMode {
+          .darkButton,
+          .lightButton {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-family: "Fira Code", monospace;
+          }
 
-      .darkButton {
-        background-color: black;
-        color: white;
-        border: none;
-      }
+          .darkButton {
+            background-color: black;
+            color: white;
+            border: none;
+          }
+          .lightButton {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            font-family: "Fira Code", monospace;
+          }
+          .lightButton:hover {
+            transform: translateX(5px);
 
-      .lightButton {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-        font-family: "Fira Code", monospace;
-      }
-
-      .lightButton:hover {
-        transform: translateX(5px);
-
-        background: var(--background, #282c33);
-        color: rgb(255, 255, 255);
+            background: var(--background, #282c33);
+            color: rgb(255, 255, 255);
+          }
+        }
+        select {
+          padding: 9px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+          font-family: "Fira Code", monospace;
+          background-color: white;
+          color: black;
+          border: 1px solid black;
+          font-family: "Fira Code", monospace;
+        }
       }
     }
     .allmyprojects {
@@ -192,35 +209,56 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .darkButton,
-      .lightButton {
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        font-family: "Fira Code", monospace;
+      .modeandlang {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        .darkMode {
+          .darkButton,
+          .lightButton {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-family: "Fira Code", monospace;
+          }
+
+          .darkButton {
+            background: var(--background, #282c33);
+            font-family: "Fira Code", monospace;
+            border: 1px solid white;
+            color: white;
+          }
+
+          .lightButton {
+            background-color: white;
+            font-family: "Fira Code", monospace;
+
+            color: black;
+            border: 1px solid black;
+          }
+
+          .darkButton:hover {
+            transform: translateX(5px);
+            background-color: white;
+            color: black;
+          }
+        }
+        select {
+          padding: 9px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+          font-family: "Fira Code", monospace;
+          background: var(--background, #282c33);
+          font-family: "Fira Code", monospace;
+          border: 1px solid white;
+          color: white;
+         
+        }
       }
 
-      .darkButton {
-        background: var(--background, #282c33);
-        font-family: "Fira Code", monospace;
-        border: 1px solid white;
-        color: white;
-      }
-
-      .lightButton {
-        background-color: white;
-        font-family: "Fira Code", monospace;
-
-        color: black;
-        border: 1px solid black;
-      }
-
-      .darkButton:hover {
-        transform: translateX(5px);
-        background-color: white;
-        color: black;
-      }
       .texts {
         display: flex;
         p {
@@ -366,6 +404,12 @@
 @media (min-width: 992px) {
   .background {
     .control {
+      .controlDarkMode{
+        .modeandlang{
+          display: flex;
+          flex-direction: row;
+        }
+      }
       .texts {
         p {
           font-size: 24px;
@@ -409,6 +453,12 @@
   .backgroundblack {
     background: var(--background, #282c33);
     .control {
+      .controlDarkMode{
+        .modeandlang{
+          display: flex;
+          flex-direction: row;
+        }
+      }
       .texts {
         p {
           font-size: 24px;

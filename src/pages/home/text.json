@@ -23,7 +23,10 @@
     "readmore": "Read more",
     "contacts": "contacts",
     "contactoverview": "I am interested in freelance and office work opportunities. However, if you have any other requests or questions, please feel free to contact me",
-    "messagemehere": "Message me here"
+    "messagemehere": "Message me here",
+    "darkmode":"Dark Mode",
+    "lightmode":"Light Mode",
+    "listmyprojects":"List of my projects:"
   },
   "aze": {
     "name": "Elçin Abdullayev",
@@ -49,7 +52,10 @@
     "readmore": "Daha çox",
     "contacts": "əlaqə",
     "contactoverview": "Mən sərbəst və ofis iş imkanları ilə maraqlanıram. Bununla belə, başqa sorğu və ya suallarınız varsa, mənimlə əlaqə saxlamaqdan çəkinməyin",
-    "messagemehere": "Mesaj göndərin"
+    "messagemehere": "Mesaj göndərin",
+    "darkmode":"Qaranlıq rejim",
+    "lightmode":"İşıqlı rejim",
+    "listmyprojects":"Layihələrimin siyahısı:"
   },
   "de": {
     "name": "Elchin Abdullayev",
@@ -75,13 +81,16 @@
     "readmore": "Mehr lesen",
     "contacts": "kontakte",
     "contactoverview": "Ich bin an freiberuflichen und Büroarbeitsmöglichkeiten interessiert. Wenn Sie jedoch andere Anfragen oder Fragen haben, können Sie mich gerne kontaktieren",
-    "messagemehere": "Schreiben Sie mir hier"
+    "messagemehere": "Schreiben Sie mir hier",
+    "darkmode":"Dunkler Modus",
+    "lightmode":"Heller Modus",
+    "listmyprojects":"Liste meiner Projekte:"
   },
 
   "ru": {
     "name": "Эльчин Абдуллаев",
     "overview": "Он создает адаптивные веб-сайты, где технологии встречают креативность",
-    "contact": "Свяжитесь со мной!",
+    "contact": "Свяжитесь!",
     "projects": "проекты",
     "viewall": "Посмотреть все",
     "moviesbaku": "Платформа для онлайн-просмотра фильмов и сериалов с широким выбором.",
@@ -102,6 +111,9 @@
     "readmore": "Читать далее",
     "contacts": "контакты",
     "contactoverview": "Я заинтересован в возможностях фриланса и работы в офисе. Однако, если у вас есть другие запросы или вопросы, не стесняйтесь связаться со мной",
-    "messagemehere": "Напишите мне здесь"
+    "messagemehere": "Напишите мне здесь",
+    "darkmode":"Темный режим",
+    "lightmode":"Светлый режим",
+    "listmyprojects":"Список моих проектов:"
   }
 }

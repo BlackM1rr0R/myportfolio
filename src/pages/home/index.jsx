@@ -14,13 +14,13 @@ import { useSelector, useDispatch } from "react-redux";
 import translations from "./text.json";
 import { changeLanguage } from "../../redux/actions.js";
 const Home = () => {
-  const savedLanguage = localStorage.getItem("language");
+  const savedLanguage = sessionStorage.getItem("language");
   const [language, setLanguage] = useState(savedLanguage || "en");
   const dispatch = useDispatch();
 
   const handleChangeLanguage = (lng) => {
     setLanguage(lng);
-    localStorage.setItem("language", lng);
+    sessionStorage.setItem("language", lng);
     dispatch(changeLanguage(lng));
   };
   const [data, setData] = useState([
@@ -52,9 +52,11 @@ const Home = () => {
     setDark((prevDark) => !prevDark);
     const newDarkMode = !dark;
     setDark(newDarkMode);
-    localStorage.setItem("darkMode", newDarkMode);
+    sessionStorage.setItem("darkMode", newDarkMode);
   };
-  const [dark, setDark] = useState(localStorage.getItem("darkMode") === "true");
+  const [dark, setDark] = useState(
+    sessionStorage.getItem("darkMode") === "true"
+  );
 
   useEffect(() => {
     const container = document.getElementById("container");
@@ -78,22 +80,23 @@ const Home = () => {
                   dark ? styles.darkButton : styles.lightButton
                 }`}
               >
-                {dark ? "Dark Mode" : "Light Mode"}
+                {dark
+                  ? `${translations[language].darkmode}`
+                  : `${translations[language].lightmode}`}
               </button>
             </div>
-           
-              <select
-                onChange={(e) => handleChangeLanguage(e.target.value)}
-                value={language}
-                name=""
-                id=""
-              >
-                <option value="en">English</option>
-                <option value="aze">Azərbaycanca</option>
-                <option value="de">Deutsch</option>
-                <option value="ru">Русский</option>
-              </select>
-           
+
+            <select
+              onChange={(e) => handleChangeLanguage(e.target.value)}
+              value={language}
+              name=""
+              id=""
+            >
+              <option value="en">English</option>
+              <option value="aze">Azərbaycanca</option>
+              <option value="de">Deutsch</option>
+              <option value="ru">Русский</option>
+            </select>
           </div>
         </Wrapper>
 
