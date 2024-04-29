@@ -162,9 +162,12 @@ const ViewProjects = () => {
         "Finance is a broad term encompassing the management of money and assets. It involves activities related to investing..",
     },
   ]);
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(localStorage.getItem("darkMode") === "true");
   const handleClicker = () => {
     setDark((prevDark) => !prevDark);
+    const newDarkMode = !dark;
+    setDark(newDarkMode);
+    localStorage.setItem("darkMode", newDarkMode);
   };
   useEffect(() => {
     const container = document.getElementById("container");

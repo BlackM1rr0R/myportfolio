@@ -41,9 +41,12 @@ const Home = () => {
         "Tic-tac-toe is a classic game played on a 3x3 grid. Two players take turns marking an empty cell with their..",
     },
   ]);
-  const [dark, setDark] = useState(true);
+    const [dark, setDark] = useState(localStorage.getItem("darkMode") === "true");
   const handleClicker = () => {
     setDark((prevDark) => !prevDark);
+      const newDarkMode = !dark;
+    setDark(newDarkMode);
+    localStorage.setItem("darkMode", newDarkMode);
   };
   useEffect(() => {
     const container = document.getElementById("container");
