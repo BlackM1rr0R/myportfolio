@@ -35,7 +35,7 @@
   background: var(--background, #282c33);
   color: rgb(255, 255, 255);
 }
-.background .homes .modeandlang .lang select {
+.background .homes .modeandlang select {
   padding: 9px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -60,7 +60,7 @@
   display: flex;
   gap: 10px;
 }
-.backgroundblack .homes .modeandlang .lang select {
+.backgroundblack .homes .modeandlang select {
   padding: 9px 20px;
   cursor: pointer;
   border-radius: 5px;

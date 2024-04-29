@@ -81,10 +81,10 @@ const Home = () => {
                 {dark ? "Dark Mode" : "Light Mode"}
               </button>
             </div>
-            <div className={styles.lang}>
+           
               <select
-              onChange={(e) => handleChangeLanguage(e.target.value)}
-              value={language}
+                onChange={(e) => handleChangeLanguage(e.target.value)}
+                value={language}
                 name=""
                 id=""
               >
@@ -93,7 +93,7 @@ const Home = () => {
                 <option value="de">Deutsch</option>
                 <option value="ru">Русский</option>
               </select>
-            </div>
+           
           </div>
         </Wrapper>
 
