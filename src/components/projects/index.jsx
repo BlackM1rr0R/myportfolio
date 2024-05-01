@@ -5,7 +5,7 @@ import { LiveIcon, RightArrowIcon } from "../../icons/";
 
 import { Link, useNavigate } from "react-router-dom";
 const Projects = ({ data,darkMode,translations }) => {
-
+  console.log(translations)
 
   return (
     <div
