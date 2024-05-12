@@ -4,15 +4,15 @@ import Projects from "../../components/projects";
 import Skills from "../../components/skills";
 import About from "../../components/about";
 import Contacts from "../../components/contacts";
-import Movies from "../../assets/images/moviebackground.jpg";
-import Payments from "../../assets/images/paymentbackground.jpg";
-import TicTac from "../../assets/images/tictactoebackground.jpg";
+import Movies from "../../assets/images/moviesbaku3.png";
+import Booking from "../../assets/images/booking3.png";
 import Language from "../../components/language";
 import styles from "./index.module.css";
 import Wrapper from "../../components/UI/wrapper";
 import { useSelector, useDispatch } from "react-redux";
 import translations from "./text.json";
 import { changeLanguage } from "../../redux/actions.js";
+import InterViewer from '../../assets/images/interview2.png'
 const Home = () => {
   const savedLanguage = localStorage.getItem("language");
   const [language, setLanguage] = useState(savedLanguage || "en");
@@ -32,20 +32,20 @@ const Home = () => {
       link: "https://movies-baku.vercel.app/",
     },
     {
-      photo: `${Payments}`,
+      photo: `${Booking}`,
 
-      skills: "HTML SCSS JavaScript REACTJS TAILWIND CSS",
-      name: "Payment Method Mobile App",
-      link: "https://mypaymentmethod.vercel.app/",
-      overview: `${translations[language].paymentmethod}`,
+      skills: "HTML SCSS REACTJS Router`s",
+      name: "Booking-Reservation",
+      link: "https://doctor-baku.vercel.app/",
+      overview: `${translations[language].booking}`,
     },
     {
-      photo: `${TicTac}`,
+      photo: `${InterViewer}`,
 
-      skills: "HTML SCSS JavaScript REACTJS",
-      name: "TicTacToe",
-      link: "https://tictakgame.vercel.app",
-      overview: `${translations[language].tictaktoe}`,
+      skills: "HTML SCSS JavaScript REACTJS Redux",
+      name: "Interview Platform",
+      link: "https://interviewer-2csi.vercel.app/",
+      overview: `${translations[language].interview}`,
     },
   ]);
   const handleClicker = () => {
