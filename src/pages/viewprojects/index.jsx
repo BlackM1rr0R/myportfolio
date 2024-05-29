@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { changeLanguage } from "../../redux/actions.js";
 import translations from "../home/text.json";
+import NoteBackground from '../../assets/images/notebackground.avif'
 const ViewProjects = () => {
   const savedLanguage = localStorage.getItem("language");
   const [language, setLanguage] = useState(savedLanguage || "en");
@@ -63,7 +64,16 @@ const ViewProjects = () => {
       name: "Calculator with NextJS",
       link: "https://calcwithnext.vercel.app/",
       overview:
-        " These are simple calculators used for arithmetic operations like addition, subtraction, multiplication, and division.. ",
+        " These are simple calculators used for arithmetic operations like... ",
+    },
+    {
+      photo: `${NoteBackground}`,
+
+      skills: "HTML SCSS REACTJS Responsive",
+      name: "Notes App Website",
+      link: "https://noteappdev.vercel.app/",
+      overview:
+        " A note-taking app is like a digital extension of your memory, a virtual notebook that.. ",
     },
     {
       photo: `${Bitcoin}`,
@@ -117,7 +127,7 @@ const ViewProjects = () => {
       name: "Football Mobile App",
       link: "https://football-baku.vercel.app/",
       overview:
-        "Are you a passionate football fan? Look no further – our Football App is your go-to destination for all things football-related!...",
+        "Are you a passionate football fan? Look no further – our Football App is your go-to..",
     },
     {
       photo: `${RSP}`,
@@ -154,7 +164,7 @@ const ViewProjects = () => {
       name: "NewsTR",
       link: "https://news-tr.vercel.app/",
       overview:
-        "News information serves as a cornerstone of informed societies, providing citizens with the information necessary..",
+        "News information serves as a cornerstone of informed societies, providing citizens..",
     },
     {
       photo: `${Maglos}`,
@@ -163,7 +173,7 @@ const ViewProjects = () => {
       name: "Maglos Finance",
       link: "https://maglos.vercel.app/",
       overview:
-        "Finance is a broad term encompassing the management of money and assets. It involves activities related to investing..",
+        "Finance is a broad term encompassing the management of money and assets. It..",
     },
   ]);
   const [dark, setDark] = useState(localStorage.getItem("darkMode") === "true");
