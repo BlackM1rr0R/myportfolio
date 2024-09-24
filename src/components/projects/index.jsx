@@ -34,8 +34,8 @@ const Projects = ({ data,darkMode,translations }) => {
             </Link>
           </div>
           <div className={styles.maps}>
-            {data?.map((item) => (
-              <div className={styles.border}>
+            {data?.map((item,index) => (
+              <div key={index} className={styles.border}>
                 <div className={styles.images}>
                   <img className={styles.img} src={item.photo} alt="" />
 

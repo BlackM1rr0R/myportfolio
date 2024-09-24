@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
 import Azer from "../../assets/images/azer.svg";
@@ -7,7 +7,7 @@ import English from "../../assets/images/uk.svg";
 import Rus from "../../assets/images/rus.svg";
 import German from "../../assets/images/german.svg";
 const Language = ({ darkMode, translations }) => {
-  const [data, setData] = useState([
+  const data = useMemo(()=>[
     {
       flag1: `${Azer}`,
       flag2: `${Turk}`,
@@ -15,7 +15,7 @@ const Language = ({ darkMode, translations }) => {
       flag4: `${Rus}`,
       flag5: `${German}`,
     },
-  ]);
+  ],[]);
   return (
     <div
       id="skills"

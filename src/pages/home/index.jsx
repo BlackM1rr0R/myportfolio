@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Me from "../../components/me";
 import Projects from "../../components/projects";
 import Skills from "../../components/skills";
@@ -23,7 +23,7 @@ const Home = () => {
     localStorage.setItem("language", lng);
     dispatch(changeLanguage(lng));
   };
-  const [data, setData] = useState([
+  const data = useMemo(()=>[
     {
       photo: `${Movies}`,
       skills: "HTML SCSS REACTJS REST API`s Router`s",
@@ -47,7 +47,7 @@ const Home = () => {
       link: "https://interviewer-2csi.vercel.app/",
       overview: `${translations[language].interview}`,
     },
-  ]);
+  ],[]);
   const handleClicker = () => {
     setDark((prevDark) => !prevDark);
     const newDarkMode = !dark;
