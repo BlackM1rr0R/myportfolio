@@ -13,10 +13,10 @@ const Skills = ({ darkMode, translations }) => {
       ]
     },
     {
-      name: "CyberSecurity",
+      name: "Backend Developer",
       skills: [
-        "PAM360", "KempLB", "Symantec", "EDR", "XDR",
-        "Bitrix24", "Nessus Scan"
+        "Java Core", "Spring Boot", "MySQL", "PostgreSQL", "SQL",
+        "Docker", "Postman"
       ]
     },
     {
