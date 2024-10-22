@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 import translations from "./text.json";
 import { changeLanguage } from "../../redux/actions.js";
 import InterViewer from '../../assets/images/interview2.png'
+import Perfume from '../../assets/images/perfume.png'
 const Home = () => {
   const savedLanguage = localStorage.getItem("language");
   const [language, setLanguage] = useState(savedLanguage || "en");
@@ -32,11 +33,11 @@ const Home = () => {
       link: "https://movies-baku.vercel.app/",
     },
     {
-      photo: `${Booking}`,
+      photo: `${Perfume}`,
 
-      skills: "HTML SCSS REACTJS Router`s",
-      name: "Booking-Reservation",
-      link: "https://doctor-baku.vercel.app/",
+      skills: "HTML SCSS REACTJS Router`s Backend",
+      name: "Perfume-Website",
+      link: "https://perfumenewwebsite.vercel.app/",
       overview: `${translations[language].booking}`,
     },
     {

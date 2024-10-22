@@ -12,7 +12,7 @@ const Me = ({ darkMode,translations  }) => {
           <div className={styles.texts}>
             <div>
               <h2>{translations.name}</h2>
-              <h3>Front-End Developer</h3>
+              <h3>Full-Stack Developer</h3>
             </div>
             <p>
               {translations.overview}

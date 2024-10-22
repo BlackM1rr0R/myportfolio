@@ -21,6 +21,7 @@ import { useDispatch } from "react-redux";
 import { changeLanguage } from "../../redux/actions.js";
 import translations from "../home/text.json";
 import NoteBackground from "../../assets/images/notebackground.avif";
+import Perfume from '../../assets/images/perfume.png'
 const ViewProjects = () => {
   const savedLanguage = localStorage.getItem("language");
   const [language, setLanguage] = useState(savedLanguage || "en");
@@ -47,6 +48,14 @@ const ViewProjects = () => {
         overview:
           "A subscription-based online platform with a wide array of movies and TV series.",
         link: "https://movies-baku.vercel.app/",
+      },
+      {
+        photo: `${Perfume}`,
+        skills: "HTML SCSS JavaScript REACTJS REDUX BACKEND",
+        name: "Perfume Global Website",
+        link: "https://perfumenewwebsite.vercel.app/",
+        overview:
+          "We offer a curated selection of the finest fragrances from renowned brands and independent artisans.."
       },
       {
         photo: `${Payments}`,
