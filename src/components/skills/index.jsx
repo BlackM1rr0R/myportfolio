@@ -8,22 +8,22 @@ const Skills = ({ darkMode, translations }) => {
       name: "Front-End Developer",
       skills: [
         "HTML", "CSS", "SCSS", "Responsive", "BootStrap5",
-        "JavaScript", "TypeScript", "Git", "GitHub", "React",
-        "React UI", "REST API`s", "NextJS", "Redux"
+        "JavaScript", "TypeScript", "React",
+        "React UI", "REST API`s", "NextJS", "Redux","CI/CD"
       ]
     },
     {
       name: "Backend Developer",
       skills: [
-        "Java Core", "Spring Boot", "MySQL", "PostgreSQL", "SQL",
-        "Docker", "Postman"
+        "Java Core", "Spring Boot", "Spring Boot JWT", "Spring Boot Web", "MySQL", "PostgreSQL", "SQL",
+        "Docker", "Postman","Redis","CI/CD"
       ]
     },
     {
       name: "Other",
       skills: [
         "Figma", "IT Ess", "Linux OS", "Windows OS", "Parrot OS",
-        "Tails OS", "Network", "Cyber Tool", "Jira", "Zendesk", "AnyDesk"
+        "Tails OS", "Network", "Cyber Tool", "Jira", "Zendesk", "AnyDesk", "Git", "GitHub",
       ]
     }
   ], []);
