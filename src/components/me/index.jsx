@@ -8,7 +8,11 @@ const Me = ({ darkMode,translations  }) => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/files/ElchinCV.pdf';
-    link.download = 'ElchinCV.pdf'; // İndirilecek dosyanın adı
+    link.setAttribute('download', 'ElchinCV.pdf');
+    
+    // MIME türünü ayarlayın
+    link.type = 'application/pdf';
+  
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
