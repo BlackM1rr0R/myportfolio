@@ -4,7 +4,7 @@ import Projects from "../../components/projects";
 import Skills from "../../components/skills";
 import About from "../../components/about";
 import Contacts from "../../components/contacts";
-import Movies from "../../assets/images/moviesbaku3.png";
+import Skalioz from "../../assets/images/skalioz.png";
 import Booking from "../../assets/images/booking3.png";
 import Language from "../../components/language";
 import styles from "./index.module.css";
@@ -25,12 +25,14 @@ const Home = () => {
     dispatch(changeLanguage(lng));
   };
   const data = useMemo(()=>[
+ 
     {
-      photo: `${Movies}`,
-      skills: "HTML SCSS REACTJS REST API`s Router`s",
-      name: "Movies-baku",
-      overview: `${translations[language].moviesbaku}`,
-      link: "https://movies-baku.vercel.app/",
+      photo: `${Skalioz}`,
+      skills: "HTML SCSS REACTJS REST API`s Router`s JAVA SPRING BOOT",
+      name: "Hospital Blog Website",
+      overview:
+        "When people get sick in the city of Sakarya, they receive all kinds of treatment and care at home.",
+      link: "https://sakaryasaglik.vercel.app/",
     },
     {
       photo: `${Perfume}`,

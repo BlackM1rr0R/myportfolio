@@ -223,11 +223,13 @@
   }
   .background .control .texts .div {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 20px;
   }
   .background .control .texts .div a {
-    width: 400px;
+    width: 300px;
     padding: 16px 24px;
   }
   .background .control .arrayicon {
@@ -273,11 +275,13 @@
   }
   .whitebackground .control .texts .div {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 20px;
   }
   .whitebackground .control .texts .div a {
-    width: 400px;
+    width: 300px;
     padding: 16px 24px;
   }
   .whitebackground .control .arrayicon {

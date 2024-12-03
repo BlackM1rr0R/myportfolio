@@ -19,14 +19,15 @@
     "german": "German B2",
     "about": "about",
     "abouttitle": "Hi, i’m Elcin!",
-    "aboutme": " I'm a front-end developer with a passion for creating user-friendly websites. HTML, CSS, JavaScript, React, Bootstrap, etc. I have experience and I am constantly trying to improve my skills by following the latest trends. I am also a good problem solver and value teamwork. I am an excellent communicator, which allows me to build strong relationships with clients and colleagues.",
+    "aboutme": "Passionate Full-Stack Developer with experience in designing intuitive and engaging web experiences, as well as developing robust backend solutions. Proficient in HTML, CSS, JavaScript, and modern frameworks like React. Solid knowledge of Java, Spring Boot, and Docker for creating scalable and high-performance applications. Proven success in optimizing performance and user experience. A team-oriented professional committed to achieving project goals and deadlines.",
     "readmore": "Read more",
     "contacts": "contacts",
     "contactoverview": "I am interested in freelance and office work opportunities. However, if you have any other requests or questions, please feel free to contact me",
     "messagemehere": "Message me here",
-    "darkmode":"Dark Mode",
-    "lightmode":"Light Mode",
-    "listmyprojects":"List of my projects:"
+    "darkmode": "Dark Mode",
+    "lightmode": "Light Mode",
+    "listmyprojects": "List of my projects:",
+    "downloadpdf": "Download CV"
   },
   "aze": {
     "name": "Elçin Abdullayev",
@@ -48,14 +49,15 @@
     "german": "Almanca B2",
     "about": "haqqında",
     "abouttitle": "Salam, mən Elçin!",
-    "aboutme": "Mən istifadəçi dostu veb-saytlar yaratmaq həvəsi olan qabaqcıl inkişaf etdiriciyəm. HTML, CSS, JavaScript, React, Bootstrap və s. Təcrübəm var və daim ən son trendləri izləyərək bacarıqlarımı təkmilləşdirməyə çalışıram. Mən də yaxşı problem həll edənəm və komanda işinə dəyər verirəm. Mən əla ünsiyyətçiyəm, bu da mənə müştərilər və həmkarlarımla güclü əlaqələr qurmağa imkan verir.",
+    "aboutme": "Həvəsli Full-Stack İnkişaf etdirici, intuitiv və cəlbedici veb təcrübələrinin dizaynında və möhkəm backend həllərinin inkişafında təcrübəyə sahibdir. HTML, CSS, JavaScript və React kimi müasir çərçivələrdə səlisdir. Java, Spring Boot və Docker üzrə möhkəm biliklərə sahibdir və miqyaslana bilən və yüksək performanslı tətbiqlər yaratmaqda təcrübəlidir. Performans və istifadəçi təcrübəsinin optimallaşdırılması sahəsində sübut edilmiş uğurlar. Komanda yönümlü bir peşəkar olaraq layihə hədəflərinin və son tarixlərinin yerinə yetirilməsinə bağlıdır.",
     "readmore": "Daha çox",
     "contacts": "əlaqə",
     "contactoverview": "Mən sərbəst və ofis iş imkanları ilə maraqlanıram. Bununla belə, başqa sorğu və ya suallarınız varsa, mənimlə əlaqə saxlamaqdan çəkinməyin",
     "messagemehere": "Mesaj göndərin",
-    "darkmode":"Qaranlıq rejim",
-    "lightmode":"İşıqlı rejim",
-    "listmyprojects":"Layihələrimin siyahısı:"
+    "darkmode": "Qaranlıq rejim",
+    "lightmode": "İşıqlı rejim",
+    "listmyprojects": "Layihələrimin siyahısı:",
+    "downloadpdf": "CV Yüklə"
   },
   "de": {
     "name": "Elchin Abdullayev",
@@ -77,16 +79,16 @@
     "german": "Deutsch B2",
     "about": "über",
     "abouttitle": "Hallo, ich bin Elcin!",
-    "aboutme": "Ich bin ein Frontend-Entwickler mit Leidenschaft für die Erstellung benutzerfreundlicher Websites. HTML, CSS, JavaScript, React, Bootstrap usw. Ich habe Erfahrung und versuche ständig, meine Fähigkeiten durch die Verfolgung der neuesten Trends zu verbessern. Ich bin auch ein guter Problemlöser und schätze Teamarbeit. Ich bin ein ausgezeichneter Kommunikator, was es mir ermöglicht, starke Beziehungen zu Kunden und Kollegen aufzubauen.",
+    "aboutme": "Leidenschaftlicher Full-Stack-Entwickler mit Erfahrung im Design intuitiver und ansprechender Web-Erlebnisse sowie in der Entwicklung robuster Backend-Lösungen.Versiert in HTML, CSS, JavaScript und modernen Frameworks wie React. Fundierte Kenntnisse in Java, Spring Boot und Docker zur Erstellung skalierbarer und leistungsstarker Anwendungen. Nachweisliche Erfolge in der Optimierung von Leistung und Benutzerfreundlichkeit. Teamorientierter Mitarbeiterin, engagiert für die Erreichung von Projektzielen und Deadlines.",
     "readmore": "Mehr lesen",
     "contacts": "kontakte",
     "contactoverview": "Ich bin an freiberuflichen und Büroarbeitsmöglichkeiten interessiert. Wenn Sie jedoch andere Anfragen oder Fragen haben, können Sie mich gerne kontaktieren",
     "messagemehere": "Schreiben Sie mir hier",
-    "darkmode":"Dunkler Modus",
-    "lightmode":"Heller Modus",
-    "listmyprojects":"Liste meiner Projekte:"
+    "darkmode": "Dunkler Modus",
+    "lightmode": "Heller Modus",
+    "listmyprojects": "Liste meiner Projekte:",
+    "downloadpdf": "Herunteladen Lebenslauf"
   },
-
   "ru": {
     "name": "Эльчин Абдуллаев",
     "overview": "Он создает адаптивные веб-сайты, где технологии встречают креативность",
@@ -107,13 +109,14 @@
     "german": "Немецкий B2",
     "about": "о",
     "abouttitle": "Привет, я Эльчин!",
-    "aboutme": "Я фронтенд-разработчик с увлечением созданием пользовательских сайтов. HTML, CSS, JavaScript, React, Bootstrap и т. д. У меня есть опыт, и я постоянно стараюсь улучшить свои навыки, следуя последним тенденциям. Я также хорошо решаю проблемы и ценю командную работу. Я отличный коммуникатор, что позволяет мне строить крепкие отношения с клиентами и коллегами.",
+    "aboutme": "Страстный Full-Stack разработчик, имеющий опыт в создании интуитивно понятных и привлекательных веб-решений, а также в разработке надежных backend-решений. Отлично владеет HTML, CSS, JavaScript и современными фреймворками, такими как React. Обладает глубокими знаниями Java, Spring Boot и Docker для создания масштабируемых и высокопроизводительных приложений. Доказанные успехи в оптимизации производительности и пользовательского опыта. Командный игрок, ориентированный на достижение целей проекта и соблюдение сроков.",
     "readmore": "Читать далее",
     "contacts": "контакты",
     "contactoverview": "Я заинтересован в возможностях фриланса и работы в офисе. Однако, если у вас есть другие запросы или вопросы, не стесняйтесь связаться со мной",
     "messagemehere": "Напишите мне здесь",
-    "darkmode":"Темный режим",
-    "lightmode":"Светлый режим",
-    "listmyprojects":"Список моих проектов:"
+    "darkmode": "Темный режим",
+    "lightmode": "Светлый режим",
+    "listmyprojects": "Список моих проектов:",
+    "downloadpdf": "Скачать CV"
   }
 }

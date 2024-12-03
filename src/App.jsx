@@ -6,10 +6,13 @@ import Footer from "./components/layout/footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import ScrollToTop from "./components/scrolltop";
 function App() {
   return (
     <Provider store={store}>
+
       <BrowserRouter>
+      <ScrollToTop>
         <Routes>
           {routeArr.map((item) => (
             <Route
@@ -26,7 +29,9 @@ function App() {
             />
           ))}
         </Routes>
+      </ScrollToTop>
       </BrowserRouter>
+
     </Provider>
   );
 }

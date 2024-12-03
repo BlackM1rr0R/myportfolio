@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import styles from "./index.module.css";
 import Wrapper from "../../components/UI/wrapper";
-import Movies from "../../assets/images/moviebackground.jpg";
+import Skalioz from "../../assets/images/skalioz.png";
 import Khuran from "../../assets/images/khuranbackground.jpg";
 import TicTac from "../../assets/images/tictactoebackground.jpg";
 import RSP from "../../assets/images/rockbackground.jpg";
@@ -22,6 +22,8 @@ import { changeLanguage } from "../../redux/actions.js";
 import translations from "../home/text.json";
 import NoteBackground from "../../assets/images/notebackground.avif";
 import Perfume from '../../assets/images/perfume.png'
+import Fatima from '../../assets/images/fatima.png'
+import Movies from '../../assets/images/movies.png'
 const ViewProjects = () => {
   const savedLanguage = localStorage.getItem("language");
   const [language, setLanguage] = useState(savedLanguage || "en");
@@ -42,12 +44,12 @@ const ViewProjects = () => {
   const data = useMemo(
     () => [
       {
-        photo: `${Movies}`,
-        skills: "HTML SCSS REACTJS REST API`s Router`s",
-        name: "Movies-baku",
+        photo: `${Skalioz}`,
+        skills: "HTML SCSS REACTJS REST API`s Router`s JAVA SPRING BOOT",
+        name: "Hospital Blog Website",
         overview:
-          "A subscription-based online platform with a wide array of movies and TV series.",
-        link: "https://movies-baku.vercel.app/",
+          "When people get sick in the city of Sakarya, they receive all kinds of treatment and care at home.",
+        link: "https://sakaryasaglik.vercel.app/",
       },
       {
         photo: `${Perfume}`,
@@ -56,6 +58,21 @@ const ViewProjects = () => {
         link: "https://perfumenewwebsite.vercel.app/",
         overview:
           "We offer a curated selection of the finest fragrances from renowned brands and independent artisans.."
+      },
+      {
+        photo: `${Fatima}`,
+        skills: "HTML SCSS JavaScript REACTJS REDUX BACKEND",
+        name: "UI/UX Blog Website",
+        link: "https://fatimastudioweb.vercel.app/",
+        overview:
+          "UI/UX designer passionate about creating seamless digital experiences that connect people with technology."
+      },
+      {
+        photo: `${Movies}`,
+        skills: "HTML SCSS REACTJS REST API`s Router`s",
+        name: "Movies-baku",
+        overview: `${translations[language].moviesbaku}`,
+        link: "https://movies-baku.vercel.app/",
       },
       {
         photo: `${Payments}`,

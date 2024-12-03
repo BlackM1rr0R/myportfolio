@@ -252,10 +252,12 @@
         }
         .div {
           display: flex;
+          flex-direction: row;
           justify-content: flex-start;
           align-items: flex-start;
+          gap: 20px;
           a {
-            width: 400px;
+            width: 300px;
             padding: 16px 24px;
           }
         }
@@ -318,10 +320,12 @@
         }
         .div {
           display: flex;
+          flex-direction: row;
           justify-content: flex-start;
           align-items: flex-start;
+          gap: 20px;
           a {
-            width: 400px;
+            width: 300px;
             padding: 16px 24px;
           }
         }

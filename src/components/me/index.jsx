@@ -5,6 +5,15 @@ import Images from "../../assets/images/elchin.png";
 import { ArrayIcon } from "../../icons";
 import { Link } from "react-router-dom";
 const Me = ({ darkMode,translations  }) => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/files/ElchinCV.pdf';
+    link.download = 'ElchinCV.pdf'; // İndirilecek dosyanın adı
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className={darkMode ? styles.background : styles.whitebackground}>
       <Wrapper>
@@ -18,7 +27,8 @@ const Me = ({ darkMode,translations  }) => {
               {translations.overview}
             </p>
             <div className={styles.div}>
-              <Link to={"https://wa.me/057487048"}>{translations.contact}</Link>
+              <Link to={"https://wa.me/0507487048"}>{translations.contact}</Link>
+              <Link onClick={()=>handleDownload()}>{translations.downloadpdf}</Link>
             </div>
           </div>
           <div className={styles.arrayicon}>

@@ -69,6 +69,7 @@
 
           svg {
             width: 15px;
+
             path {
               fill: white;
             }
@@ -94,6 +95,7 @@
             object-fit: cover;
             vertical-align: bottom;
           }
+
           video {
             width: 100%;
           }
@@ -153,11 +155,13 @@
           padding-top: 10px;
           padding-bottom: 30px;
           justify-content: center;
+
           svg {
             path {
               fill: white;
             }
           }
+
           a {
             width: 40%;
             border: 1px solid var(--primary, #c778dd);
@@ -177,9 +181,10 @@
             &:hover {
               svg {
                 path {
-                 fill: black;
+                  fill: black;
                 }
               }
+
               opacity: 1;
               background-color: #c778dd;
               color: black;
@@ -192,6 +197,7 @@
     }
   }
 }
+
 .whitebackground {
   .control {
     padding-top: 50px;
@@ -281,6 +287,7 @@
             object-fit: cover;
             vertical-align: bottom;
           }
+
           video {
             width: 100%;
           }
@@ -363,6 +370,7 @@
               color: white;
               border: 1px solid white;
               transition: 600ms;
+
               svg {
                 path {
                   fill: white;
@@ -375,6 +383,7 @@
     }
   }
 }
+
 @media (min-width: 992px) {
   .background {
     .control {
@@ -384,6 +393,7 @@
             p {
               font-size: 32px;
             }
+
             h2 {
               font-size: 32px;
             }
@@ -420,17 +430,12 @@
           justify-content: space-between;
 
           .images {
-            img {
+            .img {
+           
               height: 35vh;
             }
           }
-          video {
-            height: 35vh;
 
-            source {
-              height: 35vh;
-            }
-          }
 
           .projectoverview {
             p {
@@ -449,6 +454,7 @@
       }
     }
   }
+
   .whitebackground {
     .control {
       .headertexts {
@@ -457,6 +463,7 @@
             p {
               font-size: 32px;
             }
+
             h2 {
               font-size: 32px;
             }
@@ -494,9 +501,11 @@
 
           .images {
             img {
+            
               height: 35vh;
             }
           }
+
           video {
             height: 35vh;
 

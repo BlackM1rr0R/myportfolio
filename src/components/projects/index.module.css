@@ -334,13 +334,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .background .control .maps .border .images img {
-    height: 35vh;
-  }
-  .background .control .maps .border video {
-    height: 35vh;
-  }
-  .background .control .maps .border video source {
+  .background .control .maps .border .images .img {
     height: 35vh;
   }
   .background .control .maps .border .projectname {

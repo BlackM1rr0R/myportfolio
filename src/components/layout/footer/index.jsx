@@ -14,7 +14,7 @@ const Footer = () => {
               <h2>Elchin</h2>
             </div>
             <div className={styles.front}>
-              <h2>Front-End Developer</h2>
+              <h2>Full-Stack Developer</h2>
             </div>
           </div>
           <div className={styles.divcontrol2}>
