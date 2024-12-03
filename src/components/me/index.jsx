@@ -5,9 +5,12 @@ import Images from "../../assets/images/elchin.png";
 import { ArrayIcon } from "../../icons";
 import { Link } from "react-router-dom";
 const Me = ({ darkMode,translations  }) => {
+  const handleView=()=>{
+    window.open("ElchinCV.pdf","_blank")
+  }
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/files/ElchinCV.pdf';
+    link.href = 'ElchinCV.pdf';
     link.setAttribute('download', 'ElchinCV.pdf');
     
     // MIME türünü ayarlayın
@@ -17,6 +20,7 @@ const Me = ({ darkMode,translations  }) => {
     link.click();
     document.body.removeChild(link);
   };
+  
 
   return (
     <div className={darkMode ? styles.background : styles.whitebackground}>
@@ -31,7 +35,9 @@ const Me = ({ darkMode,translations  }) => {
               {translations.overview}
             </p>
             <div className={styles.div}>
-              <Link to={"https://wa.me/0507487048"}>{translations.contact}</Link>
+            <Link to={`https://wa.me/+994507487048`}>{translations.contact}</Link>
+
+              <Link onClick={()=>handleView()}>{translations.viewpdf}</Link>
               <Link onClick={()=>handleDownload()}>{translations.downloadpdf}</Link>
             </div>
           </div>

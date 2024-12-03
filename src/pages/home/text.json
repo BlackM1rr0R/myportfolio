@@ -27,7 +27,8 @@
     "darkmode": "Dark Mode",
     "lightmode": "Light Mode",
     "listmyprojects": "List of my projects:",
-    "downloadpdf": "Download CV"
+    "downloadpdf": "Download CV",
+    "viewpdf":"View CV"
   },
   "aze": {
     "name": "Elçin Abdullayev",
@@ -57,7 +58,8 @@
     "darkmode": "Qaranlıq rejim",
     "lightmode": "İşıqlı rejim",
     "listmyprojects": "Layihələrimin siyahısı:",
-    "downloadpdf": "CV Yüklə"
+    "downloadpdf": "CV Yüklə",
+    "viewpdf":"CV-ni Görüntülə"
   },
   "de": {
     "name": "Elchin Abdullayev",
@@ -87,7 +89,8 @@
     "darkmode": "Dunkler Modus",
     "lightmode": "Heller Modus",
     "listmyprojects": "Liste meiner Projekte:",
-    "downloadpdf": "Herunteladen Lebenslauf"
+    "downloadpdf": "Herunteladen Lebenslauf",
+    "viewpdf":"Lebenslauf anzeigen"
   },
   "ru": {
     "name": "Эльчин Абдуллаев",
@@ -117,6 +120,7 @@
     "darkmode": "Темный режим",
     "lightmode": "Светлый режим",
     "listmyprojects": "Список моих проектов:",
-    "downloadpdf": "Скачать CV"
+    "downloadpdf": "Скачать CV",
+    "viewpdf":"Посмотреть резюме"
   }
 }
