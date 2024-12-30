@@ -15,15 +15,15 @@ const Skills = ({ darkMode, translations }) => {
     {
       name: "Backend Developer",
       skills: [
-        "Java Core", "Spring Boot", "Spring Boot JWT", "MySQL", "PostgreSQL", "SQL",
-        "Docker", "Postman","Redis","CI/CD","Apache Kafka"
+        "Java Core", "Spring Boot", "Spring Boot JWT", "MySQL", "PostgreSQL", "SQL","Swagger",
+        "JUnit","Docker", "Postman","Redis","CI/CD","Apache Kafka","Kubernetes"
       ]
     },
     {
       name: "Other",
       skills: [
         "Figma", "IT Ess", "Linux OS", "Windows OS", "Parrot OS",
-        "Tails OS", "Network", "Cyber Tool", "Jira", "Zendesk", "AnyDesk", "Git", "GitHub",
+        "Tails OS", "Network", "Cyber Tool", "Jira", "Zendesk", "AnyDesk", "Git", "GitHub","GitLab"
       ]
     }
   ], []);
