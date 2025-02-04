@@ -12,7 +12,7 @@ import Wrapper from "../../components/UI/wrapper";
 import { useSelector, useDispatch } from "react-redux";
 import translations from "./text.json";
 import { changeLanguage } from "../../redux/actions.js";
-import InterViewer from '../../assets/images/interview2.png'
+import InterViewer from '../../assets/images/d1.png'
 import Perfume from '../../assets/images/perfume.png'
 const Home = () => {
   const savedLanguage = localStorage.getItem("language");
@@ -37,7 +37,7 @@ const Home = () => {
     {
       photo: `${Perfume}`,
 
-      skills: "HTML SCSS REACTJS Router`s Backend",
+      skills: "HTML SCSS REACTJS Router`s Spring Boot",
       name: "Perfume-Website",
       link: "https://perfumenewwebsite.vercel.app/",
       overview: `${translations[language].booking}`,
@@ -45,9 +45,9 @@ const Home = () => {
     {
       photo: `${InterViewer}`,
 
-      skills: "HTML SCSS JavaScript REACTJS Redux",
-      name: "Interview Platform",
-      link: "https://interviewer-2csi.vercel.app/",
+      skills: "HTML SCSS JavaScript REACTJS Redux Spring Boot",
+      name: "German Course Platform",
+      link: "https://deutscheakademiebaku.az/",
       overview: `${translations[language].interview}`,
     },
   ],[]);
