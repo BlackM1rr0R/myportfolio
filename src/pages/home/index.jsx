@@ -39,7 +39,7 @@ const Home = () => {
 
       skills: "HTML SCSS REACTJS Router`s Spring Boot",
       name: "Perfume-Website",
-      link: "https://perfumenewwebsite.vercel.app/",
+      link: "https://ambrette.istanbul/",
       overview: `${translations[language].booking}`,
     },
     {

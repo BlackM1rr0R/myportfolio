@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <h2 className={styles.copyright}>© Copyright 2024.</h2>
+        <h2 className={styles.copyright}>© Copyright 2023.</h2>
       </Wrapper>
     </div>
   );

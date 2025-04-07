@@ -9,14 +9,14 @@ const Skills = ({ darkMode, translations }) => {
       skills: [
         "HTML", "CSS", "SCSS", "Responsive", "BootStrap5",
         "JavaScript", "TypeScript", "React",
-        "React UI", "REST API`s", "NextJS", "Redux","CI/CD"
+        "React UI", "REST API`s", "NextJS", "Redux","CI/CD","React Native"
       ]
     },
     {
       name: "Backend Developer",
       skills: [
         "Java Core", "Spring Boot", "Spring JWT", "MySQL", "PostgreSQL", "SQL","Swagger",
-        "JUnit","Docker", "Postman","Redis","CI/CD","Apache Kafka","Kubernetes","Eureka","Keycloak","Grafana"
+        "JUnit","Docker", "Postman","Redis","CI/CD","Apache Kafka","Kubernetes","Eureka","Keycloak","Grafana","Elasticsearch"
       ]
     },
     {
