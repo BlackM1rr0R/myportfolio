@@ -8,7 +8,7 @@ const Skills = ({ darkMode, translations }) => {
       name: "Front-End Developer",
       skills: [
         "HTML", "CSS", "SCSS", "Responsive", "BootStrap5",
-        "JavaScript", "TypeScript", "React",
+        "JavaScript", "TypeScript", "React","Axios","Form",
         "React UI", "REST API`s", "NextJS", "Redux","CI/CD","React Native"
       ]
     },

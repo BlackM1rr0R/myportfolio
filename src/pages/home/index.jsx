@@ -28,15 +28,14 @@ const Home = () => {
  
     {
       photo: `${Skalioz}`,
-      skills: "HTML SCSS REACTJS REST API`s Router`s JAVA SPRING BOOT",
+      skills: "HTML SCSS REACTJS REST API`s Router`s SPRING BOOT",
       name: "Hospital Blog Website",
       overview:
         "When people get sick in the city of Sakarya, they receive all kinds of treatment and care at home.",
-      link: "https://sakaryasaglik.vercel.app/",
+      link: "https://eternalsaglik.com/",
     },
     {
       photo: `${Perfume}`,
-
       skills: "HTML SCSS REACTJS Router`s Spring Boot",
       name: "Perfume-Website",
       link: "https://ambrette.istanbul/",
@@ -44,7 +43,6 @@ const Home = () => {
     },
     {
       photo: `${InterViewer}`,
-
       skills: "HTML SCSS JavaScript REACTJS Redux Spring Boot",
       name: "German Course Platform",
       link: "https://deutscheakademiebaku.az/",

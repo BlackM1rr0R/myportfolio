@@ -22,7 +22,7 @@ const Footer = () => {
               <h2>Media</h2>
             </div>
             <div className={styles.iconcontrol}>
-            <Link target="_blank" to={"https://github.com/7u4bgr"}>
+            <Link target="_blank" to={"https://github.com/BlackM1rr0R?tab=repositories"}>
               <GitHubWhiteIcon/>
             </Link>
             <Link

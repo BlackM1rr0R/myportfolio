@@ -14,7 +14,7 @@ const Header = () => {
             <h2>Elchin</h2>
           </Link>
           <div className={styles.contacts}>
-            <Link target="_blank" to={"https://github.com/7u4bgr"}>
+            <Link target="_blank" to={"https://github.com/BlackM1rr0R?tab=repositories"}>
               <GitHubIcon />
             </Link>
             <Link
