@@ -1,534 +1,214 @@
-/* index.module.scss */
-
+/* Genel Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Fira Code", monospace;
 }
 
+/* Arka plan renkleri */
 .background {
-  .control {
-    padding-top: 50px;
-
-    .headertexts {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .div1 {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        .texts {
-          display: flex;
-          gap: 5px;
-
-          p {
-            color: var(--primary, #c778dd);
-            font-family: "Fira Code", monospace;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-
-          h2 {
-            color: var(--white, #fff);
-            font-size: 16px;
-            font-family: "Fira Code", monospace;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-        }
-
-        .line {
-          hr {
-            width: 50px;
-          }
-        }
-      }
-
-      .div2 {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-
-        h2 {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          align-items: center;
-          color: var(--white, #fff);
-          font-size: 14px;
-          font-family: "Fira Code", monospace;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-
-          svg {
-            width: 15px;
-
-            path {
-              fill: white;
-            }
-          }
-        }
-      }
-    }
-
-    .maps {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      padding-bottom: 30px;
-      gap: 40px;
-      padding-top: 30px;
-
-      .border {
-        border: 2px solid rgb(255, 255, 255);
-
-        .images {
-          .img {
-            width: 100%;
-            object-fit: cover;
-            vertical-align: bottom;
-          }
-
-          video {
-            width: 100%;
-          }
-
-          hr {
-            border-top: 1px solid var(--gray, #abb2bf);
-          }
-        }
-
-        .skills {
-          display: flex;
-          justify-content: center;
-          padding: 5px;
-
-          h2 {
-            color: var(--gray, #abb2bf);
-            font-size: 14px;
-            font-family: "Fira Code", monospace;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-          }
-        }
-
-        .hr {
-          hr {
-            border-top: 1px solid var(--gray, #abb2bf);
-          }
-        }
-
-        .projectname {
-          h2 {
-            color: var(--white, #fff);
-            font-family: "Fira Code", monospace;
-            padding: 10px;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-        }
-
-        .projectoverview {
-          p {
-            padding: 10px;
-            color: var(--gray, #abb2bf);
-            font-family: "Fira Code", monospace;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-          }
-        }
-
-        .live {
-          display: flex;
-          padding-top: 10px;
-          padding-bottom: 30px;
-          justify-content: center;
-
-          svg {
-            path {
-              fill: white;
-            }
-          }
-
-          a {
-            width: 40%;
-            border: 1px solid var(--primary, #c778dd);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--white, #fff);
-            font-family: "Fira Code", monospace;
-            padding: 10px;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-
-            &:hover {
-              svg {
-                path {
-                  fill: black;
-                }
-              }
-
-              opacity: 1;
-              background-color: #c778dd;
-              color: black;
-              border: 1px solid white;
-              transition: 600ms;
-            }
-          }
-        }
-      }
-    }
-  }
+  background-color: #121212;
+  color: #ddd;
+  padding: 60px 0;
 }
 
 .whitebackground {
-  .control {
-    padding-top: 50px;
+  background-color: #fafafa;
+  color: #222;
+  padding: 60px 0;
+}
 
-    .headertexts {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+/* Wrapper kontrol */
+.control {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-      .div1 {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+/* Başlık ve link bölümü */
+.headertexts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
 
-        .texts {
-          display: flex;
-          gap: 5px;
-
-          p {
-            color: var(--primary, #c778dd);
-            font-family: "Fira Code", monospace;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-
-          h2 {
-            color: var(--white, #000000);
-            font-size: 16px;
-            font-family: "Fira Code", monospace;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-        }
-
-        .line {
-          hr {
-            width: 50px;
-          }
-        }
-      }
-
-      .div2 {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-
-        h2 {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          align-items: center;
-          color: var(--white, #000000);
-          font-size: 14px;
-          font-family: "Fira Code", monospace;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-
-          svg {
-            width: 15px;
-
-            path {
-              fill: black;
-            }
-          }
-        }
-      }
-    }
-
-    .maps {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      padding-bottom: 30px;
-      gap: 40px;
-      padding-top: 30px;
-
-      .border {
-        border: 2px solid rgb(0, 0, 0);
-
-        .images {
-          .img {
-            width: 100%;
-            object-fit: cover;
-            vertical-align: bottom;
-          }
-
-          video {
-            width: 100%;
-          }
-
-          hr {
-            border-top: 1px solid var(--gray, #abb2bf);
-          }
-        }
-
-        .skills {
-          display: flex;
-          justify-content: center;
-          padding: 5px;
-
-          h2 {
-            color: var(--gray, #000000);
-            font-size: 14px;
-            font-family: "Fira Code", monospace;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-          }
-        }
-
-        .hr {
-          hr {
-            border-top: 1px solid var(--gray, #6e6e6e);
-          }
-        }
-
-        .projectname {
-          h2 {
-            color: var(--white, #000000);
-            font-family: "Fira Code", monospace;
-            padding: 10px;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-        }
-
-        .projectoverview {
-          p {
-            padding: 10px;
-            color: var(--gray, #000000);
-            font-family: "Fira Code", monospace;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-          }
-        }
-
-        .live {
-          display: flex;
-          padding-top: 10px;
-          padding-bottom: 30px;
-          justify-content: center;
-
-          a {
-            width: 40%;
-            border: 1px solid var(--primary, #b959d3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--white, #000000);
-            font-family: "Fira Code", monospace;
-            padding: 10px;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-
-            &:hover {
-              opacity: 1;
-              background-color: black;
-              color: white;
-              border: 1px solid white;
-              transition: 600ms;
-
-              svg {
-                path {
-                  fill: white;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+.div1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  .texts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
 }
 
-@media (min-width: 992px) {
-  .background {
-    .control {
-      .headertexts {
-        .div1 {
-          .texts {
-            p {
-              font-size: 32px;
-            }
+.texts p {
+  color: var(--primary, #c778dd);
+  font-size: 28px;
+  font-weight: 600;
+}
 
-            h2 {
-              font-size: 32px;
-            }
-          }
+.texts h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: 1.5px;
+}
 
-          .line {
-            hr {
-              width: 300px;
-            }
-          }
-        }
+.line hr {
+  border: none;
+  height: 4px;
+  width: 150px;
+  background: linear-gradient(90deg, #c778dd, #ff66a3);
+  border-radius: 2px;
+  margin-left: 10px;
+}
 
-        .div2 {
-          h2 {
-            display: flex;
-            flex-direction: row;
-            font-size: 28px;
+.div2 h2 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: inherit;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-            svg {
-              width: 22px;
-              height: 22px;
-            }
-          }
-        }
-      }
+.div2:hover h2 {
+  color: #c778dd;
+}
 
-      .maps {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+.div2 svg path {
+  fill: currentColor;
+}
 
-        .border {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+/* Projeler Grid */
+.maps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
 
-          .images {
-            .img {
-           
-              height: 35vh;
-            }
-          }
+/* Kart tasarımı */
+.card {
+  background: var(--card-bg, #1f1f1f);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  color: inherit;
+  margin-bottom: 50px;
+}
 
+/* Beyaz mod için kart arkaplanı */
+.whitebackground .card {
+  --card-bg: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
-          .projectoverview {
-            p {
-              // İlgili stil tanımları
-            }
-          }
+/* Resim alanı */
+.imageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 2px solid #c778dd;
+}
 
-          .projectname {
-            padding-top: 20px;
-          }
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
 
-          .live {
-            display: flex;
-          }
-        }
-      }
-    }
+.card:hover .img {
+  transform: scale(1.1);
+}
+
+/* İçerik alanı */
+.content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  color: #c778dd;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.projectName {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: inherit;
+}
+
+.projectOverview {
+  font-size: 15px;
+  font-weight: 400;
+  color: #aaa;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+/* Canlı link alanı */
+.liveLink {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #c778dd;
+}
+
+.liveLink a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid #c778dd;
+  font-size: 16px;
+  font-weight: 600;
+  color: #c778dd;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.liveLink a:hover {
+  background: #c778dd;
+  color: #222;
+  box-shadow: 0 0 15px #c778ddaa;
+}
+
+.liveLink svg path {
+  fill: currentColor;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headertexts {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .whitebackground {
-    .control {
-      .headertexts {
-        .div1 {
-          .texts {
-            p {
-              font-size: 32px;
-            }
+  .line hr {
+    width: 100px;
+  }
 
-            h2 {
-              font-size: 32px;
-            }
-          }
-
-          .line {
-            hr {
-              width: 300px;
-            }
-          }
-        }
-
-        .div2 {
-          h2 {
-            display: flex;
-            flex-direction: row;
-            font-size: 28px;
-
-            svg {
-              width: 22px;
-              height: 22px;
-            }
-          }
-        }
-      }
-
-      .maps {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-
-        .border {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-
-          .images {
-            img {
-            
-              height: 35vh;
-            }
-          }
-
-          video {
-            height: 35vh;
-
-            source {
-              height: 35vh;
-            }
-          }
-
-          .projectoverview {
-            p {
-              // İlgili stil tanımları
-            }
-          }
-
-          .projectname {
-            padding-top: 20px;
-          }
-
-          .live {
-            display: flex;
-          }
-        }
-      }
-    }
+  .div2 h2 {
+    font-size: 16px;
   }
 }

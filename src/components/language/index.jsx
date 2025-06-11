@@ -1,66 +1,62 @@
-import React, { useMemo, useState } from "react";
+import React from "react";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
+
 import Azer from "../../assets/images/azer.svg";
 import Turk from "../../assets/images/turk.svg";
 import English from "../../assets/images/uk.svg";
 import Rus from "../../assets/images/rus.svg";
 import German from "../../assets/images/german.svg";
+
+const languages = [
+  { code: "az", labelKey: "azerbaijan", flag: Azer },
+  { code: "tr", labelKey: "turkish", flag: Turk },
+  { code: "en", labelKey: "english", flag: English },
+  { code: "ru", labelKey: "russian", flag: Rus },
+  { code: "de", labelKey: "german", flag: German },
+];
+
 const Language = ({ darkMode, translations }) => {
-  const data = useMemo(()=>[
-    {
-      flag1: `${Azer}`,
-      flag2: `${Turk}`,
-      flag3: `${English}`,
-      flag4: `${Rus}`,
-      flag5: `${German}`,
-    },
-  ],[]);
   return (
-    <div
-      id="skills"
-      className={darkMode ? styles.background : styles.whitebackground}
+    <section
+      id="languages"
+      className={`${styles.languageSection} ${
+        darkMode ? styles.dark : styles.light
+      }`}
+      aria-label="Languages I speak"
     >
       <Wrapper>
-        <div className={styles.control}>
-          <div className={styles.headertexts}>
-            <p>#</p>
-            <h2>{translations.languagem}</h2>
-          </div>
-          <div className={styles.skills}>
-            {data?.map((item) => (
-              <div className={styles.border}>
-                <div className={styles.front}>
-                  <h2>{translations.languagetitle}</h2>
-                </div>
-                <ul>
-                  <div className={styles.div1}>
-                    <img src={item.flag1} alt="" />
-                    <li>{translations.azerbaijan}</li>
-                  </div>
-                  <div className={styles.div2}>
-                    <li>{translations.turkish}</li>
-                    <img src={item.flag2} alt="" />
-                  </div>
-                  <div className={styles.div3}>
-                    <img src={item.flag3} alt="" />
-                    <li>{translations.english}</li>
-                  </div>
-                  <div className={styles.div4}>
-                    <li>{translations.russian}</li>
-                    <img src={item.flag4} alt="" />
-                  </div>
-                  <div className={styles.div5}>
-                    <img src={item.flag5} alt="" />
-                    <li>{translations.german}</li>
-                  </div>
-                </ul>
+        <header className={styles.header}>
+          <span aria-hidden="true" className={styles.hashTag}>
+            #
+          </span>
+          <h2 className={styles.title}>{translations.languagem}</h2>
+        </header>
+
+        <div className={styles.cardsContainer}>
+          {languages.map(({ flag, labelKey, code }, index) => (
+            <div
+              key={code}
+              className={`${styles.card} ${
+                darkMode ? styles.cardDark : styles.cardLight
+              }`}
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <h3 className={styles.cardTitle}>{translations[labelKey]}</h3>
+              <div className={styles.languageItem}>
+                <img
+                  src={flag}
+                  alt={`${translations[labelKey]} flag`}
+                  className={styles.flagIcon}
+                  loading="lazy"
+                />
+                <span>{translations[labelKey]}</span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </Wrapper>
-    </div>
+    </section>
   );
 };
 

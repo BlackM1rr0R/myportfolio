@@ -1,365 +1,188 @@
+/* Genel reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Fira Code", monospace;
 }
-.background {
-  .control {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    .texts {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      div {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        h2 {
-          color: var(--white, #fff);
-          font-family: "Fira Code", monospace;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-        }
-        h3 {
-          display: flex;
-          justify-content: center;
-          font-family: "Fira Code", monospace;
-          color: var(--primary, #c778dd);
 
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-        }
-      }
-      p {
-        color: var(--gray, #abb2bf);
-        font-family: "Fira Code", monospace;
+.darkBackground {
+  background: linear-gradient(135deg, #2e003e 0%, #4b007d 100%);
+  color: #eaeaea;
+ 
+  padding: 60px 20px;
+  transition: background-color 0.7s ease;
+}
 
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 25px; /* 156.25% */
-      }
-      .div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        a {
-          text-decoration: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 200px;
-          background-color: transparent;
-          border: none;
-          border: 1px solid var(--primary, #c778dd);
-          display: inline-flex;
-          padding: 8px 16px;
-          align-items: flex-start;
-          gap: 10px;
-          color: var(--white, #fff);
-          font-size: 16px;
-          font-family: "Fira Code", monospace;
+.lightBackground {
+  background: linear-gradient(135deg, #f0e7ff, #f9f8fd);
+  color: #222;
+ 
+  padding: 60px 20px;
+  transition: background-color 0.7s ease;
+}
 
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-        }
-        a:hover {
-          background-color: #c778dd;
-          color: black;
-          border: 1px solid white;
-          transition: 600ms;
-        }
-      }
-    }
-    .arrayicon {
-      display: flex;
-      justify-content: center;
-      svg {
-        rotate: 55deg;
-        height: 150px;
-      }
-    }
-    .controlimages {
-      border-radius: 50%;
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        #c778ddab 50%,
-        rgba(50, 15, 133, 0) 100%
-      );
-      .fleximages {
-        border-radius: 20%;
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          #ffffff60 0.4%,
-          rgba(67, 67, 67, 0) 100%
-        );
-        display: flex;
-        justify-content: center;
-
-        img {
-          padding-top: 20px;
-          padding-bottom: 60px;
-        }
-      }
-    }
+/* Fade-in animasyonu */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
   }
-}
-.whitebackground {
-  .control {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    .texts {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      div {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        h2 {
-          color: var(--white, #000000);
-          font-family: "Fira Code", monospace;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-        }
-        h3 {
-          display: flex;
-          justify-content: center;
-          font-family: "Fira Code", monospace;
-          color: var(--primary, #b400e6);
 
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-        }
-      }
-      p {
-        color: var(--gray, #636363);
-        font-family: "Fira Code", monospace;
-
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 25px; /* 156.25% */
-      }
-      .div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        a {
-          text-decoration: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 200px;
-          background-color: transparent;
-          border: none;
-          border: 1px solid var(--primary, #b400e6);
-          display: inline-flex;
-          padding: 8px 16px;
-          align-items: flex-start;
-          gap: 10px;
-          color: var(--white, #000000);
-          font-size: 16px;
-          font-family: "Fira Code", monospace;
-
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-        }
-        a:hover {
-          background-color: #c778dd;
-          color: black;
-          border: 1px solid white;
-          transition: 600ms;
-        }
-      }
-    }
-    .arrayicon {
-      display: flex;
-      justify-content: center;
-      svg {
-        rotate: 55deg;
-        height: 150px;
-        path {
-          fill: black;
-        }
-      }
-    }
-    .controlimages {
-      border-radius: 50%;
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        #c778ddab 50%,
-        rgba(50, 15, 133, 0) 100%
-      );
-      .fleximages {
-        border-radius: 20%;
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          #ffffff60 0.4%,
-          rgba(67, 67, 67, 0) 100%
-        );
-        display: flex;
-        justify-content: center;
-
-        img {
-          padding-top: 20px;
-          padding-bottom: 60px;
-        }
-      }
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (min-width: 992px) {
-  .background {
-    .control {
-      padding-top: 50px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      .texts {
-        div {
-          h2 {
-            font-size: 45px;
-          }
-          h3 {
-            padding-left: 50px;
-            font-size: 55px;
-            display: flex;
-            justify-content: flex-start;
-          }
-        }
-        p {
-          width: 550px;
-          line-height: 30px;
-          font-size: 20px;
-        }
-        .div {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: 20px;
-          a {
-            width: 250px;
-            padding: 16px 24px;
-          }
-        }
-      }
-      .arrayicon {
-        display: flex;
-        justify-content: center;
-        svg {
-          rotate: -10deg;
-          height: 50%;
-        }
-      }
-      .controlimages {
-        width: 20%;
+.fadeIn {
+  animation: fadeInUp 1s ease forwards;
+}
 
-        border-radius: 10%;
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          #c778dd7c 80%,
-          rgba(50, 15, 133, 0) 100%
-        );
+.container {
+  width: 100%;
+  margin: 0 auto;
 
-        .fleximages {
-          border-radius: 20%;
-          background: radial-gradient(
-            50% 50% at 50% 50%,
-            #ffffff60 0.4%,
-            rgba(67, 67, 67, 0) 100%
-          );
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Yazılar */
+.textSection {
+  max-width: 700px;
+  text-align: center;
+}
+
+.titleWrapper h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.titleWrapper h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d78aff;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.textSection p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: inherit;
+  font-weight: 400;
+}
+
+/* Butonlar */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.button {
+  background: transparent;
+  border: 2px solid #d78aff;
+  color: inherit;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.button:hover,
+.button:focus {
+  background: #d78aff;
+  color: #1a1a1a;
+  box-shadow: 0 0 12px #d78affaa;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* ArrayIcon stil */
+.iconWrapper {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  animation: rotate 12s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  .whitebackground {
-    .control {
-      padding-top: 50px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      .texts {
-        div {
-          h2 {
-            font-size: 45px;
-          }
-          h3 {
-            padding-left: 50px;
-            font-size: 55px;
-            display: flex;
-            justify-content: flex-start;
-          }
-        }
-        p {
-          width: 550px;
-          line-height: 30px;
-          font-size: 20px;
-        }
-        .div {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: 20px;
-          a {
-            width: 300px;
-            padding: 16px 24px;
-          }
-        }
-      }
-      .arrayicon {
-        display: flex;
-        justify-content: center;
-        svg {
-          rotate: -10deg;
-          height: 50%;
-        }
-      }
-      .controlimages {
-        width: 20%;
 
-        border-radius: 10%;
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          #c778dd7c 80%,
-          rgba(50, 15, 133, 0) 100%
-        );
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-        .fleximages {
-          border-radius: 20%;
-          background: radial-gradient(
-            50% 50% at 50% 50%,
-            #ffffff60 0.4%,
-            rgba(67, 67, 67, 0) 100%
-          );
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-    }
+.iconWrapper svg {
+  height: 140px;
+  width: 140px;
+  fill: #d78aff;
+  filter: drop-shadow(0 0 6px #d78aff88);
+}
+
+/* Profil resmi */
+.imageSection {
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #d78aff44, transparent 70%);
+  padding: 12px;
+  max-width: 280px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #d78affbb;
+  transition: box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.imageSection:hover {
+  box-shadow: 0 0 30px #d78affee;
+}
+
+.profileImage {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.imageSection:hover .profileImage {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .textSection {
+    text-align: left;
+    max-width: 55%;
+  }
+
+  .buttons {
+    justify-content: flex-start;
+  }
+
+  .imageSection {
+    max-width: 300px;
   }
 }

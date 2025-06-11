@@ -1,90 +1,107 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: #c778dd;
+  --color-gray: #abb2bf;
 }
+
 .background {
+  background: linear-gradient(135deg, #f0e7ff, #f9f8fd);
   animation: animation 2s ease-in-out forwards;
   padding-top: 50px;
-
   padding-bottom: 60px;
-  .control {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 
-    .divcontrol1 {
-      display: flex;
+  /* Açık modda metin renkleri */
+  --text-color-main: var(--color-black);
+  --text-color-primary: var(--color-primary);
+  --text-color-secondary: var(--color-gray);
+}
 
-      flex-direction: column;
-      gap: 20px;
-      .div1 {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        h2 {
-          color: var(--white, #fff);
-          font-size: 16px;
-          font-family: "Fira Code", monospace;
+.backgroundBlack {
+  background: linear-gradient(135deg, #2e003e 0%, #4b007d 100%);
+  animation: animation 2s ease-in-out forwards;
+  padding-top: 50px;
+  padding-bottom: 60px;
 
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-        }
-      }
-      .front {
-        h2 {
-          color: var(--primary, #c778dd);
-          font-size: 13px;
-          font-family: "Fira Code", monospace;
+  /* Dark modda metin renkleri */
+  --text-color-main: var(--color-white);
+  --text-color-primary: var(--color-primary);
+  --text-color-secondary: var(--color-gray);
+}
 
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-        }
-      }
-    }
-    .divcontrol2 {
-      display: flex;
+.control {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
-      align-items: flex-end;
-      flex-direction: column;
-      gap: 10px;
-      .div2 {
-        display: flex;
-        gap: 10px;
-        h2 {
-          color: var(--white, #fff);
-          font-size: 16px;
-          font-family: "Fira Code", monospace;
+.divcontrol1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-        }
-      }
-      .iconcontrol {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        svg {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
-  .copyright {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    color: var(--gray, #abb2bf);
-    font-family: "Fira Code", monospace;
+.div1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+.div1 h2 {
+  color: var(--text-color-main);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.front h2 {
+  color: var(--text-color-primary);
+  font-size: 13px;
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.divcontrol2 {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.div2 {
+  display: flex;
+  gap: 10px;
+}
+
+.div2 h2 {
+  color: var(--text-color-main);
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.iconcontrol {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconcontrol svg {
+  width: 30px;
+  height: 30px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  color: var(--text-color-secondary);
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
 }
 
 @keyframes animation {
@@ -97,40 +114,31 @@
 }
 
 @media (min-width: 992px) {
-  .background {
+  .background,
+  .backgroundBlack {
     padding-top: 70px;
-    .control {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .divcontrol1 {
-        .div1 {
-          display: flex;
-          align-items: center;
+  }
 
-          h2 {
-            font-size: 18px;
-          }
-        }
-        .front {
-          h2 {
-            font-size: 20px;
-          }
-        }
-      }
-      .divcontrol2 {
-        display: flex;
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-        .div2 {
-          h2 {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    .copyright {
-      margin-top: 60px;
-      font-size: 14px;
-    }
+  .divcontrol1 .div1 h2 {
+    font-size: 18px;
+  }
+
+  .divcontrol1 .front h2 {
+    font-size: 20px;
+  }
+
+  .divcontrol2 .div2 h2 {
+    font-size: 18px;
+  }
+
+  .copyright {
+    margin-top: 60px;
+    font-size: 14px;
   }
 }

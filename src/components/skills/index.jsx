@@ -1,3 +1,4 @@
+// Skills.jsx
 import React, { useMemo } from "react";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
@@ -7,55 +8,57 @@ const Skills = ({ darkMode, translations }) => {
     {
       name: "Front-End Developer",
       skills: [
-        "HTML", "CSS", "SCSS", "Responsive", "BootStrap5",
-        "JavaScript", "TypeScript", "React","Axios","Form",
-        "React UI", "REST API`s", "NextJS", "Redux","CI/CD","React Native"
-      ]
+        "HTML", "CSS", "SCSS", "Responsive Design", "Bootstrap 5",
+        "JavaScript", "TypeScript", "React", "Axios", "Form Handling",
+        "React UI Libraries", "REST APIs", "NextJS", "Redux", "CI/CD", "React Native"
+      ],
     },
     {
       name: "Backend Developer",
       skills: [
-        "Java Core", "Spring Boot", "Spring JWT", "MySQL", "PostgreSQL", "SQL","Swagger",
-        "JUnit","Docker", "Postman","Redis","CI/CD","Apache Kafka","Kubernetes","Eureka","Keycloak","Grafana","Elasticsearch"
-      ]
+        "Java Core", "Spring Boot", "Spring Security (JWT)", "MySQL", "PostgreSQL", "SQL",
+        "Swagger", "JUnit", "Docker", "Postman", "Redis", "CI/CD",
+        "Apache Kafka", "Kubernetes", "Eureka", "Keycloak", "Grafana", "Elasticsearch"
+      ],
     },
     {
-      name: "Other",
+      name: "Other Tools & Skills",
       skills: [
-        "Figma", "IT Ess", "Linux OS", "Windows OS", "Parrot OS",
-        "Tails OS", "Network", "Cyber Tool", "Jira", "Zendesk", "AnyDesk", "Git", "GitHub","GitLab"
-      ]
-    }
+        "Figma", "IT Essentials", "Linux OS", "Windows OS", "Parrot OS",
+        "Tails OS", "Networking", "Cybersecurity Tools", "Jira", "Zendesk",
+        "AnyDesk", "Git", "GitHub", "GitLab"
+      ],
+    },
   ], []);
 
   return (
-    <div
+    <section
       id="skills"
-      className={darkMode ? styles.background : styles.whitebackground}
+      className={`${styles.container} ${darkMode ? styles.dark : styles.light}`}
     >
       <Wrapper>
-        <div className={styles.control}>
-          <div className={styles.headertexts}>
-            <p>#</p>
-            <h2>{translations.skills}</h2>
-          </div>
-          <div className={styles.skills}>
-            {data.map((item, index) => (
-              <div key={index} className={styles.border}>
-                <div className={styles.front}>
-                  <h2>{item.name}</h2>
-                </div>
-                <ul>
-                  {item.skills.map((skill, index) => (
-                    <li key={index}>{`•${skill}`}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+        <header className={styles.header}>
+          <span className={styles.hash}>#</span>
+          <h2 className={styles.title}>{translations.skills}</h2>
+        </header>
+
+        <div className={styles.grid}>
+          {data.map(({ name, skills }, idx) => (
+            <article key={idx} className={styles.card} tabIndex={0}>
+              <h3 className={styles.cardTitle}>{name}</h3>
+              <ul className={styles.skillList}>
+                {skills.map((skill, i) => (
+                  <li key={i} className={styles.skillItem}>
+                    <span className={styles.bullet} aria-hidden="true">▹</span>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </Wrapper>
-    </div>
+    </section>
   );
 };
 

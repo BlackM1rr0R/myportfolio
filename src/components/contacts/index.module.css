@@ -1,192 +1,193 @@
+@charset "UTF-8";
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.background {
-  padding-bottom: 30px;
-}
-.background .control {
+.container {
+  padding: 4rem 1rem 3rem;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.background .control .headertexts {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.background .control .headertexts p {
-  color: var(--primary, #c778dd);
-  font-family: "Fira Code", monospace;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.background .control .headertexts h2 {
-  color: var(--white, #fff);
-  font-size: 16px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.background .control .overview p {
-  color: var(--gray, #abb2bf);
-  font-family: "Fira Code", monospace;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.background .control .mail {
-  border: 1px solid var(--gray, #ABB2BF);
-}
-.background .control .mail .texts {
-  padding: 20px;
-}
-.background .control .mail .texts h2 {
-  color: var(--white, #fff);
-  font-size: 16px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.background .control .mail .icontexts {
-  padding-left: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.background .control .mail .icontexts a {
-  text-decoration: none;
-  color: var(--white, #fff);
-  font-size: 13px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  justify-content: center;
+  transition: background-color 0.6s ease;
 }
 
-.whitebackground {
-  padding-bottom: 30px;
-}
-.whitebackground .control {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.whitebackground .control .headertexts {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.whitebackground .control .headertexts p {
-  color: var(--primary, #c778dd);
-  font-family: "Fira Code", monospace;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.whitebackground .control .headertexts h2 {
-  color: var(--white, #000000);
-  font-size: 16px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.whitebackground .control .overview p {
-  color: var(--gray, #393939);
-  font-family: "Fira Code", monospace;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.whitebackground .control .mail {
-  border: 1px solid var(--gray, #000000);
-}
-.whitebackground .control .mail .texts {
-  padding: 20px;
-}
-.whitebackground .control .mail .texts h2 {
-  color: var(--white, #000000);
-  font-size: 16px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.whitebackground .control .mail .icontexts {
-  padding-left: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.whitebackground .control .mail .icontexts a {
-  text-decoration: none;
-  color: var(--white, #000000);
-  font-size: 13px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.light {
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  color: #1a1a1a;
 }
 
-@media (min-width: 992px) {
-  .background .control .headertexts p {
-    font-size: 32px;
+.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.hashtag {
+  color: var(--primary, #c778dd);
+  font-weight: 700;
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: inherit;
+}
+
+/* Description */
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 650px;
+  color: inherit;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0.85;
+}
+
+/* Contact Card */
+.contactCard {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 1.8rem 2rem;
+  max-width: 450px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  outline-offset: 4px;
+}
+
+.contactCard:hover,
+.contactCard:focus-visible {
+  border-color: var(--primary, #c778dd);
+  box-shadow: 0 0 20px var(--primary, #c778dd);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  outline: none;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary, #c778dd);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 0 2px rgba(199, 120, 221, 0.5));
+  transition: background-color 0.3s ease;
+}
+
+.contactCard:hover .iconWrapper {
+  background-color: #a05bbd;
+  filter: drop-shadow(0 0 6px #a05bbd);
+}
+
+.iconWrapper img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+/* Content inside contact card */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: inherit;
+  margin-bottom: 0.2rem;
+}
+
+.emailLink {
+  font-size: 1rem;
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.emailLink:hover,
+.emailLink:focus {
+  color: var(--primary, #c778dd);
+  outline: none;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  .background .control .headertexts h2 {
-    font-size: 32px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .background .control .overview {
-    width: 50%;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  .background .control .flexs {
-    display: flex;
-    justify-content: flex-end;
+}
+/* Responsive */
+@media (min-width: 768px) {
+  .container {
+    padding: 6rem 2rem 4rem;
   }
-  .background .control .flexs .mail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 20%;
+  .description {
+    font-size: 1.25rem;
   }
-  .background .control .flexs .mail .icontexts {
-    padding-left: 0px;
+  .contactCard {
+    max-width: 480px;
   }
-  .whitebackground .control .headertexts p {
-    font-size: 32px;
+  .header {
+    gap: 1rem;
   }
-  .whitebackground .control .headertexts h2 {
-    font-size: 32px;
+  .hashtag {
+    font-size: 2.8rem;
   }
-  .whitebackground .control .overview {
-    width: 50%;
+  .title {
+    font-size: 2.5rem;
   }
-  .whitebackground .control .flexs {
-    display: flex;
-    justify-content: flex-end;
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 8rem 0 6rem;
+    justify-content: flex-end; /* container içeriğini sağa yasla */
   }
-  .whitebackground .control .flexs .mail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 20%;
+  /* Wrapper genişliğini sınırla, böylece .contactCard sağda kalır */
+  section#contacts > div.wrapper {
+    max-width: 480px;
+    width: 100%;
   }
-  .whitebackground .control .flexs .mail .icontexts {
-    padding-left: 0px;
+  /* Veya doğrudan contactCard'ı sağa yasla */
+  .contactCard {
+    margin-left: auto;
   }
 }/*# sourceMappingURL=index.module.css.map */

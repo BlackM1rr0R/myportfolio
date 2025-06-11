@@ -1,300 +1,173 @@
+@charset "UTF-8";
+/* CSS Variables */
+:root {
+  --primary-color: #c778dd;
+  --dark-bg: #121212;
+  --dark-text: #eee;
+  --light-bg: #f9f9f9;
+  --light-text: #222;
+  --card-bg-dark: #1f1f1f;
+  --card-bg-light: #ffffff;
+  --shadow-dark: rgba(199, 120, 221, 0.4);
+  --shadow-light: rgba(199, 120, 221, 0.2);
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.background {
-  padding-bottom: 30px;
-}
-.background .control .headertexts {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.background .control .headertexts p {
-  color: var(--primary, #c778dd);
-  font-family: "Fira Code", monospace;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.background .control .headertexts h2 {
-  color: var(--white, #fff);
-  font-size: 16px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.background .control .skills {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 20px;
-}
-.background .control .skills .border {
-  border: 2px solid rgb(255, 255, 255);
-}
-.background .control .skills .border .front {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-.background .control .skills .border .front h2 {
-  color: var(--white, #fff);
-  font-size: 16px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.background .control .skills .border ul {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
-  padding: 10px;
-}
-.background .control .skills .border ul .div1 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.background .control .skills .border ul .div1 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.background .control .skills .border ul .div3 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.background .control .skills .border ul .div3 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.background .control .skills .border ul .div5 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.background .control .skills .border ul .div5 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.background .control .skills .border ul .div2 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-}
-.background .control .skills .border ul .div2 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.background .control .skills .border ul .div4 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-}
-.background .control .skills .border ul .div4 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.background .control .skills .border ul li:nth-child(odd) {
-  color: white;
-  font-size: 16px;
-  font-size: 12px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.background .control .skills .border ul li:nth-child(even) {
-  display: flex;
-  justify-content: flex-end;
-  color: var(--primary, #c778dd);
-  font-size: 15px;
-  font-size: 12px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.languageSection {
+  padding: 3rem 1rem 4rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.whitebackground {
-  padding-bottom: 30px;
-}
-.whitebackground .control .headertexts {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.whitebackground .control .headertexts p {
-  color: var(--primary, #c778dd);
-  font-family: "Fira Code", monospace;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.whitebackground .control .headertexts h2 {
-  color: var(--white, #000000);
-  font-size: 16px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.whitebackground .control .skills {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 20px;
-}
-.whitebackground .control .skills .border {
-  border: 2px solid rgb(0, 0, 0);
-}
-.whitebackground .control .skills .border .front {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-.whitebackground .control .skills .border .front h2 {
-  color: var(--white, #000000);
-  font-size: 16px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.whitebackground .control .skills .border ul {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
-  padding: 10px;
-}
-.whitebackground .control .skills .border ul .div1 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.whitebackground .control .skills .border ul .div1 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.whitebackground .control .skills .border ul .div3 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.whitebackground .control .skills .border ul .div3 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.whitebackground .control .skills .border ul .div5 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.whitebackground .control .skills .border ul .div5 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.whitebackground .control .skills .border ul .div2 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-}
-.whitebackground .control .skills .border ul .div2 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.whitebackground .control .skills .border ul .div4 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-}
-.whitebackground .control .skills .border ul .div4 img {
-  width: 20px;
-  border-radius: 5px;
-}
-.whitebackground .control .skills .border ul li:nth-child(odd) {
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  font-size: 12px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.whitebackground .control .skills .border ul li:nth-child(even) {
-  display: flex;
-  justify-content: flex-end;
-  color: var(--primary, #c800ff);
-  font-size: 15px;
-  font-size: 12px;
-  font-family: "Fira Code", monospace;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.languageSection.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
-@media (min-width: 992px) {
-  .background .control .headertexts p {
-    font-size: 32px;
+.languageSection.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Fira Code", monospace;
+  margin-bottom: 2rem;
+}
+
+.hashTag {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.cardsContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Çoklu kartlar yan yana ve alt alta */
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Her dil için kart */
+.card {
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 20px var(--shadow-light);
+  max-width: 290px;
+  width: 100%;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.5s forwards ease-out;
+}
+
+.cardLight {
+  background-color: var(--card-bg-light);
+  box-shadow: 0 8px 20px var(--shadow-light);
+}
+
+.cardDark {
+  background-color: var(--card-bg-dark);
+  box-shadow: 0 8px 20px var(--shadow-dark);
+}
+
+.cardTitle {
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: var(--primary-color);
+  letter-spacing: 1.1px;
+}
+
+.languageItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.languageItem:hover {
+  color: var(--primary-color);
+  background-color: rgba(199, 120, 221, 0.15);
+  box-shadow: 0 4px 10px rgba(199, 120, 221, 0.3);
+}
+
+.flagIcon {
+  width: 28px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.languageItem:hover .flagIcon {
+  transform: scale(1.1);
+}
+
+/* Animasyon */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .background .control .headertexts h2 {
-    font-size: 32px;
+}
+/* Responsive */
+@media (min-width: 768px) {
+  .cardsContainer {
+    justify-content: flex-start;
+    gap: 2rem;
   }
-  .background .control .skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .card {
+    max-width: 180px;
+    padding: 2rem 1.5rem;
   }
-  .background .control .skills .border {
-    padding-bottom: 10px;
-    width: 31.7%;
+  .title {
+    font-size: 2.2rem;
   }
-  .background .control .skills .border .front h2 {
-    font-size: 20px;
+  .cardTitle {
+    font-size: 1.5rem;
   }
-  .background .control .skills .border ul li:nth-child(odd) {
-    color: white;
-    font-size: 16px;
+  .languageItem {
+    font-size: 1.1rem;
   }
-  .background .control .skills .border ul li:nth-child(even) {
-    color: var(--primary, #c778dd);
-    font-size: 15px;
+}
+@media (min-width: 1200px) {
+  .cardsContainer {
+    justify-content: space-between;
   }
-  .whitebackground .control .headertexts p {
-    font-size: 32px;
-  }
-  .whitebackground .control .headertexts h2 {
-    font-size: 32px;
-  }
-  .whitebackground .control .skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .whitebackground .control .skills .border {
-    padding-bottom: 10px;
-    width: 31.7%;
-  }
-  .whitebackground .control .skills .border .front h2 {
-    font-size: 20px;
-  }
-  .whitebackground .control .skills .border ul li:nth-child(odd) {
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-  }
-  .whitebackground .control .skills .border ul li:nth-child(even) {
-    color: var(--primary, #c800ff);
-    font-size: 15px;
+  .card {
+    max-width: 270px;
   }
 }/*# sourceMappingURL=index.module.css.map */
