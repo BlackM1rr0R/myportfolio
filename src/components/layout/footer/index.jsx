@@ -50,7 +50,7 @@ const Footer = () => {
               <Link target="_blank" to={"https://github.com/BlackM1rr0R?tab=repositories"}>
                 {dark ? <GitHubWhiteIcon /> : <GitHubIcon />}
               </Link>
-              <Link target="_blank" to={"https://wa.me/0507487048"}>
+              <Link target="_blank" to={"https://wa.me/+4917632329799"}>
                 {dark ? <FigmaWhiteIcon /> : <FigmaIcon />}
               </Link>
               <Link target="_blank" to={"https://www.linkedin.com/in/elcin-abdullayev-583861229/"}>

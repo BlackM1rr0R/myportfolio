@@ -42,7 +42,7 @@ const Me = ({ darkMode, translations }) => {
 
             <div className={styles.buttons}>
               <a
-                href="https://wa.me/+994507487048"
+                href="https://wa.me/+4917632329799"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.button}
