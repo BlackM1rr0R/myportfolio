@@ -2,26 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
-import { LiveIcon, RightArrowIcon } from "../../icons/";
+import { LiveIcon } from "../../icons/";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
-  hover: { scale: 1.05, boxShadow: "0 10px 20px rgba(199, 120, 221, 0.4)" },
 };
 
 const Projects = ({ data, darkMode, translations }) => {
@@ -35,27 +26,22 @@ const Projects = ({ data, darkMode, translations }) => {
                 <p>#</p>
                 <h2>{translations.projects}</h2>
               </div>
-              <div className={styles.line}>
-                <hr />
-              </div>
+              <div className={styles.line}><hr /></div>
             </div>
-
           </div>
 
           <Swiper
             modules={[Navigation, Pagination, A11y, Autoplay]}
             spaceBetween={30}
-            slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            preloadImages={false}
+            lazy={true}
             breakpoints={{
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
-            }}
-            autoplay={{
-              delay: 2000,        // 3 saniyede bir geçiş
-              disableOnInteraction: false,  // kullanıcı kaydırsa bile devam etsin
             }}
             className={styles.swiperContainer}
           >
@@ -65,11 +51,16 @@ const Projects = ({ data, darkMode, translations }) => {
                   className={styles.card}
                   variants={cardVariants}
                   initial="hidden"
-                  animate="visible"
-                  whileHover="hover"
+                  whileInView="visible"
+                  viewport={{ once: true }}
                 >
                   <div className={styles.imageWrapper}>
-                    <img src={item.photo} alt={item.name} className={styles.img} />
+                    <img
+                     src={item.photo}
+                      className={`swiper-lazy ${styles.img}`}
+                      alt={item.name}
+                    />
+                    <div className="swiper-lazy-preloader"></div>
                   </div>
                   <div className={styles.content}>
                     <h3 className={styles.skills}>{item.skills}</h3>
@@ -85,11 +76,10 @@ const Projects = ({ data, darkMode, translations }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-
         </div>
       </Wrapper>
     </section>
   );
 };
 
-export default Projects;
+export default React.memo(Projects);
