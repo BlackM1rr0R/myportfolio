@@ -242,6 +242,7 @@ const Home = () => {
         <Language translations={translations[language]} darkMode={dark} />
         <About translations={translations[language]} darkMode={dark} />
         <Contacts translations={translations[language]} darkMode={dark} />
+    
       </div>
     </div>
   );
