@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import Wrapper from "../UI/wrapper";
 import Images from "../../assets/images/elchin.png";
 import { ArrayIcon } from "../../icons";
-
+import ArrayOnliy from '../../assets/images/arrowicononly.png'
 const Me = ({ darkMode, translations }) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -13,7 +13,7 @@ const Me = ({ darkMode, translations }) => {
   }, []);
 
   const handleView = () => {
-    window.open("ElchinCV.pdf", "_blank");
+    window.open("ElchinLebenslauf.pdf", "_blank");
   };
 
   const handleDownload = () => {
@@ -27,9 +27,8 @@ const Me = ({ darkMode, translations }) => {
 
   return (
     <div
-      className={`${darkMode ? styles.darkBackground : styles.lightBackground} ${
-        loaded ? styles.fadeIn : ""
-      }`}
+      className={`${darkMode ? styles.darkBackground : styles.lightBackground} ${loaded ? styles.fadeIn : ""
+        }`}
     >
       <Wrapper>
         <div className={styles.container}>
@@ -59,7 +58,7 @@ const Me = ({ darkMode, translations }) => {
           </div>
 
           <div className={styles.iconWrapper}>
-            <ArrayIcon />
+            <img src={ArrayOnliy} alt="" />
           </div>
 
           <div className={styles.imageSection}>

@@ -1,167 +1,56 @@
 @charset "UTF-8";
-/* Ortak font ve renk değişkenleri */
+/* Import modern monospace font */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+/* 🎨 Global renk değişkenleri */
 :root {
-  --color-primary: #c778dd;
-  --color-primary-hover: #e5a8ff;
-  --color-primary-dark: #a25ac6;
-  --color-light-bg: #f0e7ff;
-  --color-dark-bg: #121212;
-  --color-light-card-bg: #ffffff;
-  --color-dark-card-bg: #1f1f1f;
-  --color-light-text: #222;
-  --color-dark-text: #eee;
+  --color-primary: #4a90e2; /* Modern mavi ana renk */
+  --color-primary-hover: #73b1f4; /* Hover için açık mavi */
+  --color-bg-dark: #1c1c1e; /* Koyu arka plan */
+  --color-bg-light: #ffffff; /* Açık arka plan */
+  --color-card-dark: #2a2a2e; /* Koyu kart arka planı */
+  --color-card-light: #f9f9f9; /* Açık kart arka planı */
+  --color-text-dark: #1c1c1e; /* Koyu tema metin */
+  --color-text-light: #f4f4f6; /* Açık tema metin */
+  --color-muted-dark: #888888; /* Koyu tema hafif metin */
+  --color-muted-light: #aaaaaa; /* Açık tema hafif metin */
+  --shadow-dark: rgba(74, 144, 226, 0.3);
+  --shadow-light: rgba(0, 0, 0, 0.1);
   --transition-speed: 0.3s;
-  --font-mono: "Fira Code", monospace;
+  --font-family-mono: "Fira Code", monospace;
 }
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Container (Skills) ve About Section ortak font, transition ve user-select ayarı */
-.container,
+/* Genel container ve font */
 .aboutSection {
-  font-family: var(--font-mono);
-  transition: background-color var(--transition-speed), color var(--transition-speed);
-}
-
-/* Background ve renk temaları */
-.dark {
-  background: linear-gradient(135deg, #2c003e, #4b1a6a);
-  color: var(--color-dark-text);
-}
-
-.light {
-  background: linear-gradient(135deg, #f0e7ff, #f9f8fd);
-  color: var(--color-light-text);
-}
-
-/* Skills.module.css kısmı (container) */
-.container {
-  padding: 3rem 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-/* About kısmı */
-.aboutSection {
+  font-family: var(--font-family-mono);
   padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  border-radius: 12px;
   max-width: 900px;
   margin: 0 auto;
-  box-shadow: 0 12px 30px rgba(199, 120, 221, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px var(--shadow-light);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
   -webkit-user-select: text;
      -moz-user-select: text;
           user-select: text;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
 }
 
-/* Skills card stilleri */
-.card {
-  background-color: var(--color-light-card-bg);
-  padding: 1.8rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
-  cursor: default;
-  outline-offset: 4px;
-  animation: fadeInScale 0.7s ease forwards;
+/* Dark mode */
+.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  box-shadow: 0 12px 30px var(--shadow-dark);
 }
 
-.dark .card {
-  background-color: var(--color-dark-card-bg);
-  box-shadow: 0 6px 24px rgba(199, 120, 221, 0.4);
-}
-
-.card:hover,
-.card:focus-visible {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 14px 28px rgba(199, 120, 221, 0.6);
-  background-color: var(--color-primary-hover);
-  color: var(--color-dark-bg);
-}
-
-/* Başlıklar ve metinler */
+/* Header */
 .header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 2rem;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
-}
-
-.hash {
-  color: var(--color-primary);
-  font-size: 2rem;
-  font-weight: 700;
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-.cardTitle {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  border-bottom: 2px solid var(--color-primary);
-  padding-bottom: 0.3rem;
-}
-
-/* Skill list */
-.skillList {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem 1.2rem;
-  padding: 0;
-  margin: 0;
-}
-
-.skillItem {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: 500;
-  position: relative;
-  color: inherit;
-  line-height: 1.3;
-  transition: color var(--transition-speed);
-}
-
-.bullet {
-  color: var(--color-primary);
-  margin-right: 0.6rem;
-  font-weight: 900;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: color var(--transition-speed);
-}
-
-.card:hover .bullet,
-.card:focus-visible .bullet {
-  color: var(--color-dark-bg);
-}
-
-/* About section başlıkları */
-.aboutSection .header {
-  gap: 1rem;
-  position: relative;
-  animation: fadeSlideIn 0.8s ease forwards;
 }
 
 .sectionNumber {
@@ -171,26 +60,26 @@
   flex-shrink: 0;
 }
 
-.aboutSection .title {
+.title {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
+/* Alt çizgi */
 .underline {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
+  position: relative;
   height: 4px;
   width: 70px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
   border-radius: 4px;
-  animation: growWidth 1s ease forwards;
+  margin-top: -12px;
 }
 
+/* İçerik */
 .content {
-  animation: fadeSlideIn 1.2s ease forwards;
+  max-width: 700px;
 }
 
 .subtitle {
@@ -203,22 +92,18 @@
 .description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: inherit;
-  max-width: 700px;
-  letter-spacing: 0.03em;
   white-space: pre-line;
   -webkit-user-select: text;
      -moz-user-select: text;
           user-select: text;
-  transition: color var(--transition-speed);
+  color: inherit;
 }
 
-/* Read more butonu */
+/* Buton */
 .cta {
   margin-top: 2rem;
   display: flex;
   justify-content: flex-start;
-  animation: fadeSlideIn 1.5s ease forwards;
 }
 
 .readMoreBtn {
@@ -234,24 +119,24 @@
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.35s ease;
-  box-shadow: 0 0 10px rgba(199, 120, 221, 0.3);
+  box-shadow: 0 0 10px var(--shadow-dark);
+  transition: all var(--transition-speed);
 }
 
 .readMoreBtn:hover,
 .readMoreBtn:focus {
-  background: var(--color-primary);
-  color: white;
-  box-shadow: 0 4px 20px rgba(199, 120, 221, 0.7);
-  outline: none;
+  background: var(--color-primary-hover);
+  color: var(--color-text-light);
+  box-shadow: 0 4px 20px var(--shadow-dark);
   transform: scale(1.05);
+  outline: none;
 }
 
 .icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-speed);
 }
 
 .readMoreBtn:hover .icon,
@@ -259,64 +144,9 @@
   transform: translateX(5px);
 }
 
-/* Animasyonlar */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes growWidth {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 70px;
-  }
-}
 /* Responsive */
 @media (min-width: 768px) {
-  .skillList {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .cardTitle {
-    font-size: 1.75rem;
-  }
   .title {
-    font-size: 3rem;
-  }
-  .hash {
-    font-size: 2.5rem;
-  }
-  .aboutSection {
-    padding: 5rem 3rem;
-    width: 100%;
-  }
-  .aboutSection .title {
     font-size: 2.5rem;
   }
   .subtitle {

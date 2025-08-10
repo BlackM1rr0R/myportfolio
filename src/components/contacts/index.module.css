@@ -6,21 +6,38 @@
   box-sizing: border-box;
 }
 
+/* Renk değişkenleri */
+:root {
+  --color-primary: #4a90e2; /* Modern mavi ana renk */
+  --color-primary-hover: #73b1f4; /* Hover için açık mavi */
+  --color-bg-light: #f9f9f9; /* Açık arka plan */
+  --color-bg-dark: #1c1c1e; /* Koyu arka plan */
+  --color-text-light: #f4f4f6; /* Açık tema metin */
+  --color-text-dark: #1c1c1e; /* Koyu tema metin */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(74, 144, 226, 0.3);
+  --transition-speed: 0.3s;
+  --font-family-mono: "Fira Code", monospace;
+}
+
+/* Container */
 .container {
   padding: 4rem 1rem 3rem;
   display: flex;
   justify-content: center;
-  transition: background-color 0.6s ease;
+  font-family: var(--font-family-mono);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 
-.light {
-  background: linear-gradient(135deg, #f0f0f0, #ffffff);
-  color: #1a1a1a;
-}
-
+/* Dark Mode */
 .dark {
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
 }
 
 /* Header */
@@ -32,7 +49,7 @@
 }
 
 .hashtag {
-  color: var(--primary, #c778dd);
+  color: var(--color-primary);
   font-weight: 700;
   font-size: 2rem;
   -webkit-user-select: none;
@@ -55,14 +72,15 @@
   color: inherit;
   animation: fadeIn 1.2s ease forwards;
   opacity: 0.85;
+  margin-top: 0.5rem;
 }
 
 /* Contact Card */
 .contactCard {
   margin-top: 2rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(74, 144, 226, 0.15);
   border-radius: 15px;
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 20px var(--shadow-dark);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
   display: flex;
@@ -71,36 +89,44 @@
   padding: 1.8rem 2rem;
   max-width: 450px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
   border: 2px solid transparent;
   outline-offset: 4px;
+  color: var(--color-text-dark);
+}
+
+.dark .contactCard {
+  background: rgba(74, 144, 226, 0.2);
+  color: var(--color-text-light);
+  box-shadow: 0 12px 20px var(--shadow-dark);
 }
 
 .contactCard:hover,
 .contactCard:focus-visible {
-  border-color: var(--primary, #c778dd);
-  box-shadow: 0 0 20px var(--primary, #c778dd);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px var(--color-primary-hover);
+  background: rgba(74, 144, 226, 0.3);
   transform: translateY(-5px);
   outline: none;
 }
 
+/* Icon wrapper */
 .iconWrapper {
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  background-color: var(--primary, #c778dd);
+  background-color: var(--color-primary);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 0 2px rgba(199, 120, 221, 0.5));
-  transition: background-color 0.3s ease;
+  filter: drop-shadow(0 0 6px var(--color-primary-hover));
+  transition: background-color var(--transition-speed);
 }
 
 .contactCard:hover .iconWrapper {
-  background-color: #a05bbd;
-  filter: drop-shadow(0 0 6px #a05bbd);
+  background-color: var(--color-primary-hover);
+  filter: drop-shadow(0 0 8px var(--color-primary-hover));
 }
 
 .iconWrapper img {
@@ -113,7 +139,7 @@
   pointer-events: none;
 }
 
-/* Content inside contact card */
+/* Content */
 .content {
   display: flex;
   flex-direction: column;
@@ -130,12 +156,12 @@
   font-size: 1rem;
   color: inherit;
   text-decoration: underline;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed);
 }
 
 .emailLink:hover,
 .emailLink:focus {
-  color: var(--primary, #c778dd);
+  color: var(--color-primary);
   outline: none;
 }
 
@@ -181,12 +207,12 @@
     padding: 8rem 0 6rem;
     justify-content: flex-end; /* container içeriğini sağa yasla */
   }
-  /* Wrapper genişliğini sınırla, böylece .contactCard sağda kalır */
+  /* Wrapper genişliği sınırla, böylece .contactCard sağda kalır */
   section#contacts > div.wrapper {
     max-width: 480px;
     width: 100%;
   }
-  /* Veya doğrudan contactCard'ı sağa yasla */
+  /* contactCard'ı sağa yasla */
   .contactCard {
     margin-left: auto;
   }

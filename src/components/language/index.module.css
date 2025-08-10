@@ -1,15 +1,19 @@
 @charset "UTF-8";
-/* CSS Variables */
+/* Language.module.css */
+/* Renk değişkenleri */
 :root {
-  --primary-color: #c778dd;
-  --dark-bg: #121212;
-  --dark-text: #eee;
-  --light-bg: #f9f9f9;
-  --light-text: #222;
-  --card-bg-dark: #1f1f1f;
-  --card-bg-light: #ffffff;
-  --shadow-dark: rgba(199, 120, 221, 0.4);
-  --shadow-light: rgba(199, 120, 221, 0.2);
+  --primary-color: #4a90e2; /* Modern mavi ana renk */
+  --primary-color-light: #73b1f4; /* Hover için açık mavi */
+  --dark-bg: #1c1c1e; /* Koyu arka plan */
+  --dark-text: #f4f4f6; /* Koyu tema açık metin */
+  --light-bg: #ffffff; /* Açık arka plan */
+  --light-text: #1c1c1e; /* Açık tema koyu metin */
+  --card-bg-dark: #2a2a2e; /* Koyu kart arka planı */
+  --card-bg-light: #f9f9f9; /* Açık kart arka planı */
+  --shadow-dark: rgba(74, 144, 226, 0.3);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --font-family-mono: "Fira Code", monospace;
+  --transition-speed: 0.3s;
 }
 
 /* Reset */
@@ -19,14 +23,11 @@
   box-sizing: border-box;
 }
 
+/* Ana bölüm */
 .languageSection {
   padding: 3rem 1rem 4rem;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-.languageSection.dark {
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
+  font-family: var(--font-family-mono);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 .languageSection.light {
@@ -34,12 +35,20 @@
   color: var(--light-text);
 }
 
+.languageSection.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Başlık bölümü */
 .header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Fira Code", monospace;
   margin-bottom: 2rem;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 
 .hashTag {
@@ -55,72 +64,84 @@
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 1.2px;
+  transition: color var(--transition-speed);
 }
 
+/* Kart konteyneri */
 .cardsContainer {
   width: 100%;
   display: flex;
-  flex-wrap: wrap; /* Çoklu kartlar yan yana ve alt alta */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
 }
 
-/* Her dil için kart */
+/* Kart */
 .card {
   border-radius: 12px;
   padding: 2rem 2.5rem;
-  box-shadow: 0 8px 20px var(--shadow-light);
   max-width: 290px;
   width: 100%;
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideIn 0.5s forwards ease-out;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed), color var(--transition-speed);
+  box-shadow: 0 8px 20px var(--shadow-light);
+  color: inherit;
 }
 
+/* Kart açık tema */
 .cardLight {
   background-color: var(--card-bg-light);
   box-shadow: 0 8px 20px var(--shadow-light);
+  color: var(--light-text);
 }
 
+/* Kart koyu tema */
 .cardDark {
   background-color: var(--card-bg-dark);
   box-shadow: 0 8px 20px var(--shadow-dark);
+  color: var(--dark-text);
 }
 
+/* Kart başlığı */
 .cardTitle {
-  font-family: "Fira Code", monospace;
   font-weight: 700;
   font-size: 1.4rem;
   text-align: center;
   margin-bottom: 1.2rem;
   color: var(--primary-color);
   letter-spacing: 1.1px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
+/* Dil öğesi */
 .languageItem {
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-family: "Fira Code", monospace;
   font-weight: 500;
   font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  justify-content: center;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  justify-content: center;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed), background-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .languageItem:hover {
-  color: var(--primary-color);
-  background-color: rgba(199, 120, 221, 0.15);
-  box-shadow: 0 4px 10px rgba(199, 120, 221, 0.3);
+  color: var(--primary-color-light);
+  background-color: rgba(115, 177, 244, 0.15);
+  box-shadow: 0 4px 10px rgba(115, 177, 244, 0.3);
 }
 
+/* Bayrak ikonları */
 .flagIcon {
   width: 28px;
   height: 20px;
@@ -129,7 +150,7 @@
   border-radius: 4px;
   flex-shrink: 0;
   filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.25));
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-speed);
 }
 
 .languageItem:hover .flagIcon {

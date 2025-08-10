@@ -1,4 +1,21 @@
-/* ==== Global Reset & Font ==== */
+@charset "UTF-8";
+/* 🎨 Global Renk Değişkenleri */
+:root {
+  --color-primary: #c778dd;
+  --color-primary-light: #ff66a3;
+  --color-bg-dark: #121212;
+  --color-bg-light: #fafafa;
+  --color-card-dark: #1f1f1f;
+  --color-card-light: #ffffff;
+  --color-text-dark: #222222;
+  --color-text-light: #dddddd;
+  --color-muted-light: #aaaaaa;
+  --color-muted-dark: #888888;
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,27 +23,29 @@
   font-family: "Fira Code", monospace;
 }
 
-/* ==== Background Themes ==== */
+/* 🌙 Dark & ☀️ Light Arka Plan */
 .background {
-  background-color: #121212;
-  color: #ddd;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
   padding: 60px 0;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 .whitebackground {
-  background-color: #fafafa;
-  color: #222;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
   padding: 60px 0;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* ==== Wrapper Control ==== */
+/* 📦 Wrapper */
 .control {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* ==== Header & Section Titles ==== */
+/* 📛 Başlık Alanı */
 .headertexts {
   display: flex;
   justify-content: space-between;
@@ -50,7 +69,7 @@
 }
 
 .texts p {
-  color: var(--primary, #c778dd);
+  color: var(--color-primary);
   font-size: 28px;
   font-weight: 600;
 }
@@ -58,7 +77,6 @@
 .texts h2 {
   font-size: 32px;
   font-weight: 700;
-  color: inherit;
   letter-spacing: 1.5px;
 }
 
@@ -66,66 +84,44 @@
   border: none;
   height: 4px;
   width: 150px;
-  background: linear-gradient(90deg, #c778dd, #ff66a3);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
   border-radius: 2px;
   margin-left: 10px;
 }
 
-.div2 h2 {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 600;
-  color: inherit;
-  gap: 8px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.div2:hover h2 {
-  color: #c778dd;
-}
-
-.div2 svg path {
-  fill: currentColor;
-}
-
-/* ==== Card Grid ==== */
-.maps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-/* ==== Card Styling ==== */
+/* 📇 Kart */
 .card {
-  background: var(--card-bg, #1f1f1f);
+  background: var(--color-card-dark);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px var(--shadow-dark);
   cursor: pointer;
-  color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 50px;
 }
 
 .whitebackground .card {
-  --card-bg: #fff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: var(--color-card-light);
+  box-shadow: 0 8px 20px var(--shadow-light);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(199, 120, 221, 0.3);
 }
 
 .card:hover .img {
   transform: scale(1.1);
 }
 
-/* ==== Image Wrapper ==== */
+/* 🖼 Görsel Alanı */
 .imageWrapper {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  border-bottom: 2px solid #c778dd;
+  border-bottom: 2px solid var(--color-primary);
 }
 
 .img {
@@ -136,7 +132,7 @@
   transition: transform 0.5s ease;
 }
 
-/* ==== Card Content ==== */
+/* 📜 Kart İçeriği */
 .content {
   padding: 20px;
   flex-grow: 1;
@@ -145,7 +141,7 @@
 }
 
 .skills {
-  color: #c778dd;
+  color: var(--color-primary);
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
@@ -157,22 +153,25 @@
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: inherit;
 }
 
 .projectOverview {
   font-size: 15px;
   font-weight: 400;
-  color: #aaa;
+  color: var(--color-muted-light);
   flex-grow: 1;
   line-height: 1.5;
 }
 
-/* ==== Live Link Button ==== */
+.whitebackground .projectOverview {
+  color: var(--color-muted-dark);
+}
+
+/* 🔗 Live Link */
 .liveLink {
   padding: 20px;
   text-align: center;
-  border-top: 1px solid #c778dd;
+  border-top: 1px solid var(--color-primary);
 }
 
 .liveLink a {
@@ -182,33 +181,30 @@
   padding: 12px 28px;
   border-radius: 30px;
   background: transparent;
-  border: 2px solid #c778dd;
+  border: 2px solid var(--color-primary);
   font-size: 16px;
   font-weight: 600;
-  color: #c778dd;
+  color: var(--color-primary);
   text-decoration: none;
   transition: all 0.4s ease;
 }
 
 .liveLink a:hover {
-  background: #c778dd;
-  color: #222;
-  box-shadow: 0 0 15px rgba(199, 120, 221, 0.6666666667);
+  background: var(--color-primary);
+  color: var(--color-text-dark);
+  box-shadow: 0 0 15px rgba(199, 120, 221, 0.5);
 }
 
-.liveLink svg path {
-  fill: currentColor;
-}
-
-/* ==== Responsive ==== */
+/* 📱 Responsive */
 @media (max-width: 768px) {
   .headertexts {
     flex-direction: column;
+    align-items: flex-start;
   }
   .line hr {
     width: 100px;
   }
-  .div2 h2 {
-    font-size: 16px;
+  .projectName {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=index.module.css.map */

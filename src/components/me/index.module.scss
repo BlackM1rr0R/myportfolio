@@ -1,28 +1,42 @@
-/* Genel reset */
+/* 🎨 Genel Ayarlar ve Renk Değişkenleri */
+:root {
+  --color-primary: #4a90e2;
+  /* Modern mavi */
+  --color-primary-light: #73b1f4;
+  --color-accent: #f5a623;
+  /* Altın vurgu */
+  --color-text-light: #ffffff;
+  --color-text-dark: #1c1c1e;
+  --color-bg-light: linear-gradient(135deg, #f0f4ff, #ffffff);
+  --color-bg-dark: linear-gradient(135deg, #1e1e2e, #2c2c3c);
+  --color-shadow: rgba(74, 144, 226, 0.3);
+  --font-family-mono: "Fira Code", monospace;
+}
+
+/* 🎯 Genel Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-family-mono);
 }
 
+/* 🌙 Dark ve ☀️ Light Mod Arka Plan */
 .darkBackground {
-  background: linear-gradient(135deg, #2e003e 0%, #4b007d 100%);
-  color: #eaeaea;
- 
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
   padding: 60px 20px;
-  transition: background-color 0.7s ease;
+  transition: background 0.7s ease, color 0.7s ease;
 }
 
 .lightBackground {
-  background: linear-gradient(135deg, #f0e7ff, #f9f8fd);
-  color: #222;
- 
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
   padding: 60px 20px;
-  transition: background-color 0.7s ease;
+  transition: background 0.7s ease, color 0.7s ease;
 }
 
-/* Fade-in animasyonu */
+/* ✨ Fade-in Animasyonu */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -39,17 +53,17 @@
   animation: fadeInUp 1s ease forwards;
 }
 
+/* 📦 Container Düzeni */
 .container {
   width: 100%;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
 
-/* Yazılar */
+/* 📝 Yazılar */
 .textSection {
   max-width: 700px;
   text-align: center;
@@ -60,12 +74,13 @@
   font-weight: 700;
   letter-spacing: 1.5px;
   margin-bottom: 10px;
+  color: var(--color-primary);
 }
 
 .titleWrapper h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #d78aff;
+  color: var(--color-accent);
   margin-bottom: 20px;
   letter-spacing: 0.05em;
 }
@@ -74,11 +89,10 @@
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 40px;
-  color: inherit;
   font-weight: 400;
 }
 
-/* Butonlar */
+/* 🔘 Butonlar */
 .buttons {
   display: flex;
   justify-content: center;
@@ -88,7 +102,7 @@
 
 .button {
   background: transparent;
-  border: 2px solid #d78aff;
+  border: 2px solid var(--color-primary);
   color: inherit;
   padding: 12px 28px;
   font-size: 1rem;
@@ -106,19 +120,23 @@
 
 .button:hover,
 .button:focus {
-  background: #d78aff;
-  color: #1a1a1a;
-  box-shadow: 0 0 12px #d78affaa;
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  box-shadow: 0 0 12px var(--color-shadow);
   transform: scale(1.05);
   outline: none;
 }
 
-/* ArrayIcon stil */
+/* ⭕ Dönen İkon */
 .iconWrapper {
   margin: 20px 0;
   display: flex;
   justify-content: center;
   animation: rotate 12s linear infinite;
+}
+
+.iconWrapper img {
+  width: 220px;
 }
 
 @keyframes rotate {
@@ -134,24 +152,24 @@
 .iconWrapper svg {
   height: 140px;
   width: 140px;
-  fill: #d78aff;
-  filter: drop-shadow(0 0 6px #d78aff88);
+  fill: var(--color-primary);
+  filter: drop-shadow(0 0 6px var(--color-shadow));
 }
 
-/* Profil resmi */
+/* 🖼 Profil Resmi */
 .imageSection {
   border-radius: 50%;
-  background: radial-gradient(circle at center, #d78aff44, transparent 70%);
+  background: radial-gradient(circle at center, var(--color-primary-light)44, transparent 70%);
   padding: 12px;
   max-width: 280px;
   overflow: hidden;
-  box-shadow: 0 0 15px #d78affbb;
+  box-shadow: 0 0 15px var(--color-shadow);
   transition: box-shadow 0.4s ease;
   cursor: pointer;
 }
 
 .imageSection:hover {
-  box-shadow: 0 0 30px #d78affee;
+  box-shadow: 0 0 30px var(--color-shadow);
 }
 
 .profileImage {
@@ -165,7 +183,7 @@
   transform: scale(1.1);
 }
 
-/* Responsive */
+/* 📱 Responsive */
 @media (min-width: 900px) {
   .container {
     flex-direction: row;

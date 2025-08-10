@@ -1,7 +1,7 @@
 .background {
   animation: fadeIn 1.5s ease-in-out forwards;
   background: #f9f9f9;
-  padding: 40px 0;
+  padding-top: 40px;
 
   .homes {
     animation: fadeIn 1.5s ease-in-out forwards;
@@ -24,15 +24,18 @@
           font-size: 14px;
           border: none;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          background: rgba(255, 255, 255, 0.6);
-          backdrop-filter: blur(10px);
+          background: rgba(255, 255, 255, 0.8);
+          color: #121212;
+          backdrop-filter: blur(8px);
+          user-select: none;
         }
 
         .darkButton:hover,
         .lightButton:hover {
           transform: translateY(-3px);
-          background-color: #000;
+          background-color: #4a90e2; /* Mavi vurgu */
           color: #fff;
+          box-shadow: 0 8px 20px rgba(74, 144, 226, 0.6);
         }
       }
 
@@ -42,14 +45,24 @@
         font-family: "Fira Code", monospace;
         border: 1px solid #ccc;
         background-color: #fff;
-        color: #000;
+        color: #121212;
         transition: all 0.3s ease;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         cursor: pointer;
+        user-select: none;
 
-        &:hover {
+        &:hover,
+        &:focus {
           transform: scale(1.05);
+          border-color: #4a90e2;
+          outline: none;
+          box-shadow: 0 0 8px #4a90e2;
         }
+      }
+
+      select option {
+        background-color: #fff;
+        color: #121212;
       }
     }
   }
@@ -57,7 +70,7 @@
 
 .backgroundblack {
   background-color: #121212;
-  padding: 40px 0;
+  padding-top: 40px;
   animation: fadeIn 1.5s ease-in-out forwards;
 
   .homes {
@@ -74,16 +87,28 @@
         padding: 10px 20px;
         border-radius: 8px;
         font-family: "Fira Code", monospace;
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        border: 1px solid #555;
+        background: rgba(74, 144, 226, 0.15); /* Hafif mavi transparan */
+        color: #e0e0e0;
+        border: 1px solid #4a90e2;
         transition: all 0.3s ease;
-        backdrop-filter: blur(6px);
+        backdrop-filter: blur(8px);
         cursor: pointer;
+        user-select: none;
 
-        &:hover {
+        &:hover,
+        &:focus {
           transform: scale(1.05);
+          border-color: #73b1f4;
+          outline: none;
+          box-shadow: 0 0 10px #73b1f4;
+          background: rgba(74, 144, 226, 0.3);
+          color: #fff;
         }
+      }
+
+      select option {
+        background-color: #1e1e1e;
+        color: #fff;
       }
 
       .darkButton,
@@ -95,17 +120,19 @@
         font-size: 14px;
         transition: all 0.4s ease;
         border: none;
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
+        background: rgba(74, 144, 226, 0.15);
+        color: #e0e0e0;
         backdrop-filter: blur(8px);
-        box-shadow: 0 5px 20px rgba(255, 255, 255, 0.05);
+        box-shadow: 0 5px 20px rgba(74, 144, 226, 0.2);
+        user-select: none;
       }
 
       .darkButton:hover,
       .lightButton:hover {
         transform: translateY(-3px);
-        background-color: white;
-        color: black;
+        background-color: #4a90e2;
+        color: #fff;
+        box-shadow: 0 8px 25px rgba(74, 144, 226, 0.7);
       }
     }
   }
@@ -121,14 +148,27 @@
     transform: translateY(0);
   }
 }
-/* Dark mod için option stilleri */
-.backgroundblack select option {
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
 
-/* Light mod için option stilleri (isteğe bağlı) */
-.background select option {
-  background-color: #ffffff;
-  color: #000000;
+
+@media(max-width: 768px) {
+  .background,
+  .backgroundblack {
+    padding-top: 20px;
+
+    .modeandlang {
+      flex-direction: column;
+      align-items: center;
+
+      select {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .darkButton,
+      .lightButton {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }

@@ -38,8 +38,8 @@ const GitHubWhiteIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
+      width="24"
+      height="24"
       viewBox="0 0 48 48"
       fill="none"
     >
@@ -54,8 +54,8 @@ const FigmaIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
+      width="24"
+      height="24"
       viewBox="0 0 48 48"
       fill="none"
     >
@@ -78,8 +78,8 @@ const FigmaWhiteIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
+      width="24"
+      height="24"
       viewBox="0 0 48 48"
       fill="none"
     >
@@ -118,8 +118,8 @@ const LinkedinWhiteIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
+      width="24"
+      height="24"
       viewBox="0 0 48 48"
       fill="none"
     >

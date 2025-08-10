@@ -82,7 +82,7 @@ const Header = () => {
               {dark ? <GitHubWhiteIcon /> : <GitHubIcon />}
             </a>
             <a
-              href="https://wa.me/0507487048"
+              href="https://wa.me/+4917632329799"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"

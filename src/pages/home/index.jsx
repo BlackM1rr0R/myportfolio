@@ -29,13 +29,21 @@ import styles from "./index.module.css";
 import Wrapper from "../../components/UI/wrapper";
 import translations from "./text.json";
 import { changeLanguage, toggleDarkMode } from "../../redux/actions";
-
+import FormDom from '../../assets/images/formdom1.png'
 const Home = () => {
   const language = useSelector((state) => state.language);
   const dark = useSelector((state) => state.darkMode);
   const dispatch = useDispatch();
 
   const data = useMemo(() => [
+    {
+      photo: FormDom,
+      skills: "HTML SCSS REACTJS REST API`s Router`s SPRING BOOT",
+      name: "FormDom Form Website",
+      overview:
+        "Here, you can freely share your thoughts and participate in discussions by posting anonymously.",
+      link: "https://formdom.pro/",
+    },
     {
       photo: Skalioz,
       skills: "HTML SCSS REACTJS REST API`s Router`s SPRING BOOT",
@@ -242,7 +250,7 @@ const Home = () => {
         <Language translations={translations[language]} darkMode={dark} />
         <About translations={translations[language]} darkMode={dark} />
         <Contacts translations={translations[language]} darkMode={dark} />
-    
+
       </div>
     </div>
   );

@@ -1,38 +1,46 @@
 @charset "UTF-8";
 :root {
   --color-white: #fff;
-  --color-black: #000;
-  --color-primary: #c778dd;
-  --color-gray: #abb2bf;
+  --color-black: #000000;
+  --color-primary: #4a90e2; /* Modern mavi ana renk */
+  --color-primary-hover: #73b1f4;
+  --color-gray: #888888;
+  --text-color-main-light: var(--color-black);
+  --text-color-main-dark: var(--color-white);
+  --text-color-primary: var(--color-primary);
+  --text-color-secondary: var(--color-gray);
 }
 
+/* Açık tema arka plan ve metin */
 .background {
-  background: linear-gradient(135deg, #f0e7ff, #f9f8fd);
-  animation: animation 2s ease-in-out forwards;
-  padding-top: 50px;
-  padding-bottom: 60px;
-  /* Açık modda metin renkleri */
-  --text-color-main: var(--color-black);
-  --text-color-primary: var(--color-primary);
-  --text-color-secondary: var(--color-gray);
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  animation: fadeInOpacity 2s ease-in-out forwards;
+  padding: 50px 0 60px;
+  /* Metin renkleri */
+  --text-color-main: var(--text-color-main-light);
+  --text-color-primary: var(--text-color-primary);
+  --text-color-secondary: var(--text-color-secondary);
 }
 
+/* Koyu tema arka plan ve metin */
 .backgroundBlack {
-  background: linear-gradient(135deg, #2e003e 0%, #4b007d 100%);
-  animation: animation 2s ease-in-out forwards;
-  padding-top: 50px;
-  padding-bottom: 60px;
-  /* Dark modda metin renkleri */
-  --text-color-main: var(--color-white);
-  --text-color-primary: var(--color-primary);
-  --text-color-secondary: var(--color-gray);
+  background: linear-gradient(135deg, #1c1c1e 0%, #2a2a2e 100%);
+  animation: fadeInOpacity 2s ease-in-out forwards;
+  padding: 50px 0 60px;
+  /* Metin renkleri */
+  --text-color-main: var(--text-color-main-dark);
+  --text-color-primary: var(--text-color-primary);
+  --text-color-secondary: var(--text-color-secondary);
 }
 
+/* Ana container */
 .control {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
+/* Sol kısım */
 .divcontrol1 {
   display: flex;
   flex-direction: column;
@@ -47,20 +55,21 @@
 
 .div1 h2 {
   color: var(--text-color-main);
-  font-size: 16px;
   font-family: "Fira Code", monospace;
   font-weight: 500;
+  font-size: 16px;
   line-height: normal;
 }
 
 .front h2 {
-  color: var(--text-color-primary);
-  font-size: 13px;
+  color: var(--text-color-main);
   font-family: "Fira Code", monospace;
   font-weight: 700;
+  font-size: 14px;
   line-height: normal;
 }
 
+/* Sağ kısım */
 .divcontrol2 {
   display: flex;
   align-items: flex-end;
@@ -75,9 +84,9 @@
 
 .div2 h2 {
   color: var(--text-color-main);
-  font-size: 16px;
   font-family: "Fira Code", monospace;
   font-weight: 500;
+  font-size: 16px;
   line-height: normal;
 }
 
@@ -90,20 +99,29 @@
 .iconcontrol svg {
   width: 30px;
   height: 30px;
+  transition: fill 0.3s ease;
 }
 
+/* Linklerde ikon hover rengi */
+.iconcontrol a:hover svg path,
+.iconcontrol a:focus svg path {
+  fill: var(--color-primary-hover);
+  outline: none;
+}
+
+/* Telif hakkı metni */
 .copyright {
-  display: flex;
-  justify-content: center;
   margin-top: 40px;
-  color: var(--text-color-secondary);
+  text-align: center;
+  color: var(--text-color-main);
   font-family: "Fira Code", monospace;
-  font-size: 13px;
   font-weight: 400;
+  font-size: 13px;
   line-height: normal;
 }
 
-@keyframes animation {
+/* Animasyon */
+@keyframes fadeInOpacity {
   from {
     opacity: 0;
   }
@@ -111,6 +129,7 @@
     opacity: 1;
   }
 }
+/* Responsive */
 @media (min-width: 992px) {
   .background,
   .backgroundBlack {
@@ -125,7 +144,7 @@
     font-size: 18px;
   }
   .divcontrol1 .front h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .divcontrol2 .div2 h2 {
     font-size: 18px;
