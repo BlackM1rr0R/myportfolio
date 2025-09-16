@@ -12,12 +12,20 @@ import "swiper/css/pagination";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const Projects = ({ data, darkMode, translations }) => {
   return (
-    <section id="projects" className={darkMode ? styles.background : styles.whitebackground}>
+    <section
+      id="projects"
+      className={darkMode ? styles.background : styles.whitebackground}
+    >
       <Wrapper>
         <div className={styles.control}>
           <div className={styles.headertexts}>
@@ -26,8 +34,19 @@ const Projects = ({ data, darkMode, translations }) => {
                 <p>#</p>
                 <h2>{translations.projects}</h2>
               </div>
-              <div className={styles.line}><hr /></div>
+              <div className={styles.line}>
+                <hr />
+              </div>
             </div>
+            <Link target="_blank" to="https://vercel.com/7u4bgrs-projects"  className={styles.div2}>
+              <div className={styles.texts1}>
+                <h2>vercel</h2>
+                <div className={styles.line}>
+                  <hr />
+                </div>
+                <h2>link</h2>
+              </div>
+            </Link >
           </div>
 
           <Swiper
@@ -56,7 +75,7 @@ const Projects = ({ data, darkMode, translations }) => {
                 >
                   <div className={styles.imageWrapper}>
                     <img
-                     src={item.photo}
+                      src={item.photo}
                       className={`swiper-lazy ${styles.img}`}
                       alt={item.name}
                     />
@@ -68,7 +87,11 @@ const Projects = ({ data, darkMode, translations }) => {
                     <p className={styles.projectOverview}>{item.overview}</p>
                   </div>
                   <div className={styles.liveLink}>
-                    <Link target="_blank" to={item.link} rel="noopener noreferrer">
+                    <Link
+                      target="_blank"
+                      to={item.link}
+                      rel="noopener noreferrer"
+                    >
                       {translations.map} <LiveIcon />
                     </Link>
                   </div>
