@@ -16,8 +16,8 @@ const Skills = ({ darkMode, translations }) => {
     {
       name: "Backend Developer",
       skills: [
-        "Java Core", "Spring Boot", "Spring Security (JWT)", "MySQL", "PostgreSQL", "SQL",
-        "Swagger", "JUnit", "Docker", "Postman", "Redis", "CI/CD",
+        "Java Core", "Spring Boot", "Spring Security", "MySQL", "PostgreSQL", "SQL",
+        "Swagger", "JUnit", "Docker", "Postman", "Redis", "CI/CD", "Spring Cloud",
         "Apache Kafka", "Kubernetes", "Eureka", "Keycloak", "Grafana", "Elasticsearch"
       ],
     },
