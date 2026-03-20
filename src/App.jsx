@@ -2,11 +2,12 @@ import React from "react";
 import "./App.css";
 import { routeArr } from "./routes";
 import Header from "./components/layout/header";
-import Footer from "./components/layout/footer";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import ScrollToTop from "./components/scrolltop";
+import Footer from "./components/layout/footer";
 function App() {
   return (
     <Provider store={store}>
@@ -23,7 +24,7 @@ function App() {
                 <>
                   <Header />
                   <item.component />
-                 
+                  {/* <Footer/> */}
                 </>
               }
             />
